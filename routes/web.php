@@ -1,22 +1,11 @@
 <?php
 
+use App\Http\Controllers\landingpage\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// Landing page Routes
+Route::get('/',[LandingPageController::class,'index'])->name('Welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
