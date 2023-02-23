@@ -9,21 +9,18 @@
         <!-- Hidden Bar Wrapper -->
         <div class="inner-box">
             <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
-            <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img
-                        src="images/resource/sidebar-logo.png" alt="" title="Delici - Restaurants HTML Template"></a>
+            <div class="logo-box"><a href="index.html" title="{{ env('APP_NAME') }}"><img
+                        src="{{ asset('assets/images/resource/sidebar-logo.png') }}" alt="" title="{{ env('APP_NAME') }}"></a>
             </div>
 
             <!-- .Side-menu -->
             <div class="side-menu">
                 <ul class="navigation clearfix">
-                    <li class="current"><a href="index.html">Home</a>
+                    <li class="current"><a href="{{ route('Welcome') }}">Home</a>
                     </li>
                     <li class="dropdown"><a href="menu-list.html">Menus</a>
                         <ul>
                             <li><a href="menu-list-1.html">Menu List 1</a></li>
-                            <li><a href="menu-list-2.html">Menu List 2</a></li>
-                            <li><a href="menu-list-3.html">Menu List 3</a></li>
-                            <li><a href="menu-list-4.html">Menu List 4</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html">About Us</a></li>
@@ -31,13 +28,9 @@
                     <li class="dropdown"><a href="#">Pages</a>
                         <ul>
                             <li><a href="#">Dropdown Menu 1</a></li>
-                            <li><a href="#">Dropdown Menu 2</a></li>
-                            <li><a href="#">Dropdown Menu 3</a></li>
                             <li class="dropdown"><a href="#">Dropdown Menu 4</a>
                                 <ul>
                                     <li><a href="#">Dropdown Menu level 2</a></li>
-                                    <li><a href="#">Dropdown Menu level 2</a></li>
-                                    <li><a href="#">Dropdown Menu Level 3</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Dropdown Lorem 5</a></li>
@@ -49,7 +42,7 @@
 
             <h2>Visit Us</h2>
             <ul class="info">
-                <li>Restaurant St, Delicious City, <br>London 9578, UK</li>
+                <li>Restaurant St, {{ env('APP_NAME') }}, <br>London 9578, UK</li>
                 <li>Open: 9.30 am - 2.30pm</li>
                 <li><a href="mailto:booking@domainame.com">booking@domainame.com</a></li>
             </ul>
@@ -70,10 +63,10 @@
     <section class="info-bar">
         <div class="inner-box">
             <div class="cross-icon"><span class="far fa-close"></span></div>
-            <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img
-                        src="images/resource/sidebar-logo.png" alt=""
-                        title="Delici - Restaurants HTML Template"></a></div>
-            <div class="image-box"><img src="images/resource/sidebar-image.jpg" alt="" title=""></div>
+            <div class="logo-box"><a href="index.html" title="{{ env('APP_NAME') }}"><img
+                        src="{{ asset('assets/images/resource/sidebar-logo.png') }}" alt=""
+                        title="{{ env('APP_NAME') }}"></a></div>
+            <div class="image-box"><img src="{{ asset('assets/images/resource/sidebar-image.jpg') }}" alt="" title=""></div>
 
             <h2>Visit Us</h2>
             <ul class="info">
@@ -98,14 +91,14 @@
                 <div class="swiper-wrapper">
                     <!--Slide Item-->
                     <div class="swiper-slide slide-item">
-                        <div class="image-layer" style="background-image: url(images/main-slider/slider-1.jpg);"></div>
+                        <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-1.jpg') }});"></div>
                         <div class="auto-container">
                             <div class="content-box">
                                 <div class="content">
                                     <div class="clearfix">
                                         <div class="inner">
                                             <div class="subtitle"><span>delightful experience</span></div>
-                                            <div class="pattern-image"><img src="images/icons/separator.svg" alt=""
+                                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
                                                     title=""></div>
                                             <h1><span>Flavors Inspired by <br>the Seasons</span></h1>
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
@@ -129,14 +122,14 @@
                     </div>
                     <!--Slide Item-->
                     <div class="swiper-slide slide-item">
-                        <div class="image-layer" style="background-image: url(images/main-slider/slider-2.jpg);"></div>
+                        <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-2.jpg') }});"></div>
                         <div class="auto-container">
                             <div class="content-box">
                                 <div class="content">
                                     <div class="clearfix">
                                         <div class="inner">
                                             <div class="subtitle"><span>amazing & delicious</span></div>
-                                            <div class="pattern-image"><img src="images/icons/separator.svg"
+                                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}"
                                                     alt="" title=""></div>
                                             <h1><span>Where every flavor <br>tells a story</span></h1>
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
@@ -159,14 +152,14 @@
                     </div>
                     <!--Slide Item-->
                     <div class="swiper-slide slide-item">
-                        <div class="image-layer" style="background-image: url(images/main-slider/slider-3.jpg);"></div>
+                        <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-3.jpg') }});"></div>
                         <div class="auto-container">
                             <div class="content-box">
                                 <div class="content">
                                     <div class="clearfix">
                                         <div class="inner">
                                             <div class="subtitle"><span>Tradational & Hygine</span></div>
-                                            <div class="pattern-image"><img src="images/icons/separator.svg"
+                                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}"
                                                     alt="" title=""></div>
                                             <h1><span>For the love of <br>delicious food</span></h1>
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
@@ -193,20 +186,20 @@
             </div>
         </div>
 
-        <div class="book-btn"><a href="reservation-opentable.html" class="theme-btn"><span class="icon"><img
-                        src="images/resource/book-icon-1.png" alt="" title=""></span><span
+        <div class="book-btn"><a href="{{ asset('assets/reservation-opentable.html') }}" class="theme-btn"><span class="icon"><img
+                        src="{{ asset('assets/images/resource/book-icon-1.png') }}" alt="" title=""></span><span
                     class="txt">book a table</span></a></div>
     </section>
     <!--End Banner Section -->
 
     <!--We Offer Section-->
     <section class="we-offer-section">
-        <div class="left-bot-bg"><img src="images/background/bg-1.png" alt="" title=""></div>
-        <div class="right-top-bg"><img src="images/background/bg-2.png" alt="" title=""></div>
+        <div class="left-bot-bg"><img src="{{ asset('assets/images/background/bg-1.png') }}" alt="" title=""></div>
+        <div class="right-top-bg"><img src="{{ asset('assets/images/background/bg-2.png') }}" alt="" title=""></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>Flavors for royalty</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
                 <h2>We Offer Top Notch</h2>
                 <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum
                     has been the industrys standard dummy text ever.</div>
@@ -215,7 +208,7 @@
                 <!--Block-->
                 <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image"><a href="menu-list-1.html"><img src="images/resource/offer-image-1.jpg"
+                        <div class="image"><a href="menu-list-1.html"><img src="{{ asset('assets/images/resource/offer-image-1.jpg') }}"
                                     alt=""></a></div>
                         <h3><a href="menu-list-1.html">Breakfast</a></h3>
                         <div class="more-link"><a href="menu-list-1.html">view menu</a></div>
@@ -225,7 +218,7 @@
                 <!--Block-->
                 <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="image"><a href="menu-list-2.html"><img src="images/resource/offer-image-2.jpg"
+                        <div class="image"><a href="menu-list-2.html"><img src="{{ asset('assets/images/resource/offer-image-2.jpg') }}"
                                     alt=""></a></div>
                         <h3><a href="menu-list-2.html">Appetizers</a></h3>
                         <div class="more-link"><a href="menu-list-2.html">view menu</a></div>
@@ -235,7 +228,7 @@
                 <!--Block-->
                 <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
-                        <div class="image"><a href="menu-list-3.html"><img src="images/resource/offer-image-3.jpg"
+                        <div class="image"><a href="menu-list-3.html"><img src="{{ asset('assets/images/resource/offer-image-3.jpg') }}"
                                     alt=""></a></div>
                         <h3><a href="menu-list-3.html">Drinks</a></h3>
                         <div class="more-link"><a href="menu-list-3.html">view menu</a></div>
@@ -248,7 +241,7 @@
 
     <!--Story Section-->
     <section class="story-section">
-        <div class="left-bg"><img src="images/background/bg-3.png" alt="" title=""></div>
+        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-3.png') }}" alt="" title=""></div>
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Col-->
@@ -256,7 +249,7 @@
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="title-box centered">
                             <div class="subtitle"><span>Our story</span></div>
-                            <div class="pattern-image"><img src="images/icons/separator.svg" alt=""
+                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
                                     title=""></div>
                             <h2>Every Flavor Tells a Story</h2>
                             <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry
@@ -283,11 +276,11 @@
                 <!--Col-->
                 <div class="image-col col-xl-7 col-lg-7 col-md-12 col-sm-12">
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="round-stamp"><img src="images/resource/badge-1.png" alt=""></div>
+                        <div class="round-stamp"><img src="{{ asset('assets/images/resource/badge-1.png') }}" alt=""></div>
                         <div class="images parallax-scene-1">
-                            <div class="image" data-depth="0.15"><img src="images/resource/image-1.jpg" alt="">
+                            <div class="image" data-depth="0.15"><img src="{{ asset('assets/images/resource/image-1.jpg') }}" alt="">
                             </div>
-                            <div class="image" data-depth="0.30"><img src="images/resource/image-2.jpg" alt="">
+                            <div class="image" data-depth="0.30"><img src="{{ asset('assets/images/resource/image-2.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -299,25 +292,25 @@
 
     <!--Special Dish Section-->
     <section class="special-dish">
-        <div class="bottom-image"><img src="images/resource/image-3.png" alt="" title=""></div>
+        <div class="bottom-image"><img src="{{ asset('assets/images/resource/image-3.png') }}" alt="" title=""></div>
         <div class="outer-container">
             <div class="row clearfix">
                 <!--Col-->
                 <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image-layer" style="background-image: url(images/background/image-1.jpg);"></div>
-                        <div class="image"><img src="images/background/image-1.jpg" alt=""></div>
+                        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-1.jpg') }});"></div>
+                        <div class="image"><img src="{{ asset('assets/images/background/image-1.jpg') }}" alt=""></div>
                     </div>
                 </div>
                 <!--Col-->
                 <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="right-bg"><img src="images/background/bg-4.png" alt="" title=""></div>
+                    <div class="right-bg"><img src="{{ asset('assets/images/background/bg-4.png') }}" alt="" title=""></div>
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="title-box">
-                            <span class="badge-icon"><img src="images/resource/badge-2.png" alt=""
+                            <span class="badge-icon"><img src="{{ asset('assets/images/resource/badge-2.png') }}" alt=""
                                     title=""></span>
                             <div class="subtitle"><span>Special dish</span></div>
-                            <div class="pattern-image"><img src="images/icons/separator.svg" alt=""
+                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg"') }} alt=""
                                     title=""></div>
                             <h2>Lobster Tortellini</h2>
                             <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry
@@ -342,12 +335,12 @@
 
     <!--Menu Section-->
     <section class="menu-section">
-        <div class="left-bg"><img src="images/background/bg-5.png" alt="" title=""></div>
-        <div class="right-bg"><img src="images/background/bg-6.png" alt="" title=""></div>
+        <div class="left-bg"><img src="{{ asset('images/background/bg-5.png') }}" alt="" title=""></div>
+        <div class="right-bg"><img src="{{ asset('images/background/bg-6.png') }}" alt="" title=""></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>Special selection</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
                 <h2>Delicious Menu</h2>
             </div>
 
@@ -370,7 +363,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-5.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Greek Salad</a></h5>
@@ -385,7 +378,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-6.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
@@ -401,7 +394,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-7.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Butternut Pumpkin</a></h5>
@@ -420,7 +413,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-8.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Tokusen Wagyu <span
@@ -436,7 +429,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-9.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Olivas Rellenas</a></h5>
@@ -451,7 +444,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-10.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Opu Fish</a></h5>
@@ -475,7 +468,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-5.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Greek Salad</a></h5>
@@ -490,7 +483,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-6.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
@@ -506,7 +499,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-7.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Butternut Pumpkin</a></h5>
@@ -525,7 +518,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-8.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Tokusen Wagyu <span
@@ -541,7 +534,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-9.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Olivas Rellenas</a></h5>
@@ -556,7 +549,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-10.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Opu Fish</a></h5>
@@ -580,7 +573,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-5.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Greek Salad</a></h5>
@@ -595,7 +588,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-6.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
@@ -611,7 +604,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-7.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Butternut Pumpkin</a></h5>
@@ -630,7 +623,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-8.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Tokusen Wagyu <span
@@ -646,7 +639,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-9.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Olivas Rellenas</a></h5>
@@ -661,7 +654,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-10.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Opu Fish</a></h5>
@@ -685,7 +678,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-5.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Greek Salad</a></h5>
@@ -700,7 +693,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-6.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
@@ -716,7 +709,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-7.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Butternut Pumpkin</a></h5>
@@ -735,7 +728,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-8.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Tokusen Wagyu <span
@@ -751,7 +744,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-9.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Olivas Rellenas</a></h5>
@@ -767,7 +760,7 @@
                                     <div class="dish-block">
                                         <div class="inner-box">
                                             <div class="dish-image"><a href="#"><img
-                                                        src="images/resource/menu-image-10.png" alt=""></a></div>
+                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
                                             <div class="title clearfix">
                                                 <div class="ttl clearfix">
                                                     <h5><a href="#">Opu Fish</a></h5>
@@ -806,7 +799,7 @@
             <div class="auto-container">
                 <div class="title-box centered">
                     <div class="subtitle"><span>special offer</span></div>
-                    <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title="">
+                    <div class="pattern-image"><img src="{{asset('assets/images/icons/separator.svg" alt')}}="" title="">
                     </div>
                     <h2>Best Specialties</h2>
                 </div>
@@ -814,7 +807,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-11.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-11.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-1.html">Greek Salad</a></h4>
                             <div class="text desc">Avocados with crab meat, red onion, crab salad red bell pepper...</div>
@@ -825,7 +818,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two margin-top">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-12.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-12.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-2.html">Tokusen Wagyu</a></h4>
                             <div class="text desc">Tomatoes, green bell pepper, sliced cucumber onion, olives...</div>
@@ -836,7 +829,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-13.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-13.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-3.html">Butternut Pumpkin</a></h4>
                             <div class="text desc">Avocados with crab meat, red onion, crab salad stuffed bell pepper...
@@ -848,7 +841,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two margin-top">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-14.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-14.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-4.html">Opu Fish</a></h4>
                             <div class="text desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings...</div>
@@ -859,7 +852,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-11.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-11.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-1.html">Greek Salad</a></h4>
                             <div class="text desc">Avocados with crab meat, red onion, crab salad red bell pepper...</div>
@@ -870,7 +863,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two margin-top">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-12.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-12.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-2.html">Tokusen Wagyu</a></h4>
                             <div class="text desc">Tomatoes, green bell pepper, sliced cucumber onion, olives...</div>
@@ -881,7 +874,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-13.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-13.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-3.html">Butternut Pumpkin</a></h4>
                             <div class="text desc">Avocados with crab meat, red onion, crab salad stuffed bell pepper...
@@ -893,7 +886,7 @@
                     <!--Slide Item-->
                     <div class="offer-block-two margin-top">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/menu-image-14.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-14.jpg')}}"
                                         alt=""></a></div>
                             <h4><a href="menu-list-4.html">Opu Fish</a></h4>
                             <div class="text desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings...</div>
@@ -918,7 +911,7 @@
 
     <!--Testimonials Section-->
     <section class="testimonials-section">
-        <div class="image-layer" style="background-image: url(images/background/image-2.jpg);"></div>
+        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-2.jpg') }});"></div>
         <div class="auto-container">
             <div class="carousel-box">
                 <div class="testi-top owl-theme owl-carousel">
@@ -969,27 +962,27 @@
                 <div class="thumbs-carousel-box">
                     <div class="testi-thumbs owl-theme owl-carousel">
                         <div class="slide-item">
-                            <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-1.jpg') }}" alt=""></div>
                             <div class="auth-title">Sam Jhonson</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-2.jpg') }}" alt=""></div>
                             <div class="auth-title">Ian Botham</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="images/resource/author-thumb-3.jpg" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-3.jpg') }}" alt=""></div>
                             <div class="auth-title">Dan Bitson</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-1.jpg') }}" alt=""></div>
                             <div class="auth-title">Sam Jhonson</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-2.jpg') }}" alt=""></div>
                             <div class="auth-title">Ian Botham</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="images/resource/author-thumb-3.jpg" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-3.jpg') }}" alt=""></div>
                             <div class="auth-title">Dan Bitson</div>
                         </div>
                     </div>
@@ -1121,19 +1114,19 @@
 
     <!--Why Us Section-->
     <section class="why-us">
-        <div class="left-bg"><img src="images/background/bg-8.png" alt="" title=""></div>
-        <div class="right-bg"><img src="images/background/bg-7.png" alt="" title=""></div>
+        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-8.png') }}" alt="" title=""></div>
+        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-7.png') }}" alt="" title=""></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>why choose us</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
                 <h2>Our Strength</h2>
             </div>
             <div class="row clearfix">
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="icon-box"><img src="images/resource/why-icon-1.png" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-1.png') }}" alt=""></div>
                         <h4>Hygienic Food</h4>
                         <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
                     </div>
@@ -1142,7 +1135,7 @@
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="icon-box"><img src="images/resource/why-icon-2.png" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-2.png') }}" alt=""></div>
                         <h4>Fresh Environment</h4>
                         <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
                     </div>
@@ -1151,7 +1144,7 @@
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
-                        <div class="icon-box"><img src="images/resource/why-icon-3.png" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-3.png') }}" alt=""></div>
                         <h4>Skilled Chefs</h4>
                         <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
                     </div>
@@ -1160,7 +1153,7 @@
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="900ms">
-                        <div class="icon-box"><img src="images/resource/why-icon-4.png" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-4.png') }}" alt=""></div>
                         <h4>Event & Party</h4>
                         <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
                     </div>
@@ -1189,8 +1182,8 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <div class="image-layer" style="background-image: url(images/resource/featured-1.jpg);"></div>
-                            <div class="image"><img src="images/resource/featured-1.jpg" alt=""></div>
+                            <div class="image-layer" style="background-image: url({{ asset('assets/images/resource/featured-1.jpg') }});"></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/featured-1.jpg') }}" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -1199,8 +1192,8 @@
                 <div class="link-block alternate col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="image-box">
-                            <div class="image-layer" style="background-image: url(images/resource/featured-2.jpg);"></div>
-                            <div class="image"><img src="images/resource/featured-2.jpg" alt=""></div>
+                            <div class="image-layer" style="background-image: url({{ asset('assets/images/resource/featured-2.jpg') }});"></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/featured-2.jpg') }}" alt=""></div>
                         </div>
                         <div class="text-block">
                             <div class="bl-inner">
@@ -1231,8 +1224,8 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <div class="image-layer" style="background-image: url(images/resource/featured-3.jpg);"></div>
-                            <div class="image"><img src="images/resource/featured-3.jpg" alt=""></div>
+                            <div class="image-layer" style="background-image: url({{ asset('assets/images/resource/featured-3.jpg') }});"></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/featured-3.jpg') }}" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -1243,12 +1236,12 @@
 
     <!--Team Section-->
     <section class="team-section">
-        <div class="left-bg"><img src="images/background/bg-21.png" alt="" title=""></div>
-        <div class="right-bg"><img src="images/background/bg-9.png" alt="" title=""></div>
+        <div class="left-bg"><img src="{{asset('assets/images/background/bg-21.png')}}" alt="" title=""></div>
+        <div class="right-bg"><img src="{{asset('assets/images/background/bg-9.png')}}" alt="" title=""></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>experienced team</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
                 <h2>Meet Our Chef</h2>
             </div>
             <div class="row justify-content-center clearfix">
@@ -1256,7 +1249,7 @@
                 <div class="team-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image">
-                            <img src="images/resource/team-1.jpg" alt="">
+                            <img src="{{asset('assets/images/resource/team-1.jpg')}}" alt="">
                             <div class="overlay-box">
                                 <div class="overlay-inner">
                                     <!-- Social Box -->
@@ -1280,7 +1273,7 @@
                 <div class="team-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="image">
-                            <img src="images/resource/team-2.jpg" alt="">
+                            <img src="{{ asset('assets/images/resource/team-2.jpg') }}" alt="">
                             <div class="overlay-box">
                                 <div class="overlay-inner">
                                     <!-- Social Box -->
@@ -1304,7 +1297,7 @@
                 <div class="team-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
                         <div class="image">
-                            <img src="images/resource/team-3.jpg" alt="">
+                            <img src="{{ asset('assets/images/resource/team-3.jpg') }}" alt="">
                             <div class="overlay-box">
                                 <div class="overlay-inner">
                                     <!-- Social Box -->
@@ -1330,12 +1323,12 @@
 
     <!--Intro Section-->
     <section class="intro-section">
-        <div class="image-layer" style="background-image: url(images/background/image-3.jpg);"></div>
+        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-3.jpg') }});"></div>
         <div class="auto-container">
             <div class="content-box">
                 <div class="title-box centered">
                     <div class="subtitle"><span>amazing experience</span></div>
-                    <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title="">
+                    <div class="pattern-image"><img src="{{asset('assets/images/icons/separator.svg')}}" alt="" title="">
                     </div>
                     <h2>Watch Our Video</h2>
                 </div>
@@ -1396,7 +1389,7 @@
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>recent updates</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title="">
+                <div class="pattern-image"><img src="{{asset('assets/images/icons/separator.svg"')}} alt="" title="">
                 </div>
                 <h2>Upcoming Event</h2>
             </div>
@@ -1406,7 +1399,7 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
                             <div class="date"><span>15/09/2022</span></div>
-                            <div class="image"><a href="#"><img src="images/resource/news-2.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/news-2.jpg')}}"
                                         alt=""></a></div>
                             <div class="over-content">
                                 <div class="cat">Food, flavour</div>
@@ -1421,7 +1414,7 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="image-box">
                             <div class="date"><span>08/09/2022</span></div>
-                            <div class="image"><a href="#"><img src="images/resource/news-1.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/news-1.jpg')}}"
                                         alt=""></a></div>
                             <div class="over-content">
                                 <div class="cat">healthy food</div>
@@ -1436,7 +1429,7 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
                         <div class="image-box">
                             <div class="date"><span>03/09/2022</span></div>
-                            <div class="image"><a href="#"><img src="images/resource/news-3.jpg"
+                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/news-3.jpg')}}"
                                         alt=""></a></div>
                             <div class="over-content">
                                 <div class="cat">recipie</div>
