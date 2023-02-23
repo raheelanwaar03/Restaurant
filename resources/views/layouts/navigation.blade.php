@@ -144,7 +144,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
                                         <li><a href="our-chef.html">Our chefs</a></li>
                                         <li class="dropdown"><a href="#">Pages</a>
                                             <ul>
