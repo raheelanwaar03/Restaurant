@@ -1,100 +1,184 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Delici - Restaurants HTML Template - Home 01</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="css/responsive.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="loader-wrap">
+        <div class="preloader">
+            <div class="preloader-close">x</div>
+            <div id="handle-preloader" class="handle-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+                    <div class="txt-loading">
+                        <span data-text-preloader="L" class="letters-loading">
+                            L
+                        </span>
+                        <span data-text-preloader="O" class="letters-loading">
+                            O
+                        </span>
+                        <span data-text-preloader="D" class="letters-loading">
+                            D
+                        </span>
+                        <span data-text-preloader="I" class="letters-loading">
+                            I
+                        </span>
+                        <span data-text-preloader="N" class="letters-loading">
+                            N
+                        </span>
+                        <span data-text-preloader="G" class="letters-loading">
+                            G
+                        </span>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
 
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+    <!-- Main Header-->
+    <header class="main-header header-down">
+        <div class="header-top">
+            <div class="auto-container">
+                <div class="inner clearfix">
+                    <div class="top-left clearfix">
+                        <ul class="top-info clearfix">
+                            <li><i class="icon far fa-map-marker-alt"></i> Restaurant St, Delicious City, London 9578, UK</li>
+                            <li><i class="icon far fa-clock"></i> Daily : 8.00 am to 10.00 pm</li>
+                        </ul>
+                    </div>
+                    <div class="top-right clearfix">
+                        <ul class="top-info clearfix">
+                            <li><a href="tel:+11234567890"><i class="icon far fa-phone"></i> +1 123 456 7890</a></li>
+                            <li><a href="mailto:booking@restaurant.com"><i class="icon far fa-envelope"></i> booking@restaurant.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Upper -->
+        <div class="header-upper">
+            <div class="auto-container">
+                <!-- Main Box -->
+                <div class="main-box clearfix">
+                    <!--Logo-->
+                    <div class="logo-box">
+                         <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
+                    </div>
 
-                            <div class="ml-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
+                    <div class="nav-box clearfix">
+                        <!--Nav Outer-->
+                        <div class="nav-outer clearfix">
+                            <nav class="main-menu">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="index.html">Home</a>
+                                    </li>
+                                    <li class="dropdown has-mega-menu"><a href="menu-list.html">Menus</a>
+                                        <ul>
+                                            <li>
+                                                <div class="mega-menu">
+                                                    <div class="menu-inner">
+                                                        <div class="auto-container">
+                                                            <div class="row clearfix">
+                                                                <div class="menu-block col-lg-3 col-md-6 col-sm-6">
+                                                                    <div class="image"><a href="menu-list-1.html"><img src="images/resource/menu-image-1.jpg" alt=""></a></div>
+                                                                    <div class="title"><a href="menu-list-1.html">Menu list 1</a></div>
+                                                                </div>
+                                                                <div class="menu-block col-lg-3 col-md-6 col-sm-6">
+                                                                    <div class="image"><a href="menu-list-2.html"><img src="images/resource/menu-image-2.jpg" alt=""></a></div>
+                                                                    <div class="title"><a href="menu-list-2.html">Menu list 2</a></div>
+                                                                </div>
+                                                                <div class="menu-block col-lg-3 col-md-6 col-sm-6">
+                                                                    <div class="image"><a href="menu-list-3.html"><img src="images/resource/menu-image-3.jpg" alt=""></a></div>
+                                                                    <div class="title"><a href="menu-list-3.html">Menu list 3</a></div>
+                                                                </div>
+                                                                <div class="menu-block col-lg-3 col-md-6 col-sm-6">
+                                                                    <div class="image"><a href="menu-list-4.html"><img src="images/resource/menu-image-4.jpg" alt=""></a></div>
+                                                                    <div class="title"><a href="menu-list-4.html">Menu list 4</a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="our-chef.html">Our chefs</a></li>
+                                    <li class="dropdown"><a href="#">Pages</a>
+                                        <ul>
+                                            <li><a href="#">Dropdown Menu 1</a></li>
+                                            <li><a href="#">Dropdown Menu 2</a></li>
+                                            <li><a href="#">Dropdown Menu 3</a></li>
+                                            <li class="dropdown"><a href="#">Dropdown Menu 4</a>
+                                                <ul>
+                                                    <li><a href="#">Dropdown Menu level 2</a></li>
+                                                    <li><a href="#">Dropdown Menu level 2</a></li>
+                                                    <li><a href="#">Dropdown Menu Level 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Dropdown Lorem 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                        <!--Nav Outer End-->
+
+                        <div class="links-box clearfix">
+                            <div class="link link-btn">
+                                <a href="reservation-opentable.html" class="theme-btn btn-style-one clearfix">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">find a table</span>
+                                        <span class="text-two">find a table</span>
+                                    </span>
+                                </a>
                             </div>
-                        </button>
-                    </x-slot>
+                            <div class="link info-toggler">
+                                <button class="info-btn">
+                                    <span class="hamburger">
+                                        <span class="top-bun"></span>
+                                        <span class="meat"></span>
+                                        <span class="bottom-bun"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
 
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
+                        <!-- Hidden Nav Toggler -->
+                        <div class="nav-toggler">
+                            <button class="hidden-bar-opener">
+                                <span class="hamburger">
+                                    <span class="top-bun"></span>
+                                    <span class="meat"></span>
+                                    <span class="bottom-bun"></span>
+                                </span>
+                            </button>
+                        </div>
 
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
+                    </div>
 
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-dropdown>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="-mr-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
-
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-            </div>
-        </div>
-    </div>
-</nav>
+    </header>
