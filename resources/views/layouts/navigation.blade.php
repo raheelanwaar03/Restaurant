@@ -92,7 +92,7 @@
                             <div class="nav-outer clearfix">
                                 <nav class="main-menu">
                                     <ul class="navigation clearfix">
-                                        <li class="current"><a href="index.html">Home</a>
+                                        <li class="current"><a href="{{ route('Welcome') }}">Home</a>
                                         </li>
                                         <li class="dropdown has-mega-menu"><a href="menu-list.html">Menus</a>
                                             <ul>
