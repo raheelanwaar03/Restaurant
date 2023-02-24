@@ -15,12 +15,10 @@ class user
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->user()->role == 'user')
-        {
+        if (auth()->user()->role == 'user') {
             return $next($request);
-        }
-        else{
-            return redirect()->route('Admin.Dashboard')->with('success','Welcome to Admin Dashboard');
+        } elseif (auth()->user()->role == 'admin') {
+            return redirect()->route('Admin.Dashboard');
         }
     }
 }

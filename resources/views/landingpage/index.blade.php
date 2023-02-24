@@ -23,7 +23,7 @@
                             <li><a href="menu-list-1.html">Menu List 1</a></li>
                         </ul>
                     </li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
                     <li><a href="our-chef.html">Our chefs</a></li>
                     <li class="dropdown"><a href="#">Pages</a>
                         <ul>
@@ -36,7 +36,7 @@
                             <li><a href="#">Dropdown Lorem 5</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                 </ul>
             </div><!-- /.Side-menu -->
 
@@ -83,7 +83,7 @@
     </section>
     <!--End Hidden Bar -->
 
-    <!-- Banner Section -->
+    {{-- <!-- Banner Section -->
     <section class="banner-section">
 
         <div class="banner-container">
@@ -1451,5 +1451,5 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 @endsection
