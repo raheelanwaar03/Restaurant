@@ -17,5 +17,9 @@ class LandingPageController extends Controller
         return view('landingpage.aboutUs');
     }
 
+    public function contactUs()
+    {
+        return view('landingpage.contactUs');
+    }
 
 }

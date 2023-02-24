@@ -161,7 +161,7 @@
                                                 <li><a href="#">Dropdown Lorem 5</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact-us.html">Contact</a></li>
+                                        <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                                     </ul>
                                 </nav>
                                 <!-- Main Menu End-->
