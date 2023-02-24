@@ -35,12 +35,12 @@
                             </div>
                             <div class="form-group">
                                 <label style="color:white">Password</label>
-                                <input type="text" style="background: transparent;color:white" name="password"
+                                <input type="password" style="background: transparent;color:white" name="password"
                                     class="form-control" placeholder="Enter Your Password">
                             </div>
                             <div class="form-group">
                                 <label style="color:white">Confirm Password</label>
-                                <input type="text" style="background: transparent;color:white"
+                                <input type="password" style="background: transparent;color:white"
                                     name="password_confirmation" class="form-control"
                                     placeholder="Enter Your Confirm Password">
                             </div>

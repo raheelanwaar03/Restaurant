@@ -29,7 +29,7 @@
                             </div>
                             <div class="form-group">
                                 <label style="color:white">Password</label>
-                                <input type="text" style="background: transparent;color:white" name="password"
+                                <input type="password" style="background: transparent;color:white" name="password"
                                     class="form-control" placeholder="Enter Your Password">
                             </div>
                             <button type="submit" class="btn btn-outline-light ">Submit</button>

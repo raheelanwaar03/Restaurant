@@ -145,22 +145,11 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
-                                        <li><a href="our-chef.html">Our chefs</a></li>
-                                        <li class="dropdown"><a href="#">Pages</a>
-                                            <ul>
-                                                <li><a href="#">Dropdown Menu 1</a></li>
-                                                <li><a href="#">Dropdown Menu 2</a></li>
-                                                <li><a href="#">Dropdown Menu 3</a></li>
-                                                <li class="dropdown"><a href="#">Dropdown Menu 4</a>
-                                                    <ul>
-                                                        <li><a href="#">Dropdown Menu level 2</a></li>
-                                                        <li><a href="#">Dropdown Menu level 2</a></li>
-                                                        <li><a href="#">Dropdown Menu Level 3</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Dropdown Lorem 5</a></li>
-                                            </ul>
-                                        </li>
+                                        @if (auth()->user())
+                                            <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
+                                        @else
+                                            <li><a href="{{ route('register') }}">Register</a></li>
+                                        @endif
                                         <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                                     </ul>
                                 </nav>
