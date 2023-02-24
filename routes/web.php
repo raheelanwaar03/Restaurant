@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[LandingPageController::class,'index'])->name('Welcome');
 Route::get('/About-Us',[LandingPageController::class,'aboutUs'])->name('Welcome.About-Us');
 Route::get('/Contact-Us',[LandingPageController::class,'contactUs'])->name('Welcome.Contact-Us');
+Route::get('/Find/Table',[LandingPageController::class,'findTable'])->name('Welcome.Find.Table');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

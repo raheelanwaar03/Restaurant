@@ -22,4 +22,9 @@ class LandingPageController extends Controller
         return view('landingpage.contactUs');
     }
 
+    public function findTable()
+    {
+        return view('landingpage.tableBook');
+    }
+
 }

@@ -104,7 +104,7 @@
                                                                     <div class="menu-block col-lg-3 col-md-6 col-sm-6">
                                                                         <div class="image"><a
                                                                                 href="menu-list-1.html"><img
-                                                                                    src="{{asset('assets/images/resource/menu-image-1.jpg')}}"
+                                                                                    src="{{ asset('assets/images/resource/menu-image-1.jpg') }}"
                                                                                     alt=""></a></div>
                                                                         <div class="title"><a
                                                                                 href="menu-list-1.html">Menu list 1</a>
@@ -113,7 +113,7 @@
                                                                     <div class="menu-block col-lg-3 col-md-6 col-sm-6">
                                                                         <div class="image"><a
                                                                                 href="menu-list-2.html"><img
-                                                                                    src="{{asset('assets/images/resource/menu-image-2.jpg')}}"
+                                                                                    src="{{ asset('assets/images/resource/menu-image-2.jpg') }}"
                                                                                     alt=""></a></div>
                                                                         <div class="title"><a
                                                                                 href="menu-list-2.html">Menu list 2</a>
@@ -122,7 +122,7 @@
                                                                     <div class="menu-block col-lg-3 col-md-6 col-sm-6">
                                                                         <div class="image"><a
                                                                                 href="menu-list-3.html"><img
-                                                                                    src="{{asset('assets/images/resource/menu-image-3.jpg')}}"
+                                                                                    src="{{ asset('assets/images/resource/menu-image-3.jpg') }}"
                                                                                     alt=""></a></div>
                                                                         <div class="title"><a
                                                                                 href="menu-list-3.html">Menu list 3</a>
@@ -131,7 +131,7 @@
                                                                     <div class="menu-block col-lg-3 col-md-6 col-sm-6">
                                                                         <div class="image"><a
                                                                                 href="menu-list-4.html"><img
-                                                                                    src="{{asset('assets/images/resource/menu-image-4.jpg')}}"
+                                                                                    src="{{ asset('assets/images/resource/menu-image-4.jpg') }}"
                                                                                     alt=""></a></div>
                                                                         <div class="title"><a
                                                                                 href="menu-list-4.html">Menu list 4</a>
@@ -170,7 +170,8 @@
 
                             <div class="links-box clearfix">
                                 <div class="link link-btn">
-                                    <a href="reservation-opentable.html" class="theme-btn btn-style-one clearfix">
+                                    <a href="{{ route('Welcome.Find.Table') }}"
+                                        class="theme-btn btn-style-one clearfix">
                                         <span class="btn-wrap">
                                             <span class="text-one">find a table</span>
                                             <span class="text-two">find a table</span>
@@ -198,9 +199,7 @@
                                     </span>
                                 </button>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -47,11 +47,11 @@
                 <div class="footer-col links-col col-lg-3 col-md-6 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <ul class="links">
-                            <li><a href="home.html">Home</a></li>
+                            <li><a href="{{ route('Welcome') }}">Home</a></li>
                             <li><a href="menu-list-1.html">Menus</a></li>
-                            <li><a href="about.html">About us</a></li>
+                            <li><a href="{{ route('Welcome.About-Us') }}">About us</a></li>
                             <li><a href="our-chef.html">Our chefs</a></li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,8 +72,7 @@
     </div>
     <div class="footer-bottom">
         <div class="auto-container">
-            <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by <a
-                    href="https://themeforest.net/user/kalanidhithemes" target="blank">Kalanidhi Themes</a></div>
+            <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by</div>
         </div>
     </div>
 </footer>
