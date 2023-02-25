@@ -33,13 +33,50 @@ class CategoryController extends Controller
         $category->slug = Str::slug($validated['slug']);
         $category->image = $imageName;
         $category->save();
-        return redirect()->back()->with('success','Category added successfully');
+        return redirect()->back()->with('success', 'Category added successfully');
     }
 
     public function index()
     {
         $categorys = Category::get();
-        return view('admin.category.index',compact('categorys'));
+        return view('admin.category.index', compact('categorys'));
     }
 
+    public function show($slug)
+    {
+        $category = Category::where('slug', $slug)->first();
+        return view('admin.category.show', compact('category'));
+    }
+
+    public function destroy($id)
+    {
+        $category = Category::find($id);
+        $category->destroy($id);
+        return redirect()->back()->with('success', 'Category Deleted successfully');
+    }
+
+    public function Edit($slug)
+    {
+        $category = Category::where('slug',$slug)->first();
+        return view('admin.category.edit', compact('category'));
+    }
+
+    public function update(Request $request, $slug)
+    {
+        $category = Category::where('slug', $slug)->first();
+
+        if ($request->image) {
+            $image = $request->image;
+            $imageName = rand(111111, 99999) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+            $category->image = $imageName;
+        }
+
+        $category->title = $request->title;
+        $category->des = $request->des;
+        $category->slug = Str::slug($request->slug);
+        $category->des = $request->des;
+        $category->save();
+        return redirect()->back()->with('success', 'Category updated successfully');
+    }
 }

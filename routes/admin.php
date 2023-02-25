@@ -12,6 +12,10 @@ Route::prefix('/Admin')->name('Admin.')->middleware('auth','admin')->group(funct
     Route::get('/Add/Category',[CategoryController::class,'add'])->name('Add.Category');
     Route::post('/Store/Category',[CategoryController::class,'store'])->name('Store.Category');
     Route::get('/All/Category',[CategoryController::class,'index'])->name('All.Category');
+    Route::get('/Show/Category/{slug}',[CategoryController::class,'show'])->name('Show.Category');
+    Route::get('/Destroy/Category/{id}',[CategoryController::class,'destroy'])->name('Destroy.Category');
+    Route::get('/Edit/Category/{slug}',[CategoryController::class,'Edit'])->name('Edit.Category');
+    Route::post('/Update/Category/{slug}',[CategoryController::class,'update'])->name('Update.Category');
     // food routes
     Route::get('/Add/Food',[FoodContoller::class,'add'])->name('Add.Food');
     Route::post('/Store/Food',[FoodContoller::class,'store'])->name('Store.Food');

@@ -33,8 +33,9 @@
                                                     class="img-fluid img-thumbnail" height="150px" width="150px"
                                                     alt="{{ $category->image }}"></td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                                <a href="{{ route('Admin.Edit.Category',['slug'=>$category->slug]) }}" class="btn btn-sm btn-primary">Edit</a>
+                                                <a href="{{ route('Admin.Show.Category',['slug'=>$category->slug]) }}" class="btn btn-sm btn-danger">Show</a>
+                                                <a href="{{ route('Admin.Destroy.Category',['id'=>$category->id]) }}" class="btn btn-sm btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
