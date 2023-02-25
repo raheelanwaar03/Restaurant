@@ -44,7 +44,7 @@
                                             <td> {{ $food->category }} </td>
                                             <td> {{ $food->des }} </td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                                <a href="{{ route('Admin.Edit.Food',['slug'=>$food->slug]) }}" class="btn btn-sm btn-primary">Edit</a>
                                                 <a href="{{ route('Admin.Show.Food', ['slug' => $food->slug]) }}"
                                                     class="btn btn-sm btn-info">Show</a>
                                                 <a href="{{ route('Admin.Destroy.Food', ['id' => $food->id]) }}"

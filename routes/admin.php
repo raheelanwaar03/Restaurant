@@ -22,5 +22,7 @@ Route::prefix('/Admin')->name('Admin.')->middleware('auth','admin')->group(funct
     Route::get('/All/Food',[FoodContoller::class,'index'])->name('All.Food');
     Route::get('Show/Food/{slug}',[FoodContoller::class,'show'])->name('Show.Food');
     Route::get('Destroy/Food/{id}',[FoodContoller::class,'destroy'])->name('Destroy.Food');
+    Route::get('Edit/Food/{slug}',[FoodContoller::class,'edit'])->name('Edit.Food');
+    Route::post('Update/Food/{slug}',[FoodContoller::class,'update'])->name('Update.Food');
 
 });

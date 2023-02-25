@@ -13,7 +13,7 @@ class FoodContoller extends Controller
     public function add()
     {
         $categorys = Category::get();
-        return view('admin.food.add',compact('categorys'));
+        return view('admin.food.add', compact('categorys'));
     }
 
     public function store(Request $request)
@@ -27,8 +27,8 @@ class FoodContoller extends Controller
             'image' => 'required',
         ]);
         $image = $validated['image'];
-        $imagename = rand(11111,99999) . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'),$imagename);
+        $imagename = rand(11111, 99999) . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images'), $imagename);
 
         $food = new Food();
         $food->title = $validated['title'];
@@ -38,28 +38,52 @@ class FoodContoller extends Controller
         $food->category = $validated['category'];
         $food->image = $imagename;
         $food->save();
-        return redirect()->back()->with('success','Food added successfully');
+        return redirect()->back()->with('success', 'Food added successfully');
     }
 
     public function index()
     {
         $foods = Food::get();
-        return view('admin.food.index',compact('foods'));
+        return view('admin.food.index', compact('foods'));
     }
 
     public function show($slug)
     {
-        $food = Food::where('slug',$slug)->first();
-        return view('admin.food.show',compact('food'));
+        $food = Food::where('slug', $slug)->first();
+        return view('admin.food.show', compact('food'));
     }
 
     public function destroy($id)
     {
         $food = Food::find($id);
         $food->destroy($id);
-        return redirect()->back()->with('success','Food Deleted Successfully');
+        return redirect()->back()->with('success', 'Food Deleted Successfully');
         return $id;
     }
 
+    public function edit($slug)
+    {
+        $categorys = Category::get();
+        $food = Food::where('slug', $slug)->first();
+        return view('admin.food.edit', compact('food', 'categorys'));
+    }
 
+    public function update(Request $request,$slug)
+    {
+        $food = Food::where('slug',$slug)->first();
+
+        if ($request->image) {
+            $image = $request->image;
+            $imageName = rand(111111, 99999) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+            $food->image = $imageName;
+        }
+
+        $food->title = $request->title;
+        $food->des = $request->des;
+        $food->price = $request->price;
+        $food->category = $request->category;
+        $food->save();
+        return redirect()->back()->with('success', 'Food Details updated successfully');
+    }
 }

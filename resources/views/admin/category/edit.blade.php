@@ -18,7 +18,7 @@
                             <div class="form-group">
                                 <label for="">Title</label>
                                 <input type="text" name="title" value="{{ $category->title }}" class="form-control" placeholder="Update Category Title">
-                            </div> 
+                            </div>
                              <div class="form-group">
                                 <label for="">Description</label>
                                 <input type="text" name="des" value="{{ $category->des }}" class="form-control" placeholder="Update Category Description">
