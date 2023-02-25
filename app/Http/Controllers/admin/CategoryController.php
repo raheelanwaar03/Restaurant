@@ -35,4 +35,11 @@ class CategoryController extends Controller
         $category->save();
         return redirect()->back()->with('success','Category added successfully');
     }
+
+    public function index()
+    {
+        $categorys = Category::get();
+        return view('admin.category.index',compact('categorys'));
+    }
+
 }

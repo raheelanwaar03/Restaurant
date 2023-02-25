@@ -10,5 +10,6 @@ Route::prefix('/Admin')->name('Admin.')->middleware('auth','admin')->group(funct
     // category routes
     Route::get('/Add/Category',[CategoryController::class,'add'])->name('Add.Category');
     Route::post('/Store/Category',[CategoryController::class,'store'])->name('Store.Category');
+    Route::get('/All/Category',[CategoryController::class,'index'])->name('All.Category');
 
 });

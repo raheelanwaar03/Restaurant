@@ -21,8 +21,9 @@
     <link href="{{ asset('admin/public/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet"
         type="text/css" />
     <link href="{{ asset('admin/public/css/style.css') }}" rel="stylesheet" type="text/css" />
-
-
+    {{-- datatable --}}
+    {{-- <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"> --}}
 </head>
 
 <body>
@@ -909,7 +910,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Add.Category') }}">Add Category</a></li>
-                            <li><a href="post-details.html">Post Details</a></li>
+                            <li><a href="{{ route('Admin.All.Category') }}">All Categories</a></li>
                             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                                 <ul aria-expanded="false">
                                     <li><a href="email-compose.html">Compose</a></li>
