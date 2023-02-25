@@ -145,11 +145,17 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
-                                        @if (auth()->user())
-                                            <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
-                                        @else
-                                            <li><a href="{{ route('register') }}">Register</a></li>
-                                        @endif
+                                        <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
+                                        <li class="dropdown"><a href="#">Authentication</a>
+                                            <ul>
+                                                @if (auth()->user())
+                                                    <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
+                                                @else
+                                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                                @endif
+                                            </ul>
+                                        </li>
                                         <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                                     </ul>
                                 </nav>
