@@ -1,4 +1,11 @@
 @extends('admin.layout.app')
+
+@section('link')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+@endsection
+
 @section('content')
     <div class="content-body">
         <!-- row -->
@@ -40,7 +47,8 @@
                                                 <a href="#" class="btn btn-sm btn-primary">Edit</a>
                                                 <a href="{{ route('Admin.Show.Food', ['slug' => $food->slug]) }}"
                                                     class="btn btn-sm btn-info">Show</a>
-                                                <a href="{{ route('Admin.Destroy.Food',['id'=>$food->id]) }}" class="btn btn-sm btn-danger">Delete</a>
+                                                <a href="{{ route('Admin.Destroy.Food', ['id' => $food->id]) }}"
+                                                    class="btn btn-sm btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
