@@ -83,7 +83,7 @@
     </section>
     <!--End Hidden Bar -->
 
-    {{-- <!-- Banner Section -->
+    <!-- Banner Section -->
     <section class="banner-section">
 
         <div class="banner-container">
@@ -1451,5 +1451,5 @@
             </div>
 
         </div>
-    </section> --}}
+    </section>
 @endsection
