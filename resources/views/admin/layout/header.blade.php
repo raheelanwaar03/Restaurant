@@ -911,14 +911,14 @@
                             <li><a href="{{ route('Admin.All.Category') }}">All Categories</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-041-graph"></i>
                             <span class="nav-text">Charts</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="chart-flot.html">Flot</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-045-heart"></i>
                             <span class="nav-text">Food</span>
@@ -928,7 +928,7 @@
                             <li><a href="{{ route('Admin.All.Food') }}">All Food</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-045-heart"></i>
                             <span class="nav-text">Plugins</span>
                         </a>
@@ -973,7 +973,7 @@
                             <li><a href="page-lock-screen.html">Lock Screen</a></li>
                             <li><a href="empty-page.html">Empty Page</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                 </ul>
                 <div class="copyright">
                     <p><strong>{{ env('APP_NAME') }} Restaurant Admin</strong> © 2023 All Rights Reserved</p>

@@ -147,14 +147,16 @@
                                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
                                         <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
                                         <li class="dropdown"><a href="#">Authentication</a>
-                                            <ul>
-                                                @if (auth()->user())
+                                            @if (auth()->user())
+                                                <ul>
                                                     <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
-                                                @else
+                                                </ul>
+                                            @else
+                                                <ul>
                                                     <li><a href="{{ route('login') }}">Login</a></li>
                                                     <li><a href="{{ route('register') }}">Register</a></li>
-                                                @endif
-                                            </ul>
+                                                </ul>
+                                            @endif
                                         </li>
                                         <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                                     </ul>

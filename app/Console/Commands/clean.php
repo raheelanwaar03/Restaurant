@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Hash;
 
 class clean extends Command
 {
@@ -36,14 +37,14 @@ class clean extends Command
         $user = new User();
         $user->name = 'RaheelAnwaar';
         $user->email = 'raheelanwaar0316@gmail.com';
-        $user->password = 'asdfasdf';
+        $user->password = Hash::make('asdfasdf');
         $user->role = 'admin';
         $user->save();
 
         $user = new User();
         $user->name = 'Hamza';
         $user->email = 'hamza@gmail.com';
-        $user->password = 'asdfasdf';
+        $user->password = Hash::make('asdfasdf');
         $user->role = 'user';
         $user->save();
 
