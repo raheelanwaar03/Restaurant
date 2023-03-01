@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\landingpage;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\Category;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -25,6 +26,12 @@ class LandingPageController extends Controller
     public function findTable()
     {
         return view('landingpage.tableBook');
+    }
+
+    public function welcomeCategories()
+    {
+        $categories = Category::get();
+        return view('LandingPage.category.index',compact('categories'));
     }
 
 }
