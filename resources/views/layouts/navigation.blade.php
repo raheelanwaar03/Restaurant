@@ -145,7 +145,6 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
-                                        <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
                                         <li class="dropdown"><a href="#">Authentication</a>
                                             @if (auth()->user())
                                                 <ul>

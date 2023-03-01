@@ -7,7 +7,7 @@
                 <h2 class="mb-3 me-auto">Admin Dashboard</h2>
             </div>
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-xl-12">
                     <div class="row">
                         <div class="col-xl-6 col-sm-6">
                             <div class="card">
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6">
+                {{-- <div class="col-xl-6">
                     <div class="card">
                         <div class="card-header border-0 flex-wrap pb-0">
                             <div class="mb-sm-0 mb-2">
@@ -122,7 +122,7 @@
                             <div id="revenueChart" class="revenueChart"></div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
