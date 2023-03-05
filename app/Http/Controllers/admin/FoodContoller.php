@@ -23,7 +23,7 @@ class FoodContoller extends Controller
             'des' => 'required',
             'price' => 'required',
             'slug' => 'required',
-            'category' => 'required',
+            'category_id' => 'required',
             'image' => 'required',
         ]);
         $image = $validated['image'];
@@ -35,7 +35,7 @@ class FoodContoller extends Controller
         $food->des = $validated['des'];
         $food->price = $validated['price'];
         $food->slug = Str::slug($validated['slug']);
-        $food->category = $validated['category'];
+        $food->category_id = $validated['category_id'];
         $food->image = $imagename;
         $food->save();
         return redirect()->back()->with('success', 'Food added successfully');
@@ -82,7 +82,7 @@ class FoodContoller extends Controller
         $food->title = $request->title;
         $food->des = $request->des;
         $food->price = $request->price;
-        $food->category = $request->category;
+        $food->category_id = $request->category_id;
         $food->save();
         return redirect()->back()->with('success', 'Food Details updated successfully');
     }

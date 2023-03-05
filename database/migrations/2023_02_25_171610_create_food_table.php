@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('price');
             $table->string('slug');
             $table->string('des');
-            $table->string('category');
             $table->string('image');
             $table->timestamps();
         });
