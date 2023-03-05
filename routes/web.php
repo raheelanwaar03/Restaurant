@@ -11,7 +11,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
 // Landing page Routes
 Route::get('/',[LandingPageController::class,'index'])->name('Welcome');
 Route::get('/About-Us',[LandingPageController::class,'aboutUs'])->name('Welcome.About-Us');
@@ -20,6 +19,7 @@ Route::get('/Find/Table',[LandingPageController::class,'findTable'])->name('Welc
 
 // Show categories on landing page
 Route::get('/All/Categories',[LandingPageController::class,'welcomeCategories'])->name('Welcome.All.Categories');
+Route::get('/Category/{slug}',[LandingPageController::class,'singleCategory'])->name('Welcome.Category');
 
 
 

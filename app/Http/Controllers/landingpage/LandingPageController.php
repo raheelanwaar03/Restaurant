@@ -4,6 +4,7 @@ namespace App\Http\Controllers\landingpage;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\Category;
+use App\Models\admin\Food;
 
 class LandingPageController extends Controller
 {
@@ -35,6 +36,21 @@ class LandingPageController extends Controller
     {
         $categorys = Category::paginate(9);
         return view('LandingPage.category.index',compact('categorys'));
+    }
+    // showing category wise product
+
+    public function singleCategory($slug)
+    {
+        if(Category::where('slug',$slug)->exists())
+        {
+            $category = Category::where('slug',$slug)->first();
+            $products = Food::where('category_id',$category->id)->paginate(9);
+            $categorys = Category::get();
+            return view('landingpage.category.product',compact('products','category','categorys'));
+        }
+        else{
+            return redirect('/')->with('error','slug is not avaliable');
+        }
     }
 
 }

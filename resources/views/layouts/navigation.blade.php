@@ -104,7 +104,7 @@
                                                                 @foreach($categorys as $category)
                                                                 <div class="menu-block col-lg-3 col-md-6 col-sm-6">
                                                                     <div class="image"><a
-                                                                            href="#"><img
+                                                                            href="{{ route('Welcome.Category',['slug'=>$category->slug]) }}"><img
                                                                                 src="{{ asset('images/'.$category->image) }}"
                                                                                 alt="{{ $category->image }}"></a></div>
                                                                     <div class="title"><a
@@ -120,12 +120,10 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
-                                        <li class="dropdown"><a href="#">Authentication</a>
                                             @if (auth()->user())
-                                                <ul>
-                                                    <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
-                                                </ul>
+                                                <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
                                             @else
+                                        <li class="dropdown"><a href="#">Authentication</a>
                                                 <ul>
                                                     <li><a href="{{ route('login') }}">Login</a></li>
                                                     <li><a href="{{ route('register') }}">Register</a></li>
