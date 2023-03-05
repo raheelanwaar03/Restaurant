@@ -94,7 +94,7 @@
                                     <ul class="navigation clearfix">
                                         <li class="current"><a href="{{ route('Welcome') }}">Home</a>
                                         </li>
-                                        <li class="dropdown has-mega-menu"><a href="menu-list.html">Menus</a>
+                                        <li class="dropdown has-mega-menu"><a href="{{ route('Welcome.All.Categories') }}">Menus</a>
                                             <ul>
                                                 <li>
                                                     <div class="mega-menu">

@@ -19,7 +19,7 @@ Route::get('/Contact-Us',[LandingPageController::class,'contactUs'])->name('Welc
 Route::get('/Find/Table',[LandingPageController::class,'findTable'])->name('Welcome.Find.Table');
 
 // Show categories on landing page
-Route::get('/Welcome.All.Categories.',[LandingPageController::class,'welcomeCategories'])->name('Welcome.All.Categories');
+Route::get('/All/Categories',[LandingPageController::class,'welcomeCategories'])->name('Welcome.All.Categories');
 
 
 

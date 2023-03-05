@@ -15,23 +15,26 @@ class LandingPageController extends Controller
 
     public function aboutUs()
     {
-        return view('landingpage.aboutUs');
+        $categorys = Category::get();
+        return view('landingpage.aboutUs',compact('categorys'));
     }
 
     public function contactUs()
     {
-        return view('landingpage.contactUs');
+        $categorys = Category::get();
+        return view('landingpage.contactUs',compact('categorys'));
     }
 
     public function findTable()
     {
-        return view('landingpage.tableBook');
+        $categorys = Category::get();
+        return view('landingpage.tableBook',compact('categorys'));
     }
 
     public function welcomeCategories()
     {
-        $categories = Category::get();
-        return view('LandingPage.category.index',compact('categories'));
+        $categorys = Category::paginate(9);
+        return view('LandingPage.category.index',compact('categorys'));
     }
 
 }
