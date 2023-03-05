@@ -101,42 +101,17 @@
                                                         <div class="menu-inner">
                                                             <div class="auto-container">
                                                                 <div class="row clearfix">
-                                                                    <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                        <div class="image"><a
-                                                                                href="menu-list-1.html"><img
-                                                                                    src="{{ asset('assets/images/resource/menu-image-1.jpg') }}"
-                                                                                    alt=""></a></div>
-                                                                        <div class="title"><a
-                                                                                href="menu-list-1.html">Menu list 1</a>
-                                                                        </div>
+                                                                @foreach($categorys as $category)
+                                                                <div class="menu-block col-lg-3 col-md-6 col-sm-6">
+                                                                    <div class="image"><a
+                                                                            href="#"><img
+                                                                                src="{{ asset('images/'.$category->image) }}"
+                                                                                alt="{{ $category->image }}"></a></div>
+                                                                    <div class="title"><a
+                                                                            href="#">{{ $category->title }}</a>
                                                                     </div>
-                                                                    <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                        <div class="image"><a
-                                                                                href="menu-list-2.html"><img
-                                                                                    src="{{ asset('assets/images/resource/menu-image-2.jpg') }}"
-                                                                                    alt=""></a></div>
-                                                                        <div class="title"><a
-                                                                                href="menu-list-2.html">Menu list 2</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                        <div class="image"><a
-                                                                                href="menu-list-3.html"><img
-                                                                                    src="{{ asset('assets/images/resource/menu-image-3.jpg') }}"
-                                                                                    alt=""></a></div>
-                                                                        <div class="title"><a
-                                                                                href="menu-list-3.html">Menu list 3</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                        <div class="image"><a
-                                                                                href="menu-list-4.html"><img
-                                                                                    src="{{ asset('assets/images/resource/menu-image-4.jpg') }}"
-                                                                                    alt=""></a></div>
-                                                                        <div class="title"><a
-                                                                                href="menu-list-4.html">Menu list 4</a>
-                                                                        </div>
-                                                                    </div>
+                                                                </div>
+                                                                @endforeach
                                                                 </div>
                                                             </div>
                                                         </div>
