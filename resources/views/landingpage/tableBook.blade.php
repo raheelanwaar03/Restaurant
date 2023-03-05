@@ -33,20 +33,20 @@
                     form</div>
             </div>
             <div class="default-form reservation-form">
-                <form method="post"
-                    action="https://kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/index.html">
+                <form method="post" action="{{ route('Welcome.Reserve.Table') }}">
+                    @csrf
                     <div class="row clearfix">
                         <div class="form-group col-lg-4 col-md-6 col-sm-12">
                             <div class="field-inner">
                                 <span class="alt-icon far fa-user"></span>
-                                <select class="l-icon">
-                                    <option>1 Person</option>
-                                    <option>2 Person</option>
-                                    <option>3 Person</option>
-                                    <option>4 Person</option>
-                                    <option>5 Person</option>
-                                    <option>6 Person</option>
-                                    <option>7 Person</option>
+                                <select name="person" class="l-icon">
+                                    <option value="1 person">1 Person</option>
+                                    <option value="2 person">2 Person</option>
+                                    <option value="3 person">3 Person</option>
+                                    <option value="4 person">4 Person</option>
+                                    <option value="5 person">5 Person</option>
+                                    <option value="6 person">6 Person</option>
+                                    <option value="7 person">7 Person</option>
                                 </select>
                                 <span class="arrow-icon far fa-angle-down"></span>
                             </div>
@@ -54,7 +54,7 @@
                         <div class="form-group col-lg-4 col-md-6 col-sm-12">
                             <div class="field-inner">
                                 <span class="alt-icon far fa-calendar"></span>
-                                <input class="l-icon datepicker" type="text" name="fieldname" value=""
+                                <input class="l-icon datepicker" type="text" name="calendar" value=""
                                     placeholder="DD-MM-YYYY" required readonly>
                                 <span class="arrow-icon far fa-angle-down"></span>
                             </div>
@@ -62,22 +62,22 @@
                         <div class="form-group col-lg-4 col-md-12 col-sm-12">
                             <div class="field-inner">
                                 <span class="alt-icon far fa-clock"></span>
-                                <select class="l-icon">
-                                    <option>08 : 00 am</option>
-                                    <option>09 : 00 am</option>
-                                    <option>10 : 00 am</option>
-                                    <option>11 : 00 am</option>
-                                    <option>12 : 00 pm</option>
-                                    <option>01 : 00 pm</option>
-                                    <option>02 : 00 pm</option>
-                                    <option>03 : 00 pm</option>
-                                    <option>04 : 00 pm</option>
-                                    <option>05 : 00 pm</option>
-                                    <option>06 : 00 pm</option>
-                                    <option>07 : 00 pm</option>
-                                    <option>08 : 00 pm</option>
-                                    <option>09 : 00 pm</option>
-                                    <option>10 : 00 pm</option>
+                                <select name="time" class="l-icon">
+                                    <option value="08 : 00 am">08 : 00 am</option>
+                                    <option value="09 : 00 am">09 : 00 am</option>
+                                    <option value="10 : 00 am">10 : 00 am</option>
+                                    <option value="11 : 00 am">11 : 00 am</option>
+                                    <option value="12 : 00 am">12 : 00 pm</option>
+                                    <option value="01 : 00 am">01 : 00 pm</option>
+                                    <option value="02 : 00 am">02 : 00 pm</option>
+                                    <option value="03 : 00 am">03 : 00 pm</option>
+                                    <option value="04 : 00 am">04 : 00 pm</option>
+                                    <option value="05 : 00 am">05 : 00 pm</option>
+                                    <option value="06 : 00 am">06 : 00 pm</option>
+                                    <option value="07 : 00 am">07 : 00 pm</option>
+                                    <option value="08 : 00 am">08 : 00 pm</option>
+                                    <option value="09 : 00 am">09 : 00 pm</option>
+                                    <option value="10 : 00 am">10 : 00 pm</option>
                                 </select>
                                 <span class="arrow-icon far fa-angle-down"></span>
                             </div>
@@ -90,7 +90,6 @@
                         </span>
                     </button>
                 </form>
-                <div class="powered-by">*Powered by OpenTable</div>
             </div>
         </div>
 

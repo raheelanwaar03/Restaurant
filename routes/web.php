@@ -16,6 +16,7 @@ Route::get('/',[LandingPageController::class,'index'])->name('Welcome');
 Route::get('/About-Us',[LandingPageController::class,'aboutUs'])->name('Welcome.About-Us');
 Route::get('/Contact-Us',[LandingPageController::class,'contactUs'])->name('Welcome.Contact-Us');
 Route::get('/Find/Table',[LandingPageController::class,'findTable'])->name('Welcome.Find.Table');
+Route::post('/Reserve/Table',[LandingPageController::class,'reserveTable'])->name('Welcome.Reserve.Table')->middleware('auth');
 
 // Show categories on landing page
 Route::get('/All/Categories',[LandingPageController::class,'welcomeCategories'])->name('Welcome.All.Categories');

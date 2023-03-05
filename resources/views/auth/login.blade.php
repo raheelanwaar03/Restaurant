@@ -10,6 +10,7 @@
 </head>
 
 <body style="background-image: url({{ asset('assets/images/background/image-7.jpg') }});">
+    <x-alert/>
     <div class="container">
         <div class="row">
             <div class="col-md-12">

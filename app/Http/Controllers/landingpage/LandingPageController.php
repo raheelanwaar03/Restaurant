@@ -5,6 +5,8 @@ namespace App\Http\Controllers\landingpage;
 use App\Http\Controllers\Controller;
 use App\Models\admin\Category;
 use App\Models\admin\Food;
+use App\Models\TableBook;
+use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
 {
@@ -51,6 +53,25 @@ class LandingPageController extends Controller
         else{
             return redirect('/')->with('error','slug is not avaliable');
         }
+    }
+
+    // store table
+
+    public function reserveTable(Request $request)
+    {
+        $validated = $request->validate([
+            'time' => 'required',
+            'person' => 'required',
+            'calendar' => 'required',
+        ]);
+
+        $table = new TableBook();
+        $table->user_id = auth()->user()->id;
+        $table->person = $validated['person'];
+        $table->time = $validated['time'];
+        $table->calendar = $validated['calendar'];
+        $table->save();
+        return redirect()->back()->with('success','Your request for table reservation has been recived');
     }
 
 }
