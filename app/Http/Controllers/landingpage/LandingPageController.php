@@ -4,7 +4,6 @@ namespace App\Http\Controllers\landingpage;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\Category;
-use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
 {
