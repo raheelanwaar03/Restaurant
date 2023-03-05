@@ -10,7 +10,8 @@ class LandingPageController extends Controller
 {
     public function index()
     {
-        return view('landingpage.index');
+        $categorys = Category::get();
+        return view('landingpage.index',compact('categorys'));
     }
 
     public function aboutUs()
