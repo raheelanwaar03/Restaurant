@@ -1,6 +1,6 @@
 /* Delici - Restaurants HTML Template */
 
-/*** 
+/***
 
 ====================================================================
       Fonts
@@ -21,7 +21,7 @@
 @import url('custom-animate.css');
 
 
-/*** 
+/***
 
 ====================================================================
 
@@ -212,7 +212,8 @@
 .main-header .main-box .logo-box .logo img{
   position: relative;
   display: block;
-  height: 50px;
+  height: 100px;
+  width: 100px;
   z-index: 1;
 }
 
@@ -736,7 +737,7 @@
 
 .main-menu .navigation > li > ul > li.dropdown:hover > ul{
   visibility:visible;
-  opacity:1;  
+  opacity:1;
   top: 0;
   -webkit-transform: translateY(-30px);
   -ms-transform: translateY(-30px);
@@ -748,7 +749,7 @@
   transition:all 500ms ease;
 }
 
-/*** 
+/***
 
 ====================================================================
   Hidden Sidebar style
@@ -808,7 +809,7 @@ body.visible-sidebar{
   opacity: 1;
   visibility: visible;
   -ms-transform: translateX(0px);
-  transform: translateX(0px); 
+  transform: translateX(0px);
 }
 
 .hidden-bar ol,
@@ -1062,7 +1063,7 @@ body.visible-sidebar{
 }
 
 
-/*** 
+/***
 
 ====================================================================
   Hidden Sidebar style
@@ -1103,7 +1104,7 @@ body.visible-sidebar{
   -moz-transition:all 0.5s ease;
   -webkit-transition:all 0.5s ease;
   -ms-transition:all 0.5s ease;
-  -o-transition:all 0.5s ease;  
+  -o-transition:all 0.5s ease;
 }
 
 .side-content-visible .info-back-drop{
@@ -1268,7 +1269,7 @@ body.visible-sidebar{
 }
 
 
-/*** 
+/***
 
 ====================================================================
   Banner Slider Section
@@ -1633,7 +1634,7 @@ body.visible-sidebar{
   letter-spacing: 0.15em;
 }
 
-/*** 
+/***
 
 ====================================================================
   Title Box Section
@@ -1696,7 +1697,7 @@ body.visible-sidebar{
   margin: 0 auto;
 }
 
-/*** 
+/***
 
 ====================================================================
   We Offer Section
@@ -1878,7 +1879,7 @@ body.visible-sidebar{
   border-color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
   Story Section
@@ -2029,7 +2030,7 @@ body.visible-sidebar{
   background: url(../images/background/pattern-8.svg) center repeat;
 }
 
-/*** 
+/***
 
 ====================================================================
   Special Dish Section
@@ -2156,7 +2157,7 @@ body.visible-sidebar{
   padding-top: var(--padding-top-40);
 }
 
-/*** 
+/***
 
 ====================================================================
   Menu Section
@@ -2430,7 +2431,7 @@ body.visible-sidebar{
   margin-bottom: 25px;
 }
 
-/*** 
+/***
 
 ====================================================================
   Special Offer Section
@@ -2650,7 +2651,7 @@ body.visible-sidebar{
   background: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
   Testimonials Section
@@ -2795,7 +2796,7 @@ body.visible-sidebar{
   display: none;
 }
 
-/*** 
+/***
 
 ====================================================================
   Reservation Section
@@ -3107,7 +3108,7 @@ body.visible-sidebar{
   margin-bottom: 0;
 }
 
-/*** 
+/***
 
 ====================================================================
   Why Us Section
@@ -3212,7 +3213,7 @@ body.visible-sidebar{
   color: var(--color-one);
 }
 
-/*** 
+/***
 
 ====================================================================
   Featured Links Section
@@ -3330,10 +3331,10 @@ body.visible-sidebar{
   bottom: 0px;
   display:block;
   height: 5px;
-  
+
   opacity:0;
   transform:scale(0.2,1);
-  
+
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
   -webkit-transition:all 300ms ease;
@@ -3385,7 +3386,7 @@ body.visible-sidebar{
   width: 100%;
 }
 
-/*** 
+/***
 
 ====================================================================
   Team Section
@@ -3455,12 +3456,12 @@ body.visible-sidebar{
   top:0px;
   right:0px;
   bottom:0px;
-  
+
   display:flex;
   justify-content:center;
   align-items: center;
   flex-wrap: wrap;
-  
+
   transition: all 900ms ease;
     -moz-transition: all 900ms ease;
     -webkit-transition: all 900ms ease;
@@ -3560,7 +3561,7 @@ body.visible-sidebar{
   color: var(--color-one);
 }
 
-/*** 
+/***
 
 ====================================================================
   Intro Section
@@ -3759,7 +3760,7 @@ body.visible-sidebar{
   margin-left: var(--margin-left-15);
 }
 
-/*** 
+/***
 
 ====================================================================
   News Section
@@ -3910,7 +3911,7 @@ body.visible-sidebar{
   color: var(--text-color);
 }
 
-/*** 
+/***
 
 ====================================================================
   Main Footer
@@ -4198,7 +4199,7 @@ body.visible-sidebar{
   color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
   Inner Banner Section
@@ -4265,7 +4266,7 @@ body.visible-sidebar{
   vertical-align: top;
 }
 
-/*** 
+/***
 
 ====================================================================
   About Section
@@ -4545,7 +4546,7 @@ body.visible-sidebar{
   letter-spacing: 0.40em;
 }
 
-/*** 
+/***
 
 ====================================================================
   Fluid Section
@@ -4684,7 +4685,7 @@ body.visible-sidebar{
   padding-top: var(--padding-top-0);
 }
 
-/*** 
+/***
 
 ====================================================================
   Services Section
@@ -4820,7 +4821,7 @@ body.visible-sidebar{
   font-size: var(--font-14);
 }
 
-/*** 
+/***
 
 ====================================================================
   Testimonials Section
@@ -5008,7 +5009,7 @@ body.visible-sidebar{
   background: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
   Why Us Two Section
@@ -5153,7 +5154,7 @@ body.visible-sidebar{
   color: var(--color-one);
 }
 
-/*** 
+/***
 
 ====================================================================
   Image Gallery Section
@@ -5274,7 +5275,7 @@ body.visible-sidebar{
   background: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
   Menu Section
@@ -5457,7 +5458,7 @@ body.visible-sidebar{
   color: var(--color-one);
 }
 
-/*** 
+/***
 
 ====================================================================
   Special Offer Section
@@ -5553,7 +5554,7 @@ body.visible-sidebar{
   color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
   Special Dish Section
@@ -5674,7 +5675,7 @@ body.visible-sidebar{
   padding-top: var(--padding-top-40);
 }
 
-/*** 
+/***
 
 ====================================================================
   Menu Section
@@ -5833,7 +5834,7 @@ body.visible-sidebar{
   color: var(--color-one);
 }
 
-/*** 
+/***
 
 ====================================================================
   Featured Section
@@ -5991,7 +5992,7 @@ body.visible-sidebar{
   width: 100%;
 }
 
-/*** 
+/***
 
 ====================================================================
   online reservation Section
@@ -6091,7 +6092,7 @@ body.visible-sidebar{
 }
 
 
-/*** 
+/***
 
 ====================================================================
   online reservation open table
@@ -6276,7 +6277,7 @@ body.visible-sidebar{
 
 
 
-/*** 
+/***
 
 ====================================================================
   online reservation contact form
@@ -6374,7 +6375,7 @@ body.visible-sidebar{
 }
 
 
-/*** 
+/***
 
 ====================================================================
   location section
@@ -6526,7 +6527,7 @@ body.visible-sidebar{
 
 
 
-/*** 
+/***
 
 ====================================================================
   Location with image Section
@@ -6727,7 +6728,7 @@ body.visible-sidebar{
 }
 
 
-/*** 
+/***
 
 ====================================================================
   Contact Page
@@ -6906,7 +6907,7 @@ body.visible-sidebar{
 
 
 
-/*** 
+/***
 
 ====================================================================
   Chef Page
@@ -7068,7 +7069,7 @@ body.visible-sidebar{
 
 
 
-/*** 
+/***
 
 ====================================================================
   section

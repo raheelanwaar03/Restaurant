@@ -9,8 +9,8 @@
         <!-- Hidden Bar Wrapper -->
         <div class="inner-box">
             <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
-            <div class="logo-box"><a href="index.html" title="{{ env('APP_NAME') }}"><img
-                        src="{{ asset('assets/images/resource/sidebar-logo.png') }}" alt="" title="{{ env('APP_NAME') }}"></a>
+            <div class="logo-box"><a href="{{route('Welcome')}}" title="{{ env('APP_NAME') }}"><img
+                        src="{{ asset('assets/images/logo.png') }}" alt="" title="{{ env('APP_NAME') }}"></a>
             </div>
 
             <!-- .Side-menu -->
@@ -49,7 +49,7 @@
             <div class="separator"><span></span></div>
             <div class="booking-info">
                 <div class="bk-title">Booking request</div>
-                <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+                <div class="bk-no"><a href="#">{{env('APP_NUM')}}</a></div>
             </div>
 
         </div><!-- / Hidden Bar Wrapper -->
@@ -63,8 +63,8 @@
     <section class="info-bar">
         <div class="inner-box">
             <div class="cross-icon"><span class="far fa-close"></span></div>
-            <div class="logo-box"><a href="index.html" title="{{ env('APP_NAME') }}"><img
-                        src="{{ asset('assets/images/resource/sidebar-logo.png') }}" alt=""
+            <div class="logo-box"><a href="{{route('Welcome')}}" title="{{ env('APP_NAME') }}"><img
+                        src="{{ asset('assets/images/resource/logo.png') }}" alt=""
                         title="{{ env('APP_NAME') }}"></a></div>
             <div class="image-box"><img src="{{ asset('assets/images/resource/sidebar-image.jpg') }}" alt="" title=""></div>
 

@@ -20,36 +20,51 @@
     <div class="page-wrapper">
 
         <!-- Preloader -->
-        <div class="loader-wrap">
+        {{-- <div class="loader-wrap">
             <div class="preloader">
                 <div class="preloader-close">x</div>
                 <div id="handle-preloader" class="handle-preloader">
                     <div class="animation-preloader">
                         <div class="spinner"></div>
                         <div class="txt-loading">
-                            <span data-text-preloader="L" class="letters-loading">
-                                L
+                            <span data-text-preloader="M" class="letters-loading">
+                                M
                             </span>
-                            <span data-text-preloader="O" class="letters-loading">
-                                O
+                            <span data-text-preloader="A" class="letters-loading">
+                                A
                             </span>
-                            <span data-text-preloader="D" class="letters-loading">
-                                D
+                            <span data-text-preloader="X" class="letters-loading">
+                                X
                             </span>
                             <span data-text-preloader="I" class="letters-loading">
                                 I
                             </span>
-                            <span data-text-preloader="N" class="letters-loading">
+                            <span data-text-preloader="C" class="letters-loading">
+                                C
+                            </span>
+                            <span data-text-preloader="A" class="letters-loading">
+                                A
+                            </span>
+                             <span data-text-preloader="N" class="letters-loading">
                                 N
                             </span>
-                            <span data-text-preloader="G" class="letters-loading">
-                                G
+                             <span data-text-preloader="F" class="letters-loading">
+                                F
+                            </span>
+                             <span data-text-preloader="O" class="letters-loading">
+                                O
+                            </span>
+                             <span data-text-preloader="O" class="letters-loading">
+                                O
+                            </span>
+                             <span data-text-preloader="D" class="letters-loading">
+                                D
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Preloader End -->
 
         <!-- Main Header-->
