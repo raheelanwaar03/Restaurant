@@ -13,7 +13,8 @@ class LandingPageController extends Controller
     public function index()
     {
         $categorys = Category::get();
-        return view('landingpage.index',compact('categorys'));
+        $foods = Food::get();
+        return view('landingpage.index',compact('categorys','foods'));
     }
 
     public function aboutUs()
@@ -63,6 +64,7 @@ class LandingPageController extends Controller
             'time' => 'required',
             'person' => 'required',
             'calendar' => 'required',
+            'massage' => 'required',
         ]);
 
         $table = new TableBook();
@@ -70,6 +72,7 @@ class LandingPageController extends Controller
         $table->person = $validated['person'];
         $table->time = $validated['time'];
         $table->calendar = $validated['calendar'];
+        $table->massage = $validated['massage'];
         $table->save();
         return redirect()->back()->with('success','Your request for table reservation has been recived');
     }

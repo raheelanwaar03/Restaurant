@@ -8,8 +8,8 @@
                 <div class="footer-col info-col col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div class="content">
-                            <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img
-                                        src="images/logo.png" alt=""
+                            <div class="logo"><a href="{{ route('Welcome') }}" title="Delici - Restaurants HTML Template"><img
+                                        src="{{ asset('assets/images/logo.png') }}" alt=""
                                         title="Delici - Restaurants HTML Template"></a></div>
                             <div class="info">
                                 <ul>
@@ -48,9 +48,8 @@
                     <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <ul class="links">
                             <li><a href="{{ route('Welcome') }}">Home</a></li>
-                            <li><a href="menu-list-1.html">Menus</a></li>
+                            <li><a href="{{route('Welcome.All.Categories')}}">Menus</a></li>
                             <li><a href="{{ route('Welcome.About-Us') }}">About us</a></li>
-                            <li><a href="our-chef.html">Our chefs</a></li>
                             <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                         </ul>
                     </div>
@@ -72,7 +71,7 @@
     </div>
     <div class="footer-bottom">
         <div class="auto-container">
-            <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by</div>
+            <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by {{env('APP_NAME')}}</div>
         </div>
     </div>
 </footer>

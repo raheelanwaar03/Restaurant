@@ -105,7 +105,7 @@
                                             <div class="links-box wow fadeInUp" data-wow-delay="0ms"
                                                 data-wow-duration="1500ms">
                                                 <div class="link">
-                                                    <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
+                                                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
                                                         <span class="btn-wrap">
                                                             <span class="text-one">view our menu</span>
                                                             <span class="text-two">view our menu</span>
@@ -135,7 +135,7 @@
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
                                             <div class="links-box clearfix">
                                                 <div class="link">
-                                                    <a href="menu-list-2.html" class="theme-btn btn-style-two clearfix">
+                                                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
                                                         <span class="btn-wrap">
                                                             <span class="text-one">view our menu</span>
                                                             <span class="text-two">view our menu</span>
@@ -165,7 +165,7 @@
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
                                             <div class="links-box clearfix">
                                                 <div class="link">
-                                                    <a href="menu-list-3.html" class="theme-btn btn-style-two clearfix">
+                                                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
                                                         <span class="btn-wrap">
                                                             <span class="text-one">view our menu</span>
                                                             <span class="text-two">view our menu</span>
@@ -174,7 +174,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -210,8 +209,8 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image"><a href="menu-list-1.html"><img src="{{ asset('assets/images/resource/offer-image-1.jpg') }}"
                                     alt=""></a></div>
-                        <h3><a href="menu-list-1.html">Breakfast</a></h3>
-                        <div class="more-link"><a href="menu-list-1.html">view menu</a></div>
+                        <h3><a href="{{route('Welcome.All.Categories')}}">Breakfast</a></h3>
+                        <div class="more-link"><a href="{{ route('Welcome.All.Categories') }}">view menu</a></div>
                     </div>
                 </div>
 
@@ -220,8 +219,8 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="image"><a href="menu-list-2.html"><img src="{{ asset('assets/images/resource/offer-image-2.jpg') }}"
                                     alt=""></a></div>
-                        <h3><a href="menu-list-2.html">Appetizers</a></h3>
-                        <div class="more-link"><a href="menu-list-2.html">view menu</a></div>
+                        <h3><a href="{{ route('Welcome.All.Categories') }}">Lunch</a></h3>
+                        <div class="more-link"><a href="{{ route('Welcome.All.Categories') }}">view menu</a></div>
                     </div>
                 </div>
 
@@ -230,11 +229,10 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
                         <div class="image"><a href="menu-list-3.html"><img src="{{ asset('assets/images/resource/offer-image-3.jpg') }}"
                                     alt=""></a></div>
-                        <h3><a href="menu-list-3.html">Drinks</a></h3>
-                        <div class="more-link"><a href="menu-list-3.html">view menu</a></div>
+                        <h3><a href="{{ route('Welcome.All.Categories') }}">Drinks</a></h3>
+                        <div class="more-link"><a href="{{ route('Welcome.All.Categories') }}">view menu</a></div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -259,10 +257,10 @@
                         </div>
                         <div class="booking-info">
                             <div class="bk-title">Book Through Call</div>
-                            <div class="bk-no"><a href="tel:+80-400-123456">+80 (400) 123 4567</a></div>
+                            <div class="bk-no"><a href="tel:{{ env('APP_Num') }}">{{ env('APP_Num') }}</a></div>
 
                             <div class="link-box">
-                                <a href="about.html" class="theme-btn btn-style-two clearfix">
+                                <a href="{{ route('Welcome.About-Us') }}" class="theme-btn btn-style-two clearfix">
                                     <span class="btn-wrap">
                                         <span class="text-one">Read More</span>
                                         <span class="text-two">Read More</span>
@@ -313,13 +311,11 @@
                             <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg"') }} alt=""
                                     title=""></div>
                             <h2>Lobster Tortellini</h2>
-                            <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry
-                                lorem Ipsum has been the industrys standard dummy text ever since the when an unknown
-                                printer took a galley of type.</div>
+                            <div class="text">Our food will left a taste on your toung that you will never forgot!</div>
                         </div>
-                        <div class="price"><span class="old">$40.00</span> <span class="new">$20.00</span></div>
+                        {{-- <div class="price"><span class="old">$40.00</span> <span class="new">$20.00</span></div> --}}
                         <div class="link-box">
-                            <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
+                            <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
                                 <span class="btn-wrap">
                                     <span class="text-one">view all menu</span>
                                     <span class="text-two">view all menu</span>
@@ -328,7 +324,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -801,103 +796,25 @@
                     <div class="subtitle"><span>special offer</span></div>
                     <div class="pattern-image"><img src="{{asset('assets/images/icons/separator.svg" alt')}}="" title="">
                     </div>
-                    <h2>Best Specialties</h2>
+                    <h2>Our Food</h2>
                 </div>
                 <div class="dish-gallery-slider owl-theme owl-carousel">
                     <!--Slide Item-->
+                    @foreach ($foods as $food)
                     <div class="offer-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-11.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-1.html">Greek Salad</a></h4>
-                            <div class="text desc">Avocados with crab meat, red onion, crab salad red bell pepper...</div>
-                            <div class="price">$39.00</div>
+                            <div class="image"><a href="#"><img src="{{asset('images/'.$food->image)}}"
+                                        alt="{{ $food->image }}"></a></div>
+                            <h4><a href="#">{{ $food->title }}</a></h4>
+                            <div class="text desc">{{ $food->des }}</div>
+                            <div class="price">{{ $food->price }}</div>
                         </div>
                     </div>
-
-                    <!--Slide Item-->
-                    <div class="offer-block-two margin-top">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-12.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-2.html">Tokusen Wagyu</a></h4>
-                            <div class="text desc">Tomatoes, green bell pepper, sliced cucumber onion, olives...</div>
-                            <div class="price">$45.00</div>
-                        </div>
-                    </div>
-
-                    <!--Slide Item-->
-                    <div class="offer-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-13.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-3.html">Butternut Pumpkin</a></h4>
-                            <div class="text desc">Avocados with crab meat, red onion, crab salad stuffed bell pepper...
-                            </div>
-                            <div class="price">$15.00</div>
-                        </div>
-                    </div>
-
-                    <!--Slide Item-->
-                    <div class="offer-block-two margin-top">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-14.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-4.html">Opu Fish</a></h4>
-                            <div class="text desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings...</div>
-                            <div class="price">$12.00</div>
-                        </div>
-                    </div>
-
-                    <!--Slide Item-->
-                    <div class="offer-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-11.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-1.html">Greek Salad</a></h4>
-                            <div class="text desc">Avocados with crab meat, red onion, crab salad red bell pepper...</div>
-                            <div class="price">$39.00</div>
-                        </div>
-                    </div>
-
-                    <!--Slide Item-->
-                    <div class="offer-block-two margin-top">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-12.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-2.html">Tokusen Wagyu</a></h4>
-                            <div class="text desc">Tomatoes, green bell pepper, sliced cucumber onion, olives...</div>
-                            <div class="price">$45.00</div>
-                        </div>
-                    </div>
-
-                    <!--Slide Item-->
-                    <div class="offer-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-13.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-3.html">Butternut Pumpkin</a></h4>
-                            <div class="text desc">Avocados with crab meat, red onion, crab salad stuffed bell pepper...
-                            </div>
-                            <div class="price">$15.00</div>
-                        </div>
-                    </div>
-
-                    <!--Slide Item-->
-                    <div class="offer-block-two margin-top">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('assets/images/resource/menu-image-14.jpg')}}"
-                                        alt=""></a></div>
-                            <h4><a href="menu-list-4.html">Opu Fish</a></h4>
-                            <div class="text desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings...</div>
-                            <div class="price">$12.00</div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
 
                 <div class="lower-link-box text-center">
-                    <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
+                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
                         <span class="btn-wrap">
                             <span class="text-one">view all menu</span>
                             <span class="text-two">view all menu</span>
@@ -1005,7 +922,7 @@
                             </div>
                             <div class="default-form reservation-form">
                                 <form method="post"
-                                    action="https://kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/index.html">
+                                    action="{{ route('Welcome.Reserve.Table') }}">
                                     <div class="row clearfix">
                                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                             <div class="field-inner">
@@ -1022,7 +939,7 @@
                                         <div class="form-group col-lg-4 col-md-6 col-sm-12">
                                             <div class="field-inner">
                                                 <span class="alt-icon far fa-user"></span>
-                                                <select class="l-icon">
+                                                <select name='person' class="l-icon">
                                                     <option>1 Person</option>
                                                     <option>2 Person</option>
                                                     <option>3 Person</option>
@@ -1037,7 +954,7 @@
                                         <div class="form-group col-lg-4 col-md-6 col-sm-12">
                                             <div class="field-inner">
                                                 <span class="alt-icon far fa-calendar"></span>
-                                                <input class="l-icon datepicker" type="text" name="fieldname"
+                                                <input class="l-icon datepicker" type="text" name="calendar"
                                                     value="" placeholder="DD-MM-YYYY" required readonly>
                                                 <span class="arrow-icon far fa-angle-down"></span>
                                             </div>
@@ -1045,7 +962,7 @@
                                         <div class="form-group col-lg-4 col-md-12 col-sm-12">
                                             <div class="field-inner">
                                                 <span class="alt-icon far fa-clock"></span>
-                                                <select class="l-icon">
+                                                <select name="time" class="l-icon">
                                                     <option>08 : 00 am</option>
                                                     <option>09 : 00 am</option>
                                                     <option>10 : 00 am</option>
@@ -1067,7 +984,7 @@
                                         </div>
                                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
                                             <div class="field-inner">
-                                                <textarea name="fieldname" placeholder="Message" required></textarea>
+                                                <textarea name="massage" placeholder="Message" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
@@ -1107,7 +1024,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -1128,7 +1044,7 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-1.png') }}" alt=""></div>
                         <h4>Hygienic Food</h4>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                        <div class="text">We always take care about cleaness and freshness of food.</div>
                     </div>
                 </div>
 
@@ -1137,7 +1053,7 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-2.png') }}" alt=""></div>
                         <h4>Fresh Environment</h4>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                        <div class="text">Our fresh environment felt you asowme.</div>
                     </div>
                 </div>
 
@@ -1146,7 +1062,7 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
                         <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-3.png') }}" alt=""></div>
                         <h4>Skilled Chefs</h4>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                        <div class="text">Our chefs are fully skilled to give there best.</div>
                     </div>
                 </div>
 
@@ -1155,7 +1071,7 @@
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="900ms">
                         <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-4.png') }}" alt=""></div>
                         <h4>Event & Party</h4>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                        <div class="text">We also helded event & parties with family and friends.</div>
                     </div>
                 </div>
 
@@ -1176,7 +1092,7 @@
                                     <div class="subtitle">best menu</div>
                                     <h3>Special Dishes</h3>
                                     <div class="text">Lorem Ipsum is simply dummy printing.</div>
-                                    <div class="link"><a href="menu-list-1.html" class="theme-btn"><span>view
+                                    <div class="link"><a href="{{ route('Welcome.All.Categories') }}" class="theme-btn"><span>view
                                                 menu</span></a></div>
                                 </div>
                             </div>
@@ -1218,7 +1134,7 @@
                                     <div class="subtitle">selected</div>
                                     <h3>Chef Choice</h3>
                                     <div class="text">Dummy printing lorem Ipsum simply.</div>
-                                    <div class="link"><a href="menu-list-3.html" class="theme-btn"><span>view
+                                    <div class="link"><a href="{{ route('Welcome.All.Categories') }}" class="theme-btn"><span>view
                                                 menu</span></a></div>
                                 </div>
                             </div>
@@ -1229,7 +1145,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -1286,7 +1201,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h3><a href="menu-list.html">Steave Den</a></h3>
+                        <h3><a href="{{route('Welcome.All.Categories')}}">Steave Den</a></h3>
                         <div class="designation">Master chef</div>
                         <div class="text desc">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has
                             been the industrys.</div>
@@ -1385,7 +1300,7 @@
     </section>
 
     <!--Recnt Updates Section-->
-    <section class="news-section">
+    {{-- <section class="news-section">
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>recent updates</span></div>
@@ -1451,5 +1366,5 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 @endsection

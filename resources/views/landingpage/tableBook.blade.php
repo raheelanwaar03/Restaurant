@@ -83,6 +83,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <div class="field-inner">
+                            <textarea name="massage" placeholder="Message" required></textarea>
+                        </div>
+                    </div>
                     <button type="submit" class="theme-btn btn-style-one clearfix">
                         <span class="btn-wrap">
                             <span class="text-one">book a table</span>
@@ -92,41 +97,5 @@
                 </form>
             </div>
         </div>
-
-        <!--map Section-->
-        <div class="map-location-section">
-            <div class="auto-container">
-                <div class="outer-box">
-                    <div class="row clearfix">
-                        <div class="reserv-col col-lg-8 col-md-12 col-sm-12">
-                            <div class="inner">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin"
-                                    width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-                        <div class="info-col col-lg-4 col-md-12 col-sm-12">
-                            <div class="inner">
-                                <div class="title">
-                                    <h2>New York</h2>
-                                </div>
-                                <div class="data">
-                                    <ul class="info">
-                                        <li><strong>Contact Us</strong><br>Restaurant St, Delicious City,<br> London 9578,
-                                            UK <br> Call : +88-123-123456 <br> Email : booking@domainname.com </li>
-                                        <div class="separator"><span></span></div>
-                                        <li><strong>Lunch Time</strong><br>Monday to Sunday <br>11.00 am - 2.30pm</li>
-                                        <li><strong>Dinner Time</strong><br>Monday to Sunday <br>05.00 pm - 10.00pm</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
     </section>
 @endsection

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('person');
             $table->string('time');
             $table->string('calendar');
+            $table->longtext('massage');
             $table->timestamps();
         });
     }
