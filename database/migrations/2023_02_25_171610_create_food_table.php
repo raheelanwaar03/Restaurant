@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('slug');
             $table->string('des');
+            $table->integer('extera')->nullable();
             $table->string('image');
             $table->timestamps();
         });

@@ -36,6 +36,7 @@ class FoodContoller extends Controller
         $food->price = $validated['price'];
         $food->slug = Str::slug($validated['slug']);
         $food->category_id = $validated['category_id'];
+        $food->extera = $request->extera;
         $food->image = $imagename;
         $food->save();
         return redirect()->back()->with('success', 'Food added successfully');
@@ -83,6 +84,7 @@ class FoodContoller extends Controller
         $food->des = $request->des;
         $food->price = $request->price;
         $food->category_id = $request->category_id;
+        $food->extera = $request->extera;
         $food->save();
         return redirect()->back()->with('success', 'Food Details updated successfully');
     }

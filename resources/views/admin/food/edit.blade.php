@@ -19,12 +19,17 @@
                                 <div class="form-group">
                                     <label for="">Food Title</label>
                                     <input type="text" name="title" value="{{ $food->title }}" class="form-control"
-                                        placeholder="Add Food Title">
+                                        placeholder="Edit Food Title">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Food Price</label>
                                     <input type="number" name="price" value="{{ $food->price }}" class="form-control"
-                                        placeholder="Add Food Price">
+                                        placeholder="Edit Food Price">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Extera Toping</label>
+                                    <input type="number" name="extera" value="{{ $food->extera }}" class="form-control"
+                                        placeholder="Edit Extera Toping">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Slect Category</label>

@@ -41,6 +41,11 @@
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
+                                    <label for="">Extera Toping</label>
+                                    <input type="text" name="extera" placeholder="Enter Food Details"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
                                     <label for="">Food Image</label>
                                     <input type="file" name="image" class="form-control" placeholder="Add Food Image">
                                 </div>

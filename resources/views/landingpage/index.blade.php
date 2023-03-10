@@ -439,6 +439,9 @@
                             <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
                             <div class="text desc">{{ $food->des }}</div>
                             <div class="price">${{ $food->price }}</div>
+                            <div class="">
+                                <a href="#" class="btn btn-danger">Order now</a>
+                            </div>
                         </div>
                     </div>
                     @endforeach

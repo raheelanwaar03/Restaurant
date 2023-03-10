@@ -27,6 +27,7 @@
                                         <th>Food Price</th>
                                         <th>Food Slug</th>
                                         <th>Food Image</th>
+                                        <th>Extera Toping</th>
                                         <th>Food Category</th>
                                         <th>Food Description</th>
                                         <th>Action</th>
@@ -41,7 +42,8 @@
                                             <td><img src="{{ asset('images/' . $food->image) }}"
                                                     class="img-fluid img-thumbnail" height="150px" width="150px"
                                                     alt="{{ $food->image }}"></td>
-                                            <td> {{ $food->category }} </td>
+                                            <td> {{ $food->extera }} </td>
+                                            <td> {{ $food->id }} </td>
                                             <td> {{ $food->des }} </td>
                                             <td>
                                                 <a href="{{ route('Admin.Edit.Food',['slug'=>$food->slug]) }}" class="btn btn-sm btn-primary">Edit</a>
