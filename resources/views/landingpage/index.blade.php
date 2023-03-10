@@ -9,7 +9,7 @@
         <!-- Hidden Bar Wrapper -->
         <div class="inner-box">
             <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
-            <div class="logo-box"><a href="{{route('Welcome')}}" title="{{ env('APP_NAME') }}"><img
+            <div class="logo-box"><a href="{{ route('Welcome') }}" title="{{ env('APP_NAME') }}"><img
                         src="{{ asset('assets/images/logo.png') }}" alt="" title="{{ env('APP_NAME') }}"></a>
             </div>
 
@@ -49,7 +49,7 @@
             <div class="separator"><span></span></div>
             <div class="booking-info">
                 <div class="bk-title">Booking request</div>
-                <div class="bk-no"><a href="#">{{env('APP_NUM')}}</a></div>
+                <div class="bk-no"><a href="#">{{ env('APP_NUM') }}</a></div>
             </div>
 
         </div><!-- / Hidden Bar Wrapper -->
@@ -63,10 +63,11 @@
     <section class="info-bar">
         <div class="inner-box">
             <div class="cross-icon"><span class="far fa-close"></span></div>
-            <div class="logo-box"><a href="{{route('Welcome')}}" title="{{ env('APP_NAME') }}"><img
+            <div class="logo-box"><a href="{{ route('Welcome') }}" title="{{ env('APP_NAME') }}"><img
                         src="{{ asset('assets/images/resource/logo.png') }}" alt=""
                         title="{{ env('APP_NAME') }}"></a></div>
-            <div class="image-box"><img src="{{ asset('assets/images/resource/sidebar-image.jpg') }}" alt="" title=""></div>
+            <div class="image-box"><img src="{{ asset('assets/images/resource/sidebar-image.jpg') }}" alt=""
+                    title=""></div>
 
             <h2>Visit Us</h2>
             <ul class="info">
@@ -91,21 +92,24 @@
                 <div class="swiper-wrapper">
                     <!--Slide Item-->
                     <div class="swiper-slide slide-item">
-                        <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-1.jpg') }});"></div>
+                        <div class="image-layer"
+                            style="background-image: url({{ asset('assets/images/main-slider/slider-1.jpg') }});"></div>
                         <div class="auto-container">
                             <div class="content-box">
                                 <div class="content">
                                     <div class="clearfix">
                                         <div class="inner">
                                             <div class="subtitle"><span>delightful experience</span></div>
-                                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
+                                            <div class="pattern-image"><img
+                                                    src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
                                                     title=""></div>
                                             <h1><span>Flavors Inspired by <br>the Seasons</span></h1>
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
                                             <div class="links-box wow fadeInUp" data-wow-delay="0ms"
                                                 data-wow-duration="1500ms">
                                                 <div class="link">
-                                                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
+                                                    <a href="{{ route('Welcome.All.Categories') }}"
+                                                        class="theme-btn btn-style-two clearfix">
                                                         <span class="btn-wrap">
                                                             <span class="text-one">view our menu</span>
                                                             <span class="text-two">view our menu</span>
@@ -122,20 +126,23 @@
                     </div>
                     <!--Slide Item-->
                     <div class="swiper-slide slide-item">
-                        <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-2.jpg') }});"></div>
+                        <div class="image-layer"
+                            style="background-image: url({{ asset('assets/images/main-slider/slider-2.jpg') }});"></div>
                         <div class="auto-container">
                             <div class="content-box">
                                 <div class="content">
                                     <div class="clearfix">
                                         <div class="inner">
                                             <div class="subtitle"><span>amazing & delicious</span></div>
-                                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}"
-                                                    alt="" title=""></div>
+                                            <div class="pattern-image"><img
+                                                    src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
+                                                    title=""></div>
                                             <h1><span>Where every flavor <br>tells a story</span></h1>
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
                                             <div class="links-box clearfix">
                                                 <div class="link">
-                                                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
+                                                    <a href="{{ route('Welcome.All.Categories') }}"
+                                                        class="theme-btn btn-style-two clearfix">
                                                         <span class="btn-wrap">
                                                             <span class="text-one">view our menu</span>
                                                             <span class="text-two">view our menu</span>
@@ -152,20 +159,23 @@
                     </div>
                     <!--Slide Item-->
                     <div class="swiper-slide slide-item">
-                        <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-3.jpg') }});"></div>
+                        <div class="image-layer"
+                            style="background-image: url({{ asset('assets/images/main-slider/slider-3.jpg') }});"></div>
                         <div class="auto-container">
                             <div class="content-box">
                                 <div class="content">
                                     <div class="clearfix">
                                         <div class="inner">
                                             <div class="subtitle"><span>Tradational & Hygine</span></div>
-                                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}"
-                                                    alt="" title=""></div>
+                                            <div class="pattern-image"><img
+                                                    src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
+                                                    title=""></div>
                                             <h1><span>For the love of <br>delicious food</span></h1>
                                             <div class="text">Come with family & feel the joy of mouthwatering food</div>
                                             <div class="links-box clearfix">
                                                 <div class="link">
-                                                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
+                                                    <a href="{{ route('Welcome.All.Categories') }}"
+                                                        class="theme-btn btn-style-two clearfix">
                                                         <span class="btn-wrap">
                                                             <span class="text-one">view our menu</span>
                                                             <span class="text-two">view our menu</span>
@@ -185,20 +195,23 @@
             </div>
         </div>
 
-        <div class="book-btn"><a href="{{ asset('assets/reservation-opentable.html') }}" class="theme-btn"><span class="icon"><img
-                        src="{{ asset('assets/images/resource/book-icon-1.png') }}" alt="" title=""></span><span
-                    class="txt">book a table</span></a></div>
+        <div class="book-btn"><a href="{{ route('Welcome.Find.Table') }}" class="theme-btn"><span
+                    class="icon"><img src="{{ asset('assets/images/resource/book-icon-1.png') }}" alt=""
+                        title=""></span><span class="txt">book a table</span></a></div>
     </section>
     <!--End Banner Section -->
 
     <!--We Offer Section-->
     <section class="we-offer-section">
-        <div class="left-bot-bg"><img src="{{ asset('assets/images/background/bg-1.png') }}" alt="" title=""></div>
-        <div class="right-top-bg"><img src="{{ asset('assets/images/background/bg-2.png') }}" alt="" title=""></div>
+        <div class="left-bot-bg"><img src="{{ asset('assets/images/background/bg-1.png') }}" alt=""
+                title=""></div>
+        <div class="right-top-bg"><img src="{{ asset('assets/images/background/bg-2.png') }}" alt=""
+                title=""></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>Flavors for royalty</span></div>
-                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
+                        title=""></div>
                 <h2>We Offer Top Notch</h2>
                 <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum
                     has been the industrys standard dummy text ever.</div>
@@ -207,9 +220,10 @@
                 <!--Block-->
                 <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image"><a href="menu-list-1.html"><img src="{{ asset('assets/images/resource/offer-image-1.jpg') }}"
-                                    alt=""></a></div>
-                        <h3><a href="{{route('Welcome.All.Categories')}}">Breakfast</a></h3>
+                        <div class="image"><a href="menu-list-1.html"><img
+                                    src="{{ asset('assets/images/resource/offer-image-1.jpg') }}" alt=""></a>
+                        </div>
+                        <h3><a href="{{ route('Welcome.All.Categories') }}">Breakfast</a></h3>
                         <div class="more-link"><a href="{{ route('Welcome.All.Categories') }}">view menu</a></div>
                     </div>
                 </div>
@@ -217,8 +231,9 @@
                 <!--Block-->
                 <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="image"><a href="menu-list-2.html"><img src="{{ asset('assets/images/resource/offer-image-2.jpg') }}"
-                                    alt=""></a></div>
+                        <div class="image"><a href="menu-list-2.html"><img
+                                    src="{{ asset('assets/images/resource/offer-image-2.jpg') }}" alt=""></a>
+                        </div>
                         <h3><a href="{{ route('Welcome.All.Categories') }}">Lunch</a></h3>
                         <div class="more-link"><a href="{{ route('Welcome.All.Categories') }}">view menu</a></div>
                     </div>
@@ -227,8 +242,9 @@
                 <!--Block-->
                 <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
-                        <div class="image"><a href="menu-list-3.html"><img src="{{ asset('assets/images/resource/offer-image-3.jpg') }}"
-                                    alt=""></a></div>
+                        <div class="image"><a href="menu-list-3.html"><img
+                                    src="{{ asset('assets/images/resource/offer-image-3.jpg') }}" alt=""></a>
+                        </div>
                         <h3><a href="{{ route('Welcome.All.Categories') }}">Drinks</a></h3>
                         <div class="more-link"><a href="{{ route('Welcome.All.Categories') }}">view menu</a></div>
                     </div>
@@ -239,7 +255,8 @@
 
     <!--Story Section-->
     <section class="story-section">
-        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-3.png') }}" alt="" title=""></div>
+        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-3.png') }}" alt="" title="">
+        </div>
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Col-->
@@ -247,8 +264,6 @@
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="title-box centered">
                             <div class="subtitle"><span>Our story</span></div>
-                            <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
-                                    title=""></div>
                             <h2>Every Flavor Tells a Story</h2>
                             <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry
                                 lorem Ipsum has been the industrys standard dummy text ever since the when an unknown
@@ -274,11 +289,14 @@
                 <!--Col-->
                 <div class="image-col col-xl-7 col-lg-7 col-md-12 col-sm-12">
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="round-stamp"><img src="{{ asset('assets/images/resource/badge-1.png') }}" alt=""></div>
+                        <div class="round-stamp"><img src="{{ asset('assets/images/resource/badge-1.png') }}"
+                                alt=""></div>
                         <div class="images parallax-scene-1">
-                            <div class="image" data-depth="0.15"><img src="{{ asset('assets/images/resource/image-1.jpg') }}" alt="">
+                            <div class="image" data-depth="0.15"><img
+                                    src="{{ asset('assets/images/resource/image-1.jpg') }}" alt="">
                             </div>
-                            <div class="image" data-depth="0.30"><img src="{{ asset('assets/images/resource/image-2.jpg') }}" alt="">
+                            <div class="image" data-depth="0.30"><img
+                                    src="{{ asset('assets/images/resource/image-2.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -290,23 +308,27 @@
 
     <!--Special Dish Section-->
     <section class="special-dish">
-        <div class="bottom-image"><img src="{{ asset('assets/images/resource/image-3.png') }}" alt="" title=""></div>
+        <div class="bottom-image"><img src="{{ asset('assets/images/resource/image-3.png') }}" alt=""
+                title=""></div>
         <div class="outer-container">
             <div class="row clearfix">
                 <!--Col-->
                 <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-1.jpg') }});"></div>
-                        <div class="image"><img src="{{ asset('assets/images/background/image-1.jpg') }}" alt=""></div>
+                        <div class="image-layer"
+                            style="background-image: url({{ asset('assets/images/background/image-1.jpg') }});"></div>
+                        <div class="image"><img src="{{ asset('assets/images/background/image-1.jpg') }}"
+                                alt=""></div>
                     </div>
                 </div>
                 <!--Col-->
                 <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="right-bg"><img src="{{ asset('assets/images/background/bg-4.png') }}" alt="" title=""></div>
+                    <div class="right-bg"><img src="{{ asset('assets/images/background/bg-4.png') }}" alt=""
+                            title=""></div>
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="title-box">
-                            <span class="badge-icon"><img src="{{ asset('assets/images/resource/badge-2.png') }}" alt=""
-                                    title=""></span>
+                            <span class="badge-icon"><img src="{{ asset('assets/images/resource/badge-2.png') }}"
+                                    alt="" title=""></span>
                             <div class="subtitle"><span>Special dish</span></div>
                             <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg"') }} alt=""
                                     title=""></div>
@@ -335,7 +357,8 @@
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>Special selection</span></div>
-                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
+                        title=""></div>
                 <h2>Delicious Menu</h2>
             </div>
 
@@ -355,417 +378,27 @@
                             <div class="menu-col col-lg-6 col-md-12 col-sm-12">
                                 <div class="inner">
                                     <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Greek Salad</a></h5>
+                                    @foreach ($categorys as $category)
+                                        <div class="dish-block">
+                                            <div class="inner-box">
+                                                <div class="dish-image"><a
+                                                        href="{{ route('Welcome.Category', ['slug' => $category->slug]) }}"><img
+                                                            src="{{ asset('images/' . $category->image) }}"
+                                                            alt=""></a></div>
+                                                <div class="title clearfix">
+                                                    <div class="ttl clearfix">
+                                                        <h5><a href="#">{{ $category->title }}</a></h5>
+                                                    </div>
                                                 </div>
-                                                <div class="price"><span>$25.50</span></div>
+                                                <div class="text desc"><a href="#">{{ $category->des }}</a></div>
                                             </div>
-                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced
-                                                    cucumber onion, olives, and feta cheese.</a></div>
                                         </div>
-                                    </div>
+                                    @endforeach
                                     <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
-                                                    </h5>
-                                                </div>
-                                                <div class="price"><span>$40.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Butternut Pumpkin</a></h5>
-                                                </div>
-                                                <div class="price"><span>$10.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem
-                                                    Ipsum is simply dummy text of the priand.</a></div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="menu-col col-lg-6 col-md-12 col-sm-12">
                                 <div class="inner">
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Tokusen Wagyu <span
-                                                                class="s-info">NEW</span></a></h5>
-                                                </div>
-                                                <div class="price"><span>$39.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Olivas Rellenas</a></h5>
-                                                </div>
-                                                <div class="price"><span>$25.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion,
-                                                    crab salad stuffed red bell pepper and green bell pepper.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Opu Fish</a></h5>
-                                                </div>
-                                                <div class="price"><span>$49.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Tab-->
-                    <div class="tab" id="tab-2">
-                        <div class="row clearfix">
-                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                                <div class="inner">
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Greek Salad</a></h5>
-                                                </div>
-                                                <div class="price"><span>$25.50</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced
-                                                    cucumber onion, olives, and feta cheese.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
-                                                    </h5>
-                                                </div>
-                                                <div class="price"><span>$40.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Butternut Pumpkin</a></h5>
-                                                </div>
-                                                <div class="price"><span>$10.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem
-                                                    Ipsum is simply dummy text of the priand.</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                                <div class="inner">
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Tokusen Wagyu <span
-                                                                class="s-info">NEW</span></a></h5>
-                                                </div>
-                                                <div class="price"><span>$39.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Olivas Rellenas</a></h5>
-                                                </div>
-                                                <div class="price"><span>$25.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion,
-                                                    crab salad stuffed red bell pepper and green bell pepper.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Opu Fish</a></h5>
-                                                </div>
-                                                <div class="price"><span>$49.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Tab-->
-                    <div class="tab" id="tab-3">
-                        <div class="row clearfix">
-                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                                <div class="inner">
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Greek Salad</a></h5>
-                                                </div>
-                                                <div class="price"><span>$25.50</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced
-                                                    cucumber onion, olives, and feta cheese.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
-                                                    </h5>
-                                                </div>
-                                                <div class="price"><span>$40.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Butternut Pumpkin</a></h5>
-                                                </div>
-                                                <div class="price"><span>$10.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem
-                                                    Ipsum is simply dummy text of the priand.</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                                <div class="inner">
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Tokusen Wagyu <span
-                                                                class="s-info">NEW</span></a></h5>
-                                                </div>
-                                                <div class="price"><span>$39.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Olivas Rellenas</a></h5>
-                                                </div>
-                                                <div class="price"><span>$25.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion,
-                                                    crab salad stuffed red bell pepper and green bell pepper.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Opu Fish</a></h5>
-                                                </div>
-                                                <div class="price"><span>$49.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Tab-->
-                    <div class="tab" id="tab-4">
-                        <div class="row clearfix">
-                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                                <div class="inner">
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-5.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Greek Salad</a></h5>
-                                                </div>
-                                                <div class="price"><span>$25.50</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced
-                                                    cucumber onion, olives, and feta cheese.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-6.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a>
-                                                    </h5>
-                                                </div>
-                                                <div class="price"><span>$40.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-7.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Butternut Pumpkin</a></h5>
-                                                </div>
-                                                <div class="price"><span>$10.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem
-                                                    Ipsum is simply dummy text of the priand.</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                                <div class="inner">
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-8.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Tokusen Wagyu <span
-                                                                class="s-info">NEW</span></a></h5>
-                                                </div>
-                                                <div class="price"><span>$39.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices.</a></div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-9.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Olivas Rellenas</a></h5>
-                                                </div>
-                                                <div class="price"><span>$25.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion,
-                                                    crab salad stuffed red bell pepper and green bell pepper. Cucumber</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Block-->
-                                    <div class="dish-block">
-                                        <div class="inner-box">
-                                            <div class="dish-image"><a href="#"><img
-                                                        src="{{ asset('assets/images/resource/menu-image-10.png') }}" alt=""></a></div>
-                                            <div class="title clearfix">
-                                                <div class="ttl clearfix">
-                                                    <h5><a href="#">Opu Fish</a></h5>
-                                                </div>
-                                                <div class="price"><span>$49.00</span></div>
-                                            </div>
-                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats,
-                                                    tomato sauce, seasonings and spices</a></div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -774,10 +407,10 @@
             </div>
 
             <div class="open-timing">
-                <div class="hours">During winter daily from <span class="theme_color">7:00 pm</span> to <span
-                        class="theme_color">9:00 pm</span></div>
+                {{-- <div class="hours">During winter daily from <span class="theme_color">7:00 pm</span> to <span
+                        class="theme_color">9:00 pm</span></div> --}}
                 <div class="link-box">
-                    <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
+                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
                         <span class="btn-wrap">
                             <span class="text-one">view all menu</span>
                             <span class="text-two">view all menu</span>
@@ -794,27 +427,25 @@
             <div class="auto-container">
                 <div class="title-box centered">
                     <div class="subtitle"><span>special offer</span></div>
-                    <div class="pattern-image"><img src="{{asset('assets/images/icons/separator.svg" alt')}}="" title="">
-                    </div>
-                    <h2>Our Food</h2>
+                    <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                    <h2>Best Specialties</h2>
                 </div>
                 <div class="dish-gallery-slider owl-theme owl-carousel">
-                    <!--Slide Item-->
                     @foreach ($foods as $food)
+                    <!--Slide Item-->
                     <div class="offer-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="{{asset('images/'.$food->image)}}"
-                                        alt="{{ $food->image }}"></a></div>
-                            <h4><a href="#">{{ $food->title }}</a></h4>
+                            <div class="image"><a href="{{ route('Welcome.Show.Product',['slug'=>$food->slug]) }}"><img src="{{ asset('images/'.$food->image) }}" style="transparent" alt=""></a></div>
+                            <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
                             <div class="text desc">{{ $food->des }}</div>
-                            <div class="price">{{ $food->price }}</div>
+                            <div class="price">${{ $food->price }}</div>
                         </div>
                     </div>
                     @endforeach
                 </div>
 
                 <div class="lower-link-box text-center">
-                    <a href="{{ route('Welcome.All.Categories') }}" class="theme-btn btn-style-two clearfix">
+                    <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
                         <span class="btn-wrap">
                             <span class="text-one">view all menu</span>
                             <span class="text-two">view all menu</span>
@@ -825,10 +456,10 @@
             </div>
         </div>
     </section>
-
     <!--Testimonials Section-->
     <section class="testimonials-section">
-        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-2.jpg') }});"></div>
+        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-2.jpg') }});">
+        </div>
         <div class="auto-container">
             <div class="carousel-box">
                 <div class="testi-top owl-theme owl-carousel">
@@ -879,27 +510,33 @@
                 <div class="thumbs-carousel-box">
                     <div class="testi-thumbs owl-theme owl-carousel">
                         <div class="slide-item">
-                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-1.jpg') }}" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-1.jpg') }}"
+                                    alt=""></div>
                             <div class="auth-title">Sam Jhonson</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-2.jpg') }}" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-2.jpg') }}"
+                                    alt=""></div>
                             <div class="auth-title">Ian Botham</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-3.jpg') }}" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-3.jpg') }}"
+                                    alt=""></div>
                             <div class="auth-title">Dan Bitson</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-1.jpg') }}" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-1.jpg') }}"
+                                    alt=""></div>
                             <div class="auth-title">Sam Jhonson</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-2.jpg') }}" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-2.jpg') }}"
+                                    alt=""></div>
                             <div class="auth-title">Ian Botham</div>
                         </div>
                         <div class="slide-item">
-                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-3.jpg') }}" alt=""></div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/author-thumb-3.jpg') }}"
+                                    alt=""></div>
                             <div class="auth-title">Dan Bitson</div>
                         </div>
                     </div>
@@ -921,8 +558,7 @@
                                     the order form</div>
                             </div>
                             <div class="default-form reservation-form">
-                                <form method="post"
-                                    action="{{ route('Welcome.Reserve.Table') }}">
+                                <form method="post" action="{{ route('Welcome.Reserve.Table') }}">
                                     <div class="row clearfix">
                                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                             <div class="field-inner">
@@ -1030,19 +666,23 @@
 
     <!--Why Us Section-->
     <section class="why-us">
-        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-8.png') }}" alt="" title=""></div>
-        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-7.png') }}" alt="" title=""></div>
+        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-8.png') }}" alt="" title="">
+        </div>
+        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-7.png') }}" alt=""
+                title=""></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>why choose us</span></div>
-                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
+                        title=""></div>
                 <h2>Our Strength</h2>
             </div>
             <div class="row clearfix">
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-1.png') }}" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-1.png') }}"
+                                alt=""></div>
                         <h4>Hygienic Food</h4>
                         <div class="text">We always take care about cleaness and freshness of food.</div>
                     </div>
@@ -1051,7 +691,8 @@
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-2.png') }}" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-2.png') }}"
+                                alt=""></div>
                         <h4>Fresh Environment</h4>
                         <div class="text">Our fresh environment felt you asowme.</div>
                     </div>
@@ -1060,7 +701,8 @@
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
-                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-3.png') }}" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-3.png') }}"
+                                alt=""></div>
                         <h4>Skilled Chefs</h4>
                         <div class="text">Our chefs are fully skilled to give there best.</div>
                     </div>
@@ -1069,7 +711,8 @@
                 <!--Block-->
                 <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="900ms">
-                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-4.png') }}" alt=""></div>
+                        <div class="icon-box"><img src="{{ asset('assets/images/resource/why-icon-4.png') }}"
+                                alt=""></div>
                         <h4>Event & Party</h4>
                         <div class="text">We also helded event & parties with family and friends.</div>
                     </div>
@@ -1092,14 +735,18 @@
                                     <div class="subtitle">best menu</div>
                                     <h3>Special Dishes</h3>
                                     <div class="text">Lorem Ipsum is simply dummy printing.</div>
-                                    <div class="link"><a href="{{ route('Welcome.All.Categories') }}" class="theme-btn"><span>view
+                                    <div class="link"><a href="{{ route('Welcome.All.Categories') }}"
+                                            class="theme-btn"><span>view
                                                 menu</span></a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="image-box">
-                            <div class="image-layer" style="background-image: url({{ asset('assets/images/resource/featured-1.jpg') }});"></div>
-                            <div class="image"><img src="{{ asset('assets/images/resource/featured-1.jpg') }}" alt=""></div>
+                            <div class="image-layer"
+                                style="background-image: url({{ asset('assets/images/resource/featured-1.jpg') }});">
+                            </div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/featured-1.jpg') }}"
+                                    alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -1108,8 +755,11 @@
                 <div class="link-block alternate col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="image-box">
-                            <div class="image-layer" style="background-image: url({{ asset('assets/images/resource/featured-2.jpg') }});"></div>
-                            <div class="image"><img src="{{ asset('assets/images/resource/featured-2.jpg') }}" alt=""></div>
+                            <div class="image-layer"
+                                style="background-image: url({{ asset('assets/images/resource/featured-2.jpg') }});">
+                            </div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/featured-2.jpg') }}"
+                                    alt=""></div>
                         </div>
                         <div class="text-block">
                             <div class="bl-inner">
@@ -1134,14 +784,18 @@
                                     <div class="subtitle">selected</div>
                                     <h3>Chef Choice</h3>
                                     <div class="text">Dummy printing lorem Ipsum simply.</div>
-                                    <div class="link"><a href="{{ route('Welcome.All.Categories') }}" class="theme-btn"><span>view
+                                    <div class="link"><a href="{{ route('Welcome.All.Categories') }}"
+                                            class="theme-btn"><span>view
                                                 menu</span></a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="image-box">
-                            <div class="image-layer" style="background-image: url({{ asset('assets/images/resource/featured-3.jpg') }});"></div>
-                            <div class="image"><img src="{{ asset('assets/images/resource/featured-3.jpg') }}" alt=""></div>
+                            <div class="image-layer"
+                                style="background-image: url({{ asset('assets/images/resource/featured-3.jpg') }});">
+                            </div>
+                            <div class="image"><img src="{{ asset('assets/images/resource/featured-3.jpg') }}"
+                                    alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -1151,12 +805,15 @@
 
     <!--Team Section-->
     <section class="team-section">
-        <div class="left-bg"><img src="{{asset('assets/images/background/bg-21.png')}}" alt="" title=""></div>
-        <div class="right-bg"><img src="{{asset('assets/images/background/bg-9.png')}}" alt="" title=""></div>
+        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-21.png') }}" alt=""
+                title=""></div>
+        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-9.png') }}" alt=""
+                title=""></div>
         <div class="auto-container">
             <div class="title-box centered">
                 <div class="subtitle"><span>experienced team</span></div>
-                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt="" title=""></div>
+                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
+                        title=""></div>
                 <h2>Meet Our Chef</h2>
             </div>
             <div class="row justify-content-center clearfix">
@@ -1164,7 +821,7 @@
                 <div class="team-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image">
-                            <img src="{{asset('assets/images/resource/team-1.jpg')}}" alt="">
+                            <img src="{{ asset('assets/images/resource/team-1.jpg') }}" alt="">
                             <div class="overlay-box">
                                 <div class="overlay-inner">
                                     <!-- Social Box -->
@@ -1201,7 +858,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h3><a href="{{route('Welcome.All.Categories')}}">Steave Den</a></h3>
+                        <h3><a href="{{ route('Welcome.All.Categories') }}">Steave Den</a></h3>
                         <div class="designation">Master chef</div>
                         <div class="text desc">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has
                             been the industrys.</div>
@@ -1238,18 +895,20 @@
 
     <!--Intro Section-->
     <section class="intro-section">
-        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-3.jpg') }});"></div>
+        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/image-3.jpg') }});">
+        </div>
         <div class="auto-container">
             <div class="content-box">
                 <div class="title-box centered">
                     <div class="subtitle"><span>amazing experience</span></div>
-                    <div class="pattern-image"><img src="{{asset('assets/images/icons/separator.svg')}}" alt="" title="">
+                    <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}"
+                            alt="" title="">
                     </div>
                     <h2>Watch Our Video</h2>
                 </div>
                 <div class="play-btn"><a href="https://www.youtube.com/watch?v=ZETY_l3GVQg&amp;autoplay=1"
-                        class="lightbox-image theme-btn"><span class="icon fal fa-play"><i
-                                class="ripple"></i></span></a></div>
+                        class="lightbox-image theme-btn"><span class="icon fal fa-play"><i class="ripple"></i></span></a>
+                </div>
                 <div class="separator"><span></span><span></span><span></span></div>
                 <h3>A modern restaurant with a menu that will make your mouth water.</h3>
                 <div class="auth-title">Willium Joe - Master chef</div>

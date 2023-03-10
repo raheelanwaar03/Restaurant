@@ -77,4 +77,18 @@ class LandingPageController extends Controller
         return redirect()->back()->with('success','Your request for table reservation has been recived');
     }
 
+    public function allProducts()
+    {
+        $categorys = Category::paginate(9);
+        $foods = Food::paginate(9);
+        return view('landingpage.products.index',compact('foods','categorys'));
+    }
+
+    public function showProduct($slug)
+    {
+        $categorys = Category::paginate(9);
+        $food = Food::where('slug',$slug)->first();
+        return view('landingpage.products.show',compact('food','categorys'));
+    }
+
 }

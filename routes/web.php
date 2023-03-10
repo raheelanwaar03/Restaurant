@@ -21,6 +21,8 @@ Route::post('/Reserve/Table',[LandingPageController::class,'reserveTable'])->nam
 // Show categories on landing page
 Route::get('/All/Categories',[LandingPageController::class,'welcomeCategories'])->name('Welcome.All.Categories');
 Route::get('/Category/{slug}',[LandingPageController::class,'singleCategory'])->name('Welcome.Category');
+Route::get('/All/Products',[LandingPageController::class,'allProducts'])->name('Welcome.All.Products');
+Route::get('/Show/Products/{slug}',[LandingPageController::class,'showProduct'])->name('Welcome.Show.Product');
 
 
 
