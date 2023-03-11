@@ -92,208 +92,6 @@
                                     </svg></a>
                             </div>
                             <div class="card-body contacts_body p-0 dz-scroll  " id="DZ_W_Contacts_Body">
-                                <ul class="contacts">
-                                    <li class="name-first-letter">A</li>
-                                    <li class="active dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Archie Parker</span>
-                                                <p>Kalid is online</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Alfie Mason</span>
-                                                <p>Taherah left 7 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/3.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>AharlieKane</span>
-                                                <p>Sami is online</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/4.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Athan Jacoby</span>
-                                                <p>Nargis left 30 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="name-first-letter">B</li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/5.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Bashid Samim</span>
-                                                <p>Rashid left 50 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Breddie Ronan</span>
-                                                <p>Kalid is online</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Ceorge Carson</span>
-                                                <p>Taherah left 7 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="name-first-letter">D</li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/3.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Darry Parker</span>
-                                                <p>Sami is online</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/4.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Denry Hunter</span>
-                                                <p>Nargis left 30 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="name-first-letter">J</li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/5.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Jack Ronan</span>
-                                                <p>Rashid left 50 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Jacob Tucker</span>
-                                                <p>Kalid is online</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>James Logan</span>
-                                                <p>Taherah left 7 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/3.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Joshua Weston</span>
-                                                <p>Sami is online</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="name-first-letter">O</li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/4.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Oliver Acker</span>
-                                                <p>Nargis left 30 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dz-chat-user">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="img_cont">
-                                                <img src="{{ asset('admin/public/images/avatar/5.jpg') }}"
-                                                    class="rounded-circle user_img" alt="" />
-                                                <span class="online_icon offline"></span>
-                                            </div>
-                                            <div class="user_info">
-                                                <span>Oscar Weston</span>
-                                                <p>Rashid left 50 mins ago</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                         <div class="card chat dz-chat-history-box d-none">
@@ -346,7 +144,7 @@
                                 </div>
                             </div>
                             <div class="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
-                                <div class="d-flex justify-content-start mb-4">
+                                {{-- <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
                                         <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
                                             class="rounded-circle user_img_msg" alt="" />
@@ -485,7 +283,7 @@
                                         Bye, see you
                                         <span class="msg_time">9:12 AM, Today</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="card-footer type_msg">
                                 <div class="input-group">
@@ -609,7 +407,7 @@
                                     </svg></a>
                             </div>
                             <div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
-                                <ul class="contacts">
+                                {{-- <ul class="contacts">
                                     <li class="active">
                                         <div class="d-flex bd-highlight">
                                             <div class="user_info">
@@ -670,7 +468,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </div>
                         </div>
                     </div>
@@ -755,15 +553,15 @@
                             <li><a href="{{ route('Admin.All.Food') }}">All Food</a></li>
                         </ul>
                     </li>
-                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-045-heart"></i>
-                            <span class="nav-text">Plugins</span>
+                   <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-072-printer"></i>
+                            <span class="nav-text">Reservation</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="uc-select2.html">Select 2</a></li>
+                            <li><a href="{{ route('Admin.Book.Table') }}">Table Request</a></li>
                         </ul>
                     </li>
-                    <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+                    {{--  <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-013-checkmark"></i>
                             <span class="nav-text">Widget</span>
                         </a>
