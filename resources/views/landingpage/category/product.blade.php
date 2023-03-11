@@ -31,12 +31,15 @@
                                 @forelse ($products as $product)
                                     <div class="col-md-4 mx-3">
                                         <div class="card bg-transparent" style="width: 18rem;">
-                                            <img class="card-img-top" src="{{ asset('images/' . $product->image) }}" height="250px" width="250px"
-                                                alt="Card image cap">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-white">{{ $product->title }}</h5>
-                                                <p class="card-text text-white">{{ $product->des }}.</p>
-                                            </div>
+                                            <a href="{{ route('Welcome.Show.Product', ['slug' => $product->slug]) }}">
+                                                <img class="card-img-top" src="{{ asset('images/' . $product->image) }}"
+                                                    height="250px" width="250px" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-white">{{ $product->title }}</h5>
+                                                    <p class="card-text text-white">{{ $product->des }}.</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="btn btn-sm btn-danger">order now</a>
                                         </div>
                                     </div>
                                 @empty

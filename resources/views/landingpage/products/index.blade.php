@@ -30,7 +30,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 @forelse ($foods as $food)
-                                    <a href="#">
+                                    <a href="{{ route('Welcome.Show.Product',['slug'=>$food->slug]) }}">
                                         <div class="col-md-4 mx-3">
                                             <div class="card bg-transparent" style="width: 18rem;">
                                                 <img class="card-img-top" src="{{ asset('images/' . $food->image) }}"

@@ -18,24 +18,8 @@
                 <ul class="navigation clearfix">
                     <li class="current"><a href="{{ route('Welcome') }}">Home</a>
                     </li>
-                    <li class="dropdown"><a href="menu-list.html">Menus</a>
-                        <ul>
-                            <li><a href="menu-list-1.html">Menu List 1</a></li>
-                        </ul>
-                    </li>
                     <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
                     <li><a href="our-chef.html">Our chefs</a></li>
-                    <li class="dropdown"><a href="#">Pages</a>
-                        <ul>
-                            <li><a href="#">Dropdown Menu 1</a></li>
-                            <li class="dropdown"><a href="#">Dropdown Menu 4</a>
-                                <ul>
-                                    <li><a href="#">Dropdown Menu level 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Dropdown Lorem 5</a></li>
-                        </ul>
-                    </li>
                     <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                 </ul>
             </div><!-- /.Side-menu -->

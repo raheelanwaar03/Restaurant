@@ -51,11 +51,11 @@
                                     <div class="ttl clearfix">
                                         <h5><a href="#">{{ $food->title }}</a></h5>
                                     </div>
-                                    <div class="price"><span>$25.50</span></div>
+                                    <div class="price"><span>${{ $food->price }}</span></div>
                                 </div>
                                 <div class="text desc"><a href="#">{{ $food->des }}</a></div>
                             </div>
-                            <div class="">
+                            <div class="mt-3">
                                 <a href="#" class="btn btn-danger">order now</a>
                             </div>
                         </div>
