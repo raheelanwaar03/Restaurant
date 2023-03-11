@@ -8,4 +8,8 @@ Route::prefix('/User')->name('User.')->middleware('auth','user')->group(function
 
     Route::get('/Dashboard',[UserDashboardController::class,'index'])->name('Dashboard');
 
+    // order food
+
+    Route::post('/Add/To/Cart/{id}',[UserDashboardController::class,'store'])->name('Add.To.Cart');
+
 });

@@ -31,15 +31,24 @@
                                 @forelse ($products as $product)
                                     <div class="col-md-4 mx-3">
                                         <div class="card bg-transparent" style="width: 18rem;">
-                                            <a href="{{ route('Welcome.Show.Product', ['slug' => $product->slug]) }}">
-                                                <img class="card-img-top" src="{{ asset('images/' . $product->image) }}"
-                                                    height="250px" width="250px" alt="Card image cap">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-white">{{ $product->title }}</h5>
-                                                    <p class="card-text text-white">{{ $product->des }}.</p>
+                                            <form action="{{ route('User.Add.To.Cart',['id'=>$product->id]) }}" method="POST">
+                                                @csrf
+                                                <a href="{{ route('Welcome.Show.Product', ['slug' => $product->slug]) }}">
+                                                    <img class="card-img-top" src="{{ asset('images/' . $product->image) }}"
+                                                        height="250px" width="250px" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <h5 class="card-title text-white">{{ $product->title }}</h5>
+                                                            <h3>${{ $product->price }}</h3>
+                                                        </div>
+                                                        <p class="card-text text-white">{{ $product->des }}.</p>
+                                                    </div>
+                                                </a>
+                                                <div class="d-flex justify-content-around align-items-center mb-3 ">
+                                                    <input type="number" name="qty" min='1' value="1" style="width:35px;background: rgb(153, 148, 148);color:black;border-radius:7px;padding-left:5px">
+                                                    <button class="btn btn-danger">AddToCart</button>
                                                 </div>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-danger">order now</a>
+                                            </form>
                                         </div>
                                     </div>
                                 @empty
