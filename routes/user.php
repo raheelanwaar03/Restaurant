@@ -10,6 +10,6 @@ Route::prefix('/User')->name('User.')->middleware('auth','user')->group(function
 
     // order food
 
-    Route::post('/Add/To/Cart/{id}',[UserDashboardController::class,'store'])->name('Add.To.Cart');
+    Route::post('/Add/To/Cart/{id}',[UserDashboardController::class,'addToCart'])->name('Add.To.Cart');
 
 });

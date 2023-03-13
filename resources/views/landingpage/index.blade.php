@@ -166,25 +166,14 @@
                                     </a>
                                 </div>
                                 <div class="link info-toggler">
-                                    <button class="info-btn">
-                                        <span class="hamburger">
-                                            <span class="top-bun"></span>
-                                            <span class="meat"></span>
-                                            <span class="bottom-bun"></span>
-                                        </span>
-                                    </button>
+                                    <li class="nav-item dropdown dropdown-large">
+                                        <a href="#"
+                                            class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative cart-link">
+                                            <span class="alert-count">1</span>
+                                            <i class='bx bx-shopping-bag'></i>
+                                        </a>
+                                    </li>
                                 </div>
-                            </div>
-
-                            <!-- Hidden Nav Toggler -->
-                            <div class="nav-toggler">
-                                <button class="hidden-bar-opener">
-                                    <span class="hamburger">
-                                        <span class="top-bun"></span>
-                                        <span class="meat"></span>
-                                        <span class="bottom-bun"></span>
-                                    </span>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -646,7 +635,7 @@
                                     <div class="text desc">{{ $food->des }}</div>
                                     <div class="price">${{ $food->price }}</div>
                                     <div class="">
-                                        <a href="#" class="btn btn-danger">Order now</a>
+                                        <a href="#" class="btn btn-danger">AddToCart</a>
                                     </div>
                                 </div>
                             </div>

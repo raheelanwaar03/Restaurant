@@ -14,7 +14,7 @@ class UserDashboardController extends Controller
         return view('user.index');
     }
 
-    public function store(Request $request, $id)
+    public function addToCart(Request $request, $id)
     {
         $food = Food::find($id);
 

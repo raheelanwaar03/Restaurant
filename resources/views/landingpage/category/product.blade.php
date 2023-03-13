@@ -3,7 +3,7 @@
 @section('content')
     <!-- Inner Banner Section -->
     <section class="inner-banner">
-        <div class="image-layer" style="background-image: url({{ asset('images/' . $category->image) }});">
+        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/banner-image-4.jpg') }});">
         </div>
         <div class="auto-container">
             <div class="inner">

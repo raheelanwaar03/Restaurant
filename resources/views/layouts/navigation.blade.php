@@ -103,25 +103,25 @@
                                 <!-- Main Menu End-->
                             </div>
                             <!--Nav Outer End-->
-
-                            <div class="links-box clearfix">
-                                <div class="link link-btn">
-                                    <a href="{{ route('Welcome.Find.Table') }}"
-                                        class="theme-btn btn-style-one clearfix">
-                                        <span class="btn-wrap">
-                                            <span class="text-one">find a table</span>
-                                            <span class="text-two">find a table</span>
-                                        </span>
-                                    </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="links-box clearfix">
+                                    <div class="link link-btn">
+                                        <a href="{{ route('Welcome.Find.Table') }}"
+                                            class="theme-btn btn-style-one clearfix">
+                                            <span class="btn-wrap">
+                                                <span class="text-one">find a table</span>
+                                                <span class="text-two">find a table</span>
+                                            </span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="link info-toggler">
-                                    <button class="info-btn">
-                                        <span class="hamburger">
-                                            <span class="top-bun"></span>
-                                            <span class="meat"></span>
-                                            <span class="bottom-bun"></span>
+                                <div class="link link-btn ml-3">
+                                    <a href="#" class="theme-btn btn-style-one clearfix text-white">
+                                        <span class="btn-wrap">
+                                            <span class="text-one">Cart Items( {{ cartItems() }} )</span>
+                                            <span class="text-two">Cart Items</span>
                                         </span>
-                                    </button>
+                                        </a>
                                 </div>
                             </div>
 
