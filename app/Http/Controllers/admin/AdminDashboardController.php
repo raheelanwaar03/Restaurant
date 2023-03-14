@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use App\Models\TableBook;
 use Illuminate\Http\Request;
 
@@ -17,6 +18,20 @@ class AdminDashboardController extends Controller
     {
         $tables = TableBook::paginate(9);
         return view('admin.dashboard.table',compact('tables'));
+    }
+
+    public function allOrders()
+    {
+        $orderFood = Order::where('status','pending')->with('userOrders')->get();
+        return view('admin.order.index',compact('orderFood'));
+    }
+
+    public function cancelOrder($id)
+    {
+        $orderFood = Order::find($id);
+        $orderFood->status = 'Admin Cancelled';
+        $orderFood->save();
+        return redirect()->back()->with('success','Order Cancelled successfully');
     }
 
 }

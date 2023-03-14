@@ -59,7 +59,6 @@ class UserDashboardController extends Controller
         $cartFood = cartFood::find($id);
 
         $cartFood->qty = $request->qty;
-
         $price = $cartFood->price * $request->qty;
 
         $cartFood->total_price = $price;
@@ -96,6 +95,23 @@ class UserDashboardController extends Controller
         $cartFood->delete();
 
         return redirect()->back()->with('success','Thanks for Your Order!');
+
+    }
+
+    public function allOrder()
+    {
+        $categorys = Category::get();
+        $orderFoods = Order::paginate(10);
+        return view('landingpage.order.index',compact('orderFoods','categorys'));
+
+    }
+
+    public function destroyOrder($id)
+    {
+        $orderFood = Order::find($id);
+        $orderFood->status = 'Cancelled';
+        $orderFood->save();
+        return redirect()->back()->with('success','Your order is cancelled');
 
     }
 

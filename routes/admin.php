@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('/Admin')->name('Admin.')->middleware('auth','admin')->group(function(){
     Route::get('/Dashboard',[AdminDashboardController::class,'index'])->name('Dashboard');
     Route::get('/Book/Table',[AdminDashboardController::class,'bookTable'])->name('Book.Table');
+    // order system
+    Route::get('/All/Orders',[AdminDashboardController::class,'allOrders'])->name('All.Orders');
+    Route::get('/Cancel/Order/{id}',[AdminDashboardController::class,'cancelOrder'])->name('Cancel.Order');
     // category routes
     Route::get('/Add/Category',[CategoryController::class,'add'])->name('Add.Category');
     Route::post('/Store/Category',[CategoryController::class,'store'])->name('Store.Category');

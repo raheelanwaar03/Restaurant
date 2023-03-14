@@ -45,12 +45,12 @@
                                 </div>
                             </div>
                             <div class="ml-5">
-                                <h5><a href="#">{{ $food->title }}</a></h5>
-                                <div class="price"><span>${{ $food->price }}</span></div>
-                                <div class="text desc"><a href="#">{{ $food->des }}</a></div>
+                                <h5><a href="#">Title: {{ $food->title }}</a></h5>
+                                <div class="price"><span>Price: ${{ $food->price }}</span></div>
+                                <div class="text desc"><a href="#">Description: {{ $food->des }}</a></div>
                                 <div class="mt-3">
                                     <input type="number" name="qty" min='1' value="1"
-                                        style="width:35px;background: rgb(153, 148, 148);color:black;border-radius:7px;padding-left:5px">
+                                        style="width:55px;height:35px;padding:6px">
                                     <button class="btn btn-danger">AddToCart</button>
                                 </div>
                             </div>

@@ -554,27 +554,22 @@
                         </ul>
                     </li>
                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-072-printer"></i>
+                            <i class="flaticon-013-checkmark"></i>
                             <span class="nav-text">Reservation</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Book.Table') }}">Table Request</a></li>
                         </ul>
                     </li>
-                    {{--  <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
-                            <i class="flaticon-013-checkmark"></i>
-                            <span class="nav-text">Widget</span>
-                        </a>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-072-printer"></i>
-                            <span class="nav-text">Forms</span>
+                            <span class="nav-text">Orders</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="form-element.html">Form Elements</a></li>
+                            <li><a href="{{ route('Admin.All.Orders') }}">Pending Order</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    {{--<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Table</span>
                         </a>
