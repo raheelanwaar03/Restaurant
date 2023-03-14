@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\TableBook;
+use App\Models\UserAddress;
 use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
@@ -53,5 +54,12 @@ class AdminDashboardController extends Controller
         $orderFood = Order::where('status','Delivered')->get();
         return view('admin.order.deliveredOrders',compact('orderFood'));
     }
+
+    public function userAddress($user_id)
+    {
+        $userAddress = UserAddress::where('user_id',$user_id)->first();
+        return view('admin.Dashboard.userAddress',compact('userAddress'));
+    }
+
 
 }

@@ -51,7 +51,7 @@
                                                 <a href="{{ route('Admin.Cancel.Order', ['id' => $food->id]) }}"
                                                     class="btn btn-danger">Cancel</a>
                                                 <a href="{{ route('Admin.Deliver.Order',['id'=>$food->id]) }}" class="btn btn-success">Delivered</a>
-                                                <a href="#" class="btn btn-info">User Address</a>
+                                                <a href="{{ route('Admin.User.Address',['user_id'=>$food->user_id]) }}" class="btn btn-info">User Address</a>
                                             </td>
                                         </tr>
                                     @empty
