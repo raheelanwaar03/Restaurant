@@ -44,23 +44,26 @@
                                         <td>{{ $food->title }}</td>
                                         <td>{{ $food->price }}</td>
                                         <td>
-                                            <form action="{{ route('User.Update.Cart.Item',['id'=>$food->id]) }}" method='POST'>
+                                            <form action="{{ route('User.Update.Cart.Item', ['id' => $food->id]) }}"
+                                                method='POST'>
                                                 @csrf
-                                                <input type="number" name="qty" value="{{ $food->qty }}" min="1"
-                                                    style="width:55px;height:35px;padding:6px">
-                                                    <button type="submit" style="background: transparent;color:white;">
-                                                        <i class="fa fa-refresh" aria-hidden="true"></i>
-                                                    </button>
-                                                </td>
-                                            </form>
+                                                <input type="number" name="qty" value="{{ $food->qty }}"
+                                                    min="1" style="width:55px;height:35px;padding:6px">
+                                                <button type="submit" style="background: transparent;color:white;">
+                                                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                                                </button>
+                                        </td>
+                                        </form>
                                         <td>
                                             <img src="{{ asset('images/' . $food->image) }}" class="img-fluid img-thumbnail"
                                                 width="90px" height="90px" alt="{{ $food->image }}">
                                         </td>
                                         <td>{{ $food->total_price }}</td>
                                         <td>
-                                            <a href="{{ route('User.Delete.Cart.Item',['id'=>$food->id]) }}" class="btn btn-danger">Remove</a>
-                                            <a href="#" class="btn btn-warning text-white">Order Now</a>
+                                            <a href="{{ route('User.Delete.Cart.Item', ['id' => $food->id]) }}"
+                                                class="btn btn-danger">Remove</a>
+                                            <a href="{{ route('User.Store.Order', ['id' => $food->id]) }}"
+                                                class="btn btn-warning text-white">Order Now</a>
                                         </td>
                                     </tr>
                                 @empty

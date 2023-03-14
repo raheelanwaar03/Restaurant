@@ -139,7 +139,7 @@
                                         </li>
                                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
                                         @if (auth()->user())
-                                            <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
+                                            <li><a href="{{ route('User.Dashboard') }}">All Orders</a></li>
                                         @else
                                             <li class="dropdown"><a href="#">Authentication</a>
                                                 <ul>
