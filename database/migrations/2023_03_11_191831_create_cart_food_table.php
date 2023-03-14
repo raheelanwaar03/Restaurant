@@ -16,9 +16,10 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('product_id');
             $table->string('title');
-            $table->string('price');
+            $table->bigInteger('price');
+            $table->bigInteger('total_price');
             $table->string('image');
-            $table->string('qty');
+            $table->integer('qty');
             $table->timestamps();
         });
     }

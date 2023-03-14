@@ -165,14 +165,13 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="link info-toggler">
-                                    <li class="nav-item dropdown dropdown-large">
-                                        <a href="#"
-                                            class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative cart-link">
-                                            <span class="alert-count">1</span>
-                                            <i class='bx bx-shopping-bag'></i>
+                                <div class="link link-btn ml-3">
+                                    <a href="{{ route('User.All.Cart.Items') }}" class="theme-btn btn-style-one clearfix text-white">
+                                        <span class="btn-wrap">
+                                            <span class="text-one">Cart Items( {{ cartItems() }} )</span>
+                                            <span class="text-two">Cart Items</span>
+                                        </span>
                                         </a>
-                                    </li>
                                 </div>
                             </div>
                         </div>
@@ -624,7 +623,8 @@
                     </div>
                     <div class="dish-gallery-slider owl-theme owl-carousel">
                         @foreach ($foods as $food)
-                            <!--Slide Item-->
+                        <form action="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" method="POST">
+                            @csrf
                             <div class="offer-block-two">
                                 <div class="inner-box">
                                     <div class="image"><a
@@ -634,16 +634,17 @@
                                     <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
                                     <div class="text desc">{{ $food->des }}</div>
                                     <div class="price">${{ $food->price }}</div>
-                                    <div class="">
-                                        <a href="#" class="btn btn-danger">AddToCart</a>
-                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <input type="number" name="qty" value="1" min="1" style="width:55px;height:35px;padding:6px">
+                                    <button class="btn btn-danger">AddToCart</button>
                                 </div>
                             </div>
+                        </form>
                         @endforeach
                     </div>
-
                     <div class="lower-link-box text-center">
-                        <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
+                        <a href="{{ route('Welcome.All.Products') }}" class="theme-btn btn-style-two clearfix">
                             <span class="btn-wrap">
                                 <span class="text-one">view all menu</span>
                                 <span class="text-two">view all menu</span>

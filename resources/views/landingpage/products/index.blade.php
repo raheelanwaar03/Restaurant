@@ -42,7 +42,10 @@
                                                     </div>
                                                     <p class="card-text text-white">{{ $food->des }}.</p>
                                                 </div>
-                                                <a href="#" class="btn btn-danger">order now!</a>
+                                                <div class="d-flex justify-content-around align-items-center">
+                                                    <input type="number" name="qty" min="1" value="1" style="width:55px;height:35px;padding:6px">
+                                                    <a href="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" class="btn btn-danger">AddToCart</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>

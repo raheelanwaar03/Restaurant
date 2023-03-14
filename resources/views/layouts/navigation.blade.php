@@ -9,6 +9,7 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('asset/images/favicon.png') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('asset/images/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -116,7 +117,7 @@
                                     </div>
                                 </div>
                                 <div class="link link-btn ml-3">
-                                    <a href="#" class="theme-btn btn-style-one clearfix text-white">
+                                    <a href="{{ route('User.All.Cart.Items') }}" class="theme-btn btn-style-one clearfix text-white">
                                         <span class="btn-wrap">
                                             <span class="text-one">Cart Items( {{ cartItems() }} )</span>
                                             <span class="text-two">Cart Items</span>

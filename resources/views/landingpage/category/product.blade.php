@@ -45,7 +45,7 @@
                                                     </div>
                                                 </a>
                                                 <div class="d-flex justify-content-around align-items-center mb-3 ">
-                                                    <input type="number" name="qty" min='1' value="1" style="width:35px;background: rgb(153, 148, 148);color:black;border-radius:7px;padding-left:5px">
+                                                    <input type="number" name="qty" min="1" value="1" style="width:55px;height:35px;padding:6px">
                                                     <button class="btn btn-danger">AddToCart</button>
                                                 </div>
                                             </form>

@@ -9,7 +9,9 @@ Route::prefix('/User')->name('User.')->middleware('auth','user')->group(function
     Route::get('/Dashboard',[UserDashboardController::class,'index'])->name('Dashboard');
 
     // order food
-
     Route::post('/Add/To/Cart/{id}',[UserDashboardController::class,'addToCart'])->name('Add.To.Cart');
+    Route::get('/All/Cart/Items',[UserDashboardController::class,'allCartItems'])->name('All.Cart.Items');
+    Route::post('/Update/Cart/{id}',[UserDashboardController::class,'updateCart'])->name('Update.Cart.Item');
+    Route::get('/Delete/Cart/{id}',[UserDashboardController::class,'deleteCart'])->name('Delete.Cart.Item');
 
 });
