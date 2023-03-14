@@ -30,36 +30,41 @@
                         <div class="col-md-12">
                             <div class="row">
                                 @forelse ($foods as $food)
-                                    <a href="{{ route('Welcome.Show.Product',['slug'=>$food->slug]) }}">
+                                    <a href="{{ route('Welcome.Show.Product', ['slug' => $food->slug]) }}">
                                         <div class="col-md-4 mx-3">
                                             <div class="card bg-transparent" style="width: 18rem;">
                                                 <img class="card-img-top" src="{{ asset('images/' . $food->image) }}"
                                                     height="250px" width="250px" alt="Card image cap">
-                                                <div class="card-body">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <h5 class="card-title text-white">{{ $food->title }}</h5>
-                                                        <p class="text-white">{{ $food->price }}$</p>
-                                                    </div>
-                                                    <p class="card-text text-white">{{ $food->des }}.</p>
-                                                </div>
-                                                <div class="d-flex justify-content-around align-items-center">
-                                                    <input type="number" name="qty" min="1" value="1" style="width:55px;height:35px;padding:6px">
-                                                    <a href="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" class="btn btn-danger">AddToCart</a>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </a>
-                                @empty
-                            </div>
-                            <h3>Admin have not added any food yet!</h3>
-                            @endforelse
-                            <div class="col-md-12 text-center">
-                                {{ $foods->withQueryString()->links('pagination::bootstrap-5') }}
+                                    <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
+                                        @csrf
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h5 class="card-title text-white">{{ $food->title }}</h5>
+                                                <p class="text-white">{{ $food->price }}$</p>
+                                            </div>
+                                            <p class="card-text text-white">{{ $food->des }}.</p>
+                                        </div>
+                                        <div class="d-flex justify-content-around align-items-center">
+                                            <input type="number" name="qty" min="1" value="1"
+                                                style="width:55px;height:35px;padding:6px">
+                                            <button class="btn btn-danger">AddToCart</button>
+                                        </div>
+                                    </form>
                             </div>
                         </div>
+
+                    @empty
+                    </div>
+                    <h3>Admin have not added any food yet!</h3>
+                    @endforelse
+                    <div class="col-md-12 text-center">
+                        {{ $foods->withQueryString()->links('pagination::bootstrap-5') }}
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
         </div>
     </section>

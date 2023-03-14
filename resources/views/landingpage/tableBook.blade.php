@@ -33,7 +33,7 @@
                     form</div>
             </div>
             <div class="default-form reservation-form">
-                <form method="post" action="{{ route('Welcome.Reserve.Table') }}">
+                <form method="post" action="{{ route('Welcome.Reserve.Table') }}" method='POST'>
                     @csrf
                     <div class="row clearfix">
                         <div class="form-group col-lg-4 col-md-6 col-sm-12">

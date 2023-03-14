@@ -34,4 +34,24 @@ class AdminDashboardController extends Controller
         return redirect()->back()->with('success','Order Cancelled successfully');
     }
 
+    public function deliverOrder($id)
+    {
+        $orderFood = Order::find($id);
+        $orderFood->status = 'Delivered';
+        $orderFood->save();
+        return redirect()->back()->with('success','Order Delivered successfully');
+    }
+
+    public function cancelledOrder()
+    {
+        $orderFood = Order::where('status','Admin Cancelled')->get();
+        return view('admin.order.cancel',compact('orderFood'));
+    }
+
+    public function deliveredOrders()
+    {
+        $orderFood = Order::where('status','Delivered')->get();
+        return view('admin.order.deliveredOrders',compact('orderFood'));
+    }
+
 }

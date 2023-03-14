@@ -62,24 +62,27 @@
                                     <ul class="navigation clearfix">
                                         <li class="current"><a href="{{ route('Welcome') }}">Home</a>
                                         </li>
-                                        <li class="dropdown has-mega-menu"><a href="{{ route('Welcome.All.Categories') }}">Menus</a>
+                                        <li class="dropdown has-mega-menu"><a
+                                                href="{{ route('Welcome.All.Categories') }}">Menus</a>
                                             <ul>
                                                 <li>
                                                     <div class="mega-menu">
                                                         <div class="menu-inner">
                                                             <div class="auto-container">
                                                                 <div class="row clearfix">
-                                                                @foreach($categorys as $category)
-                                                                <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                    <div class="image"><a
-                                                                            href="{{ route('Welcome.Category',['slug'=>$category->slug]) }}"><img
-                                                                                src="{{ asset('images/'.$category->image) }}"
-                                                                                alt="{{ $category->image }}"></a></div>
-                                                                    <div class="title"><a
-                                                                            href="#">{{ $category->title }}</a>
-                                                                    </div>
-                                                                </div>
-                                                                @endforeach
+                                                                    @foreach ($categorys as $category)
+                                                                        <div
+                                                                            class="menu-block col-lg-3 col-md-6 col-sm-6">
+                                                                            <div class="image"><a
+                                                                                    href="{{ route('Welcome.Category', ['slug' => $category->slug]) }}"><img
+                                                                                        src="{{ asset('images/' . $category->image) }}"
+                                                                                        alt="{{ $category->image }}"></a>
+                                                                            </div>
+                                                                            <div class="title"><a
+                                                                                    href="#">{{ $category->title }}</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    @endforeach
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -88,15 +91,15 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
-                                            @if (auth()->user())
-                                                <li><a href="{{ route('User.All.Orders') }}">All Orders</a></li>
-                                            @else
-                                        <li class="dropdown"><a href="#">Authentication</a>
+                                        @if (auth()->user())
+                                            <li><a href="{{ route('User.All.Orders') }}">All Orders</a></li>
+                                        @else
+                                            <li class="dropdown"><a href="#">Authentication</a>
                                                 <ul>
                                                     <li><a href="{{ route('login') }}">Login</a></li>
                                                     <li><a href="{{ route('register') }}">Register</a></li>
                                                 </ul>
-                                            @endif
+                                        @endif
                                         </li>
                                         <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                                     </ul>
@@ -106,7 +109,7 @@
                             <!--Nav Outer End-->
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="links-box clearfix">
-                                    <div class="link link-btn">
+                                    <div class="link link-btn mr-3">
                                         <a href="{{ route('Welcome.Find.Table') }}"
                                             class="theme-btn btn-style-one clearfix">
                                             <span class="btn-wrap">
@@ -114,30 +117,80 @@
                                                 <span class="text-two">find a table</span>
                                             </span>
                                         </a>
+                                        <div class="link link-btn ml-3">
+                                            <a href="{{ route('User.All.Cart.Items') }}"
+                                                class="theme-btn btn-style-one clearfix text-white">
+                                                <span class="btn-wrap">
+                                                    <span class="text-one">Cart Items( {{ cartItems() }} )</span>
+                                                    <span class="text-two">Cart Items( {{ cartItems() }} )</span>
+                                                </span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="link link-btn ml-3">
-                                    <a href="{{ route('User.All.Cart.Items') }}" class="theme-btn btn-style-one clearfix text-white">
-                                        <span class="btn-wrap">
-                                            <span class="text-one">Cart Items( {{ cartItems() }} )</span>
-                                            <span class="text-two">Cart Items</span>
+                                <div class="nav-toggler">
+                                    <button class="hidden-bar-opener">
+                                        <span class="hamburger">
+                                            <span class="top-bun"></span>
+                                            <span class="meat"></span>
+                                            <span class="bottom-bun"></span>
                                         </span>
-                                        </a>
+                                    </button>
                                 </div>
-                            </div>
-
-                            <!-- Hidden Nav Toggler -->
-                            <div class="nav-toggler">
-                                <button class="hidden-bar-opener">
-                                    <span class="hamburger">
-                                        <span class="top-bun"></span>
-                                        <span class="meat"></span>
-                                        <span class="bottom-bun"></span>
-                                    </span>
-                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
+        <div class="menu-backdrop"></div>
+
+        <!-- Hidden Navigation Bar -->
+        <section class="hidden-bar">
+            <!-- Hidden Bar Wrapper -->
+            <div class="inner-box">
+                <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
+                <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img
+                            src="{{ asset('assets/images/logo.png') }}" alt=""
+                            title="Delici - Restaurants HTML Template"></a></div>
+
+                <!-- .Side-menu -->
+                <div class="side-menu">
+                    <ul class="navigation clearfix">
+                        <li class="current"><a href="{{ route('Welcome') }}">Home</a>
+                        </li>
+                        <li class="dropdown"><a href="#">Menus</a>
+                            <ul>
+                                @foreach ($categorys as $category)
+                                    <li><a
+                                            href="{{ route('Welcome.Category', ['slug' => $category->slug]) }}">{{ $category->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
+                        @if (auth()->user())
+                            <li><a href="{{ route('User.All.Orders') }}">All Orders</a></li>
+                        @else
+                            <li class="dropdown"><a href="#">Authentication</a>
+                                <ul>
+                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                </ul>
+                        @endif
+                        <li><a href="{{ route('Welcome.Contact-Us') }}">Contact </a></li>
+                    </ul>
+                </div>
+                <div class="link link-btn ml-3">
+                    <a href="{{ route('User.All.Cart.Items') }}"
+                        class="theme-btn btn-style-one clearfix text-white">
+                        <span class="btn-wrap">
+                            <span class="text-one">Cart Items( {{ cartItems() }} )</span>
+                            <span class="text-two">Cart Items( {{ cartItems() }} )</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- / Hidden Bar -->

@@ -35,6 +35,7 @@
                                     <th>Item Image</th>
                                     <th>Total Price</th>
                                     <th>Status</th>
+                                    <th>Address</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

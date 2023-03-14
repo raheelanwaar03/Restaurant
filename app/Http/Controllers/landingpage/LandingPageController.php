@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\admin\Category;
 use App\Models\admin\Food;
 use App\Models\TableBook;
+use App\Models\UserAddress;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -89,6 +90,26 @@ class LandingPageController extends Controller
         $categorys = Category::paginate(9);
         $food = Food::where('slug',$slug)->first();
         return view('landingpage.products.show',compact('food','categorys'));
+    }
+
+    public function address()
+    {
+        $categorys = Category::paginate(9);
+        return view('landingpage.address',compact('categorys'));
+    }
+
+    public function storeAddress(Request $request)
+    {
+        $validated = $request->validate([
+            'address'=>'required',
+        ]);
+
+        $userAddress = new UserAddress();
+        $userAddress->user_id = auth()->user()->id;
+        $userAddress->address = $validated['address'];
+        $userAddress->save();
+        return redirect()->back()->with('success','Your Address added successfully');
+
     }
 
 }

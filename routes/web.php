@@ -13,6 +13,9 @@ Route::middleware('auth')->group(function () {
 
 // Landing page Routes
 Route::get('/',[LandingPageController::class,'index'])->name('Welcome');
+Route::get('/User/Add/Address',[LandingPageController::class,'address'])->name('Add.Address');
+Route::post('/User/Store/Address',[LandingPageController::class,'storeAddress'])->name('Store.Address');
+
 Route::get('/About-Us',[LandingPageController::class,'aboutUs'])->name('Welcome.About-Us');
 Route::get('/Contact-Us',[LandingPageController::class,'contactUs'])->name('Welcome.Contact-Us');
 Route::get('/Find/Table',[LandingPageController::class,'findTable'])->name('Welcome.Find.Table');

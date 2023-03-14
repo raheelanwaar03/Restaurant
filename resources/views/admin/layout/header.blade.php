@@ -38,7 +38,7 @@
     <div id="main-wrapper">
         <div class="nav-header">
             <a href="{{ route('Welcome') }}" class="brand-logo">
-               <img src="{{ asset('admin/public/images/logo.png') }}" height="100px" width="100px" alt="logo">
+                <img src="{{ asset('admin/public/images/logo.png') }}" height="100px" width="100px" alt="logo">
             </a>
             <div class="nav-control">
                 <div class="hamburger">
@@ -553,7 +553,7 @@
                             <li><a href="{{ route('Admin.All.Food') }}">All Food</a></li>
                         </ul>
                     </li>
-                   <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-013-checkmark"></i>
                             <span class="nav-text">Reservation</span>
                         </a>
@@ -561,39 +561,16 @@
                             <li><a href="{{ route('Admin.Book.Table') }}">Table Request</a></li>
                         </ul>
                     </li>
-                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-072-printer"></i>
                             <span class="nav-text">Orders</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('Admin.All.Orders') }}">Pending Order</a></li>
+                            <li><a href="{{ route('Admin.All.Orders') }}">Pending Orders</a></li>
+                            <li><a href="{{ route('Admin.All.Cancel.Order') }}">Cancelled Orders</a></li>
+                            <li><a href="{{ route('Admin.All.Delivered.Order') }}">Delivered Orders</a></li>
                         </ul>
                     </li>
-                    {{--<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-043-menu"></i>
-                            <span class="nav-text">Table</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                            <li><a href="table-datatable-basic.html">Datatable</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-022-copy"></i>
-                            <span class="nav-text">Pages</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="page-login.html">Login</a></li>
-                            <li><a href="page-register.html">Register</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="page-error-400.html">Error 400</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="page-lock-screen.html">Lock Screen</a></li>
-                            <li><a href="empty-page.html">Empty Page</a></li>
-                        </ul>
-                    </li> --}}
                 </ul>
                 <div class="copyright">
                     <p><strong>{{ env('APP_NAME') }} Restaurant Admin</strong> © 2023 All Rights Reserved</p>

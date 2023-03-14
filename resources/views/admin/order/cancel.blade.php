@@ -17,7 +17,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="text-center">Orders</h3>
+                            <h3 class="text-center">Cancelled Orders</h3>
                         </div>
                         <div class="card-body">
                             <table class="table table-responsive table-borderd" id="myTable">

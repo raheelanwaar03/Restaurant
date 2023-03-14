@@ -7,6 +7,7 @@ use App\Models\admin\Category;
 use App\Models\admin\Food;
 use App\Models\Order;
 use App\Models\user\cartFood;
+use App\Models\UserAddress;
 use Illuminate\Http\Request;
 
 class UserDashboardController extends Controller
@@ -78,6 +79,14 @@ class UserDashboardController extends Controller
 
     public function storeOrder($id)
     {
+        // check user address
+
+        $userAddress = UserAddress::where('user_id',auth()->user()->id)->first();
+        if($userAddres = '')
+        {
+            return redirect()->route('Add.Address')->with('error','Please Add Your Address For Receiving Delivery');
+        }
+
         $cartFood = cartFood::find($id);
 
         // storing cartItem into order

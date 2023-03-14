@@ -12,6 +12,9 @@ Route::prefix('/Admin')->name('Admin.')->middleware('auth','admin')->group(funct
     // order system
     Route::get('/All/Orders',[AdminDashboardController::class,'allOrders'])->name('All.Orders');
     Route::get('/Cancel/Order/{id}',[AdminDashboardController::class,'cancelOrder'])->name('Cancel.Order');
+    Route::get('/Deliver/Order/{id}',[AdminDashboardController::class,'deliverOrder'])->name('Deliver.Order');
+    Route::get('/All/Cancel/Order',[AdminDashboardController::class,'cancelledOrder'])->name('All.Cancel.Order');
+    Route::get('/All/Delivered/Order',[AdminDashboardController::class,'deliveredOrders'])->name('All.Delivered.Order');
     // category routes
     Route::get('/Add/Category',[CategoryController::class,'add'])->name('Add.Category');
     Route::post('/Store/Category',[CategoryController::class,'store'])->name('Store.Category');

@@ -25,6 +25,9 @@
         <div class="location-center">
             <div class="container-fluid">
                 <div class="cinfo-box">
+                    <div class="">
+                        <h4 class="text-center my-4">{{ auth()->user()->name }} Please Add Your Address To Receive Your Order <span><a href="{{ route('Add.Address') }}" class="btn btn-success">Add Address</a></span> </h2>
+                    </div>
                     <div class="card">
                         <table class="table table-striped table-dark">
                             <thead>
