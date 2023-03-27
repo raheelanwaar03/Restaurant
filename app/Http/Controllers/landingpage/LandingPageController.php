@@ -39,7 +39,7 @@ class LandingPageController extends Controller
     public function welcomeCategories()
     {
         $categorys = Category::paginate(9);
-        return view('landingPage.category.index',compact('categorys'));
+        return view('landingpage.category.index',compact('categorys'));
     }
     // showing category wise product
 
