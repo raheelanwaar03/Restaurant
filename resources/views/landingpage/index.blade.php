@@ -14,8 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
     {{-- multi select --}}
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css">
 
 </head>
 
@@ -645,8 +644,9 @@
                                         <button class="btn btn-danger">AddToCart</button>
                                     </div>
                                     <div>
-                                        <select name="extera[]" id="countries" multiple>
-                                            <option value="Cheese" class="bg-dark" style="color:black;">Cheese</option>
+                                        <select name="extera[]" class="livesearch" multiple>
+                                            <option value="Cheese" class="bg-dark" style="color:black;">Cheese
+                                            </option>
                                             <option value="Lettuce">Lettuce</option>
                                             <option value="Tomato">Tomato</option>
                                             <option value="Onion">Onion</option>
@@ -1284,12 +1284,8 @@
 
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-up"></span></div>
-    {{-- muliti select option --}}
 
-    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
-    <script>
-        new MultiSelectTag('countries') // id
-    </script>
+
 
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
@@ -1302,6 +1298,11 @@
     <script src="{{ asset('assets/js/wow.js') }}"></script>
     <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
     <script src="{{ asset('assets/js/custom-script.js') }}"></script>
+    {{-- muliti select option --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <script>
+        $(".livesearch").chosen();
+    </script>
 </body>
 
 </html>

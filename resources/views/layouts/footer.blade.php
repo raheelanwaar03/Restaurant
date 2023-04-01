@@ -94,9 +94,9 @@
 <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
 <script src="{{ asset('assets/js/custom-script.js') }}"></script>
 {{-- mulite select option --}}
-<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 <script>
-    new MultiSelectTag('countries')  // id
+$(".livesearch").chosen();
 </script>
 
 </body>

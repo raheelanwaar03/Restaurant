@@ -70,6 +70,16 @@ class UserDashboardController extends Controller
         return redirect()->back()->with('success','Food quantity updated successfully');
     }
 
+    public function removeTopin($id)
+    {
+        $cartFood = cartFood::find($id);
+        $totalPrice = $cartFood->qty * $cartFood->price;
+        $cartFood->total_price = $totalPrice;
+        $cartFood->save();
+
+        return redirect()->back()->with('success','Extera Topin Removed');
+    }
+
     public function deleteCart($id)
     {
         $cartFood = cartFood::find($id);

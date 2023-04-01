@@ -49,8 +49,8 @@
                                 <div class="price"><span>Price: ${{ $food->price }}</span></div>
                                 <div class="text desc"><a href="#">Description: {{ $food->des }}</a></div>
                                 <div class="">
-                                    <select name="extera[]" id="countries"  multiple="" class="text-dark" aria-placeholder="Exter Topin">
-                                        <option value="Cheese" class="bg-dark" style="color:black;">Cheese</option>
+                                    <select name="extera[]" class="livesearch" multiple style="width: 250px;">
+                                        <option value="Cheese" >Cheese</option>
                                         <option value="Lettuce">Lettuce</option>
                                         <option value="Tomato">Tomato</option>
                                         <option value="Onion">Onion</option>

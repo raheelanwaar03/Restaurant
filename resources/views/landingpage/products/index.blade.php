@@ -45,7 +45,7 @@
                                             </div>
                                             <p class="card-text text-white" style="color:white">{{ $food->des }}.</p>
                                             <div class="">
-                                                <select name="extera[]" id="countries">
+                                                <select name="extera[]" multiple="" placeholder="Extera Topin" id="countries">
                                                     <option value="cheese">Cheese</option>
                                                     <option value="Lettuce">Lettuce</option>
                                                     <option value="Tomato">Tomato</option>

@@ -26,7 +26,9 @@
             <div class="container-fluid">
                 <div class="cinfo-box">
                     <div class="">
-                        <h4 class="text-center my-4">{{ auth()->user()->name }} Please Add Your Address To Receive Your Order <span><a href="{{ route('Add.Address') }}" class="btn btn-success">Add Address</a></span> </h2>
+                        <h4 class="text-center my-4">{{ auth()->user()->name }} Please Add Your Address To Receive Your
+                            Order <span><a href="{{ route('Add.Address') }}" class="btn btn-success">Add Address</a></span>
+                            </h2>
                     </div>
                     <div class="card">
                         <table class="table table-striped table-dark">
@@ -66,7 +68,9 @@
                                             <a href="{{ route('User.Delete.Cart.Item', ['id' => $food->id]) }}"
                                                 class="btn btn-danger">Remove</a>
                                             <a href="{{ route('User.Store.Order', ['id' => $food->id]) }}"
-                                                class="btn btn-warning text-white">Order Now</a>
+                                                class="btn btn-success text-white">Order Now</a>
+                                            <a href="{{ route('User.Remove.Extera.Topin', ['id' => $food->id]) }}"
+                                                class="btn btn-warning text-white">Remove Extera Topin</a>
                                         </td>
                                     </tr>
                                 @empty
