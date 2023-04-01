@@ -21,6 +21,8 @@ class UserDashboardController extends Controller
 
     public function addToCart(Request $request, $id)
     {
+        $extera = $request->extera;
+        $count =  count($extera);
         $food = Food::find($id);
 
         // check if food already added to cart
@@ -42,7 +44,7 @@ class UserDashboardController extends Controller
         $cartFood->price = $food->price;
         // calculating price
         $price = $food->price * $request->qty;
-        $cartFood->total_price = $price;
+        $cartFood->total_price = $price + $count;
         $cartFood->save();
         return  redirect()->back()->with('success','Food added to cart successfully');
 

@@ -108,7 +108,7 @@ class LandingPageController extends Controller
         $userAddress->user_id = auth()->user()->id;
         $userAddress->address = $validated['address'];
         $userAddress->save();
-        return redirect()->back()->with('success','Your Address added successfully');
+        return redirect()->route('User.All.Cart.Items')->with('success','Your Address added successfully');
 
     }
 

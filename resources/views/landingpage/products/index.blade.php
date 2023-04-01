@@ -40,10 +40,25 @@
                                         @csrf
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="card-title text-white">{{ $food->title }}</h5>
-                                                <p class="text-white">{{ $food->price }}$</p>
+                                                <h5 class="card-title text-white" style="color:white">{{ $food->title }}</h5>
+                                                <p class="text-white" style="color:white">{{ $food->price }}$</p>
                                             </div>
-                                            <p class="card-text text-white">{{ $food->des }}.</p>
+                                            <p class="card-text text-white" style="color:white">{{ $food->des }}.</p>
+                                            <div class="">
+                                                <select name="extera[]" id="countries">
+                                                    <option value="cheese">Cheese</option>
+                                                    <option value="Lettuce">Lettuce</option>
+                                                    <option value="Tomato">Tomato</option>
+                                                    <option value="Onion">Onion</option>
+                                                    <option value="Cilantro">Cilantro</option>
+                                                    <option value="Jalapeno">Jalapeno</option>
+                                                    <option value="Pickles">Pickles</option>
+                                                    <option value="Black Olives">Black Olives</option>
+                                                    <option value="Green Olives">Green Olives</option>
+                                                    <option value="Guancamole">Guancamole</option>
+                                                    <option value="Sour Cream">Sour Cream</option>
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="d-flex justify-content-around align-items-center">
                                             <input type="number" name="qty" min="1" value="1"

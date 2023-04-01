@@ -13,6 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
+    {{-- multi select --}}
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
 
 </head>
 
@@ -166,12 +169,13 @@
                                     </a>
                                 </div>
                                 <div class="link link-btn ml-3">
-                                    <a href="{{ route('User.All.Cart.Items') }}" class="theme-btn btn-style-one clearfix text-white">
+                                    <a href="{{ route('User.All.Cart.Items') }}"
+                                        class="theme-btn btn-style-one clearfix text-white">
                                         <span class="btn-wrap">
                                             <span class="text-one">Cart Items( {{ cartItems() }} )</span>
                                             <span class="text-two">Cart Items</span>
                                         </span>
-                                        </a>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -623,24 +627,40 @@
                     </div>
                     <div class="dish-gallery-slider owl-theme owl-carousel">
                         @foreach ($foods as $food)
-                        <form action="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" method="POST">
-                            @csrf
-                            <div class="offer-block-two">
-                                <div class="inner-box">
-                                    <div class="image"><a
-                                            href="{{ route('Welcome.Show.Product', ['slug' => $food->slug]) }}"><img
-                                                src="{{ asset('images/' . $food->image) }}" style="transparent"
-                                                alt=""></a></div>
-                                    <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
-                                    <div class="text desc">{{ $food->des }}</div>
-                                    <div class="price">${{ $food->price }}</div>
+                            <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
+                                @csrf
+                                <div class="offer-block-two">
+                                    <div class="inner-box">
+                                        <div class="image"><a
+                                                href="{{ route('Welcome.Show.Product', ['slug' => $food->slug]) }}"><img
+                                                    src="{{ asset('images/' . $food->image) }}" style="transparent"
+                                                    alt=""></a></div>
+                                        <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
+                                        <div class="text desc">{{ $food->des }}</div>
+                                        <div class="price">${{ $food->price }}</div>
+                                    </div>
+                                    <div class="d-flex justify-content-around align-items-center">
+                                        <input type="number" name="qty" value="1" min="1"
+                                            style="width:55px;height:35px;padding:6px">
+                                        <button class="btn btn-danger">AddToCart</button>
+                                    </div>
+                                    <div>
+                                        <select name="extera[]" id="countries" multiple>
+                                            <option value="Cheese" class="bg-dark" style="color:black;">Cheese</option>
+                                            <option value="Lettuce">Lettuce</option>
+                                            <option value="Tomato">Tomato</option>
+                                            <option value="Onion">Onion</option>
+                                            <option value="Cilantro">Cilantro</option>
+                                            <option value="Jalapeno">Jalapeno</option>
+                                            <option value="Pickles">Pickles</option>
+                                            <option value="Black Olives">Black Olives</option>
+                                            <option value="Green Olives">Green Olives</option>
+                                            <option value="Guancamole">Guancamole</option>
+                                            <option value="Sour Cream">Sour Cream</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="d-flex justify-content-around align-items-center">
-                                    <input type="number" name="qty" value="1" min="1" style="width:55px;height:35px;padding:6px">
-                                    <button class="btn btn-danger">AddToCart</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
                         @endforeach
                     </div>
                     <div class="lower-link-box text-center">
@@ -651,7 +671,6 @@
                             </span>
                         </a>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -1265,6 +1284,12 @@
 
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-up"></span></div>
+    {{-- muliti select option --}}
+
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script>
+        new MultiSelectTag('countries') // id
+    </script>
 
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>

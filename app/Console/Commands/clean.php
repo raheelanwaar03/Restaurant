@@ -36,14 +36,14 @@ class clean extends Command
 
         $user = new User();
         $user->name = 'RaheelAnwaar';
-        $user->email = 'raheelanwaar0316@gmail.com';
+        $user->email = 'admin@gmail.com';
         $user->password = Hash::make('asdfasdf');
         $user->role = 'admin';
         $user->save();
 
         $user = new User();
         $user->name = 'Hamza';
-        $user->email = 'hamza@gmail.com';
+        $user->email = 'user@gmail.com';
         $user->password = Hash::make('asdfasdf');
         $user->role = 'user';
         $user->save();

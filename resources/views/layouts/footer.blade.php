@@ -93,6 +93,12 @@
 <script src="{{ asset('assets/js/wow.js') }}"></script>
 <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
 <script src="{{ asset('assets/js/custom-script.js') }}"></script>
+{{-- mulite select option --}}
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+<script>
+    new MultiSelectTag('countries')  // id
+</script>
+
 </body>
 
 </html>
