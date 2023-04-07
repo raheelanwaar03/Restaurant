@@ -35,6 +35,7 @@
                                     class="form-control" placeholder="Enter Your Password">
                             </div>
                             <button type="submit" class="btn btn-outline-light ">Submit</button>
+                            <a href="{{ route('password.request') }}" class="btn btn-dark text-white">Reset Password</a>
                         </form>
                     </div>
                 </div>
