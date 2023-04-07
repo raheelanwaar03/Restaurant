@@ -35,8 +35,6 @@
                                     <th>Item Image</th>
                                     <th>Total Price</th>
                                     <th>Status</th>
-                                    <th>Address</th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,10 +49,6 @@
                                         </td>
                                         <td>{{ $food->total_price }}</td>
                                         <td>{{ $food->status }}</td>
-                                        <td>
-                                            <a href="{{ route('User.Cancel.Order', ['id' => $food->id]) }}"
-                                                class="btn btn-danger">Cancel</a>
-                                        </td>
                                     </tr>
                                 @empty
                                     <h4 class="text-dark text-center">You have not added any Food into cart <a

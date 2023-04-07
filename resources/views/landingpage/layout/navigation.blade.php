@@ -14,7 +14,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
 
 </head>
 
@@ -184,8 +185,7 @@
                     </ul>
                 </div>
                 <div class="link link-btn ml-3">
-                    <a href="{{ route('User.All.Cart.Items') }}"
-                        class="theme-btn btn-style-one clearfix text-white">
+                    <a href="{{ route('User.All.Cart.Items') }}" class="theme-btn btn-style-one clearfix text-white">
                         <span class="btn-wrap">
                             <span class="text-one">Cart Items( {{ cartItems() }} )</span>
                             <span class="text-two">Cart Items( {{ cartItems() }} )</span>

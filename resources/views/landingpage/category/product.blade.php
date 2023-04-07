@@ -28,20 +28,20 @@
                     <div class="row clearfix">
                         <div class="col-md-12">
                             <div class="row">
-                                @forelse ($products as $product)
+                                @forelse ($products as $food)
                                     <div class="col-md-4 mx-3">
                                         <div class="card bg-transparent" style="width: 18rem;">
-                                            <form action="{{ route('User.Add.To.Cart',['id'=>$product->id]) }}" method="POST">
+                                            <form action="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" method="POST">
                                                 @csrf
                                                 <a data-toggle="modal" data-target="#{{ $food->slug }}">
-                                                    <img class="card-img-top" src="{{ asset('images/' . $product->image) }}"
+                                                    <img class="card-img-top" src="{{ asset('images/' . $food->image) }}"
                                                         height="250px" width="250px" alt="Card image cap">
                                                     <div class="card-body">
                                                         <div class="d-flex justify-content-between align-items-center">
-                                                            <h5 class="card-title text-white">{{ $product->title }}</h5>
-                                                            <h3>${{ $product->price }}</h3>
+                                                            <h5 class="card-title text-white">{{ $food->title }}</h5>
+                                                            <h3>${{ $food->price }}</h3>
                                                         </div>
-                                                        <p class="card-text text-white">{{ $product->des }}.</p>
+                                                        <p class="card-text text-white">{{ $food->des }}.</p>
                                                     </div>
                                                 </a>
                                             </form>
@@ -49,7 +49,7 @@
                                     </div>
                                 @empty
                             </div>
-                            <h3>Admin have not added any product yet!</h3>
+                            <h3>Admin have not added any food yet!</h3>
                             @endforelse
                             <div class="col-md-12 text-center">
                                 {{ $products->withQueryString()->links('pagination::bootstrap-5') }}

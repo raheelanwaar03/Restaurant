@@ -18,6 +18,20 @@ class LandingPageController extends Controller
         return view('landingpage.index',compact('categorys','foods'));
     }
 
+    public function showAddress()
+    {
+        $categorys = Category::get();
+        $foods = Food::get();
+        $address = UserAddress::where('user_id',auth()->user()->id)->latest();
+        return view('landingpage.showAddress',compact('address','categorys','foods'));
+    }
+
+    public function updateAddress(Request $request)
+    {
+
+    }
+
+
     public function aboutUs()
     {
         $categorys = Category::get();
@@ -108,7 +122,7 @@ class LandingPageController extends Controller
         $userAddress->user_id = auth()->user()->id;
         $userAddress->address = $validated['address'];
         $userAddress->save();
-        return redirect()->route('User.All.Cart.Items')->with('success','Your Address added successfully');
+        return redirect()->back()->with('success','Your Address added successfully');
 
     }
 
