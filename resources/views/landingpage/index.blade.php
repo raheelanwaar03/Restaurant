@@ -76,17 +76,16 @@
                     <div class="inner clearfix">
                         <div class="top-left clearfix">
                             <ul class="top-info clearfix">
-                                <li><i class="icon far fa-map-marker-alt"></i> Restaurant St, Delicious City, London
-                                    9578, UK</li>
-                                <li><i class="icon far fa-clock"></i> Daily : 8.00 am to 10.00 pm</li>
+                                <li><i class="icon far fa-map-marker-alt"></i> {{ env('APP_ADDRESS') }}</li>
+                                <li><i class="icon far fa-clock"></i> Daily : {{ env('APP_TIMING') }}</li>
                             </ul>
                         </div>
                         <div class="top-right clearfix">
                             <ul class="top-info clearfix">
-                                <li><a href="tel:+11234567890"><i class="icon far fa-phone"></i> +1 123 456 7890</a>
+                                <li><a href="tel:{{env('APP_NUM')}}"><i class="icon far fa-phone"></i> {{env('APP_NUM')}}</a>
                                 </li>
-                                <li><a href="mailto:booking@restaurant.com"><i class="icon far fa-envelope"></i>
-                                        booking@restaurant.com</a></li>
+                                <li><a href="mailto:{{ env('APP_EMAIL') }}"><i class="icon far fa-envelope"></i>
+                                        {{ env('APP_EMAIL') }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -266,7 +265,7 @@
                 <div class="separator"><span></span></div>
                 <div class="booking-info">
                     <div class="bk-title">Booking request</div>
-                    <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+                    <div class="bk-no"><a href="tel:{{ env('APP_NUM') }}">{{ env('APP_NUM') }}</a></div>
                 </div>
             </div>
         </section>
@@ -782,7 +781,7 @@
                             <div class="inner">
                                 <div class="title">
                                     <h2>Online Reservation</h2>
-                                    <div class="request-info">Booking request <a href="#">+88-123-123456</a> or
+                                    <div class="request-info">Booking request <a href="#">{{ env('APP_NUM') }}</a> or
                                         fill out
                                         the order form</div>
                                 </div>
@@ -877,7 +876,7 @@
                                 <div class="data">
                                     <div class="booking-info">
                                         <div class="bk-title">Booking request</div>
-                                        <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+                                        <div class="bk-no"><a href="tel:{{ env('APP_NUM') }}">{{ env('APP_NUM') }}</a></div>
                                     </div>
                                     <div class="separator"><span></span></div>
                                     <ul class="info">
@@ -1213,9 +1212,9 @@
                                                 title="Delici - Restaurants HTML Template"></a></div>
                                     <div class="info">
                                         <ul>
-                                            <li>Restaurant St, Delicious City, London 9578, UK</li>
-                                            <li><a href="mailto:booking@domainname.com">booking@domainname.com</a></li>
-                                            <li><a href="tel:+88-123-123456">Booking Request : +88-123-123456</a></li>
+                                            <li>{{ env('APP_ADDRESS') }}</li>
+                                            <li><a href="mailto:{{ env('APP_EMAIL') }}">{{ env('APP_EMAIL') }}</a></li>
+                                            <li><a href="tel:+88-123-123456">Booking Request : {{ env('APP_NUM') }}</a></li>
                                             <li>Open : 09:00 am - 01:00 pm</li>
                                         </ul>
                                     </div>
@@ -1270,7 +1269,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="auto-container">
-                    <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by
+                    <div class="copyright">&copy; 2023 Restaurt. All Rights Reserved | Crafted by
                         {{ env('APP_NAME') }}</div>
                 </div>
             </div>
