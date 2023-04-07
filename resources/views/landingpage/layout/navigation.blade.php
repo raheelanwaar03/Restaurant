@@ -29,17 +29,16 @@
                     <div class="inner clearfix">
                         <div class="top-left clearfix">
                             <ul class="top-info clearfix">
-                                <li><i class="icon far fa-map-marker-alt"></i> Restaurant St, Delicious City, London
-                                    9578, UK</li>
-                                <li><i class="icon far fa-clock"></i> Daily : 8.00 am to 10.00 pm</li>
+                                <li><i class="icon far fa-map-marker-alt"></i> {{env('APP_ADDRESS')}}</li>
+                                <li><i class="icon far fa-clock"></i> Daily : {{ env('APP_TIMING') }}</li>
                             </ul>
                         </div>
                         <div class="top-right clearfix">
                             <ul class="top-info clearfix">
-                                <li><a href="tel:+11234567890"><i class="icon far fa-phone"></i> +1 123 456 7890</a>
+                                <li><a href="tel:{{ env('APP_NUM') }}"><i class="icon far fa-phone"></i> {{ env('APP_NUM') }}</a>
                                 </li>
-                                <li><a href="mailto:booking@restaurant.com"><i class="icon far fa-envelope"></i>
-                                        booking@restaurant.com</a></li>
+                                <li><a href="mailto:{{ env('APP_EMAIL') }}"><i class="icon far fa-envelope"></i>
+                                        {{ env('APP_EMAIL') }}</a></li>
                             </ul>
                         </div>
                     </div>

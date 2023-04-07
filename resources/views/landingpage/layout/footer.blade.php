@@ -14,10 +14,10 @@
                                         title="Delici - Restaurants HTML Template"></a></div>
                             <div class="info">
                                 <ul>
-                                    <li>Restaurant St, Delicious City, London 9578, UK</li>
-                                    <li><a href="mailto:booking@domainname.com">booking@domainname.com</a></li>
-                                    <li><a href="tel:+88-123-123456">Booking Request : +88-123-123456</a></li>
-                                    <li>Open : 09:00 am - 01:00 pm</li>
+                                    <li>{{ env('APP_ADDRESS') }}</li>
+                                    <li><a href="mailto:{{ env('APP_EMAIL') }}">{{ env('APP_EMAIL') }}</a></li>
+                                    <li><a href="tel:{{ env('APP_NUM') }}">Booking Request : {{ env('APP_NUM') }}</a></li>
+                                    <li>Open : {{ env('APP_TIMING') }}</li>
                                 </ul>
                             </div>
                             <div class="separator"><span></span><span></span><span></span></div>
@@ -71,7 +71,7 @@
     </div>
     <div class="footer-bottom">
         <div class="auto-container">
-            <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by {{ env('APP_NAME') }}</div>
+            <div class="copyright">&copy; 2023 Restaurt. All Rights Reserved | Crafted by {{ env('APP_NAME') }}</div>
         </div>
     </div>
 </footer>
