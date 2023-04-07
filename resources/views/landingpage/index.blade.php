@@ -630,10 +630,8 @@
                                 @csrf
                                 <div class="offer-block-two">
                                     <div class="inner-box">
-                                        <div class="image"><a
-                                                href="{{ route('Welcome.Show.Product', ['slug' => $food->slug]) }}"><img
-                                                    src="{{ asset('images/' . $food->image) }}" style="transparent"
-                                                    alt=""></a></div>
+                                        <div class="image"><a data-toggle="modal" data-target="#{{ $food->slug }}"><img src="{{ asset('images/' . $food->image) }}"
+                                                    style="transparent" alt=""></a></div>
                                         <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
                                         <div class="text desc">{{ $food->des }}</div>
                                         <div class="price">${{ $food->price }}</div>
@@ -643,7 +641,7 @@
                                             style="width:55px;height:35px;padding:6px">
                                         <button class="btn btn-danger">AddToCart</button>
                                     </div>
-                                    <div>
+                                    {{-- <div>
                                         <select name="extera[]" class="livesearch" multiple>
                                             <option value="Cheese" class="bg-dark" style="color:black;">Cheese
                                             </option>
@@ -658,7 +656,7 @@
                                             <option value="Guancamole">Guancamole</option>
                                             <option value="Sour Cream">Sour Cream</option>
                                         </select>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </form>
                         @endforeach
@@ -1278,6 +1276,28 @@
                 </div>
             </div>
         </footer>
+        {{-- model --}}
+
+        <div class="modal fade bg-dark" id="{{ $food->slug }}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">{{ $food->title }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{ asset('images/'.$food->image) }}" alt="image">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!--End pagewrapper-->

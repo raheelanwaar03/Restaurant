@@ -8,7 +8,8 @@
                 <div class="footer-col info-col col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div class="content">
-                            <div class="logo"><a href="{{ route('Welcome') }}" title="Delici - Restaurants HTML Template"><img
+                            <div class="logo"><a href="{{ route('Welcome') }}"
+                                    title="Delici - Restaurants HTML Template"><img
                                         src="{{ asset('assets/images/logo.png') }}" alt=""
                                         title="Delici - Restaurants HTML Template"></a></div>
                             <div class="info">
@@ -24,8 +25,7 @@
                                 <h3>Get News & Offers</h3>
                                 <div class="text">Subscribe us & Get <span>25% Off.</span></div>
                                 <div class="newsletter-form">
-                                    <form method="post"
-                                        action="#">
+                                    <form method="post" action="#">
                                         <div class="form-group">
                                             <span class="alt-icon far fa-envelope"></span>
                                             <input type="email" name="email" value="" placeholder="Your email"
@@ -48,7 +48,7 @@
                     <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <ul class="links">
                             <li><a href="{{ route('Welcome') }}">Home</a></li>
-                            <li><a href="{{route('Welcome.All.Categories')}}">Menus</a></li>
+                            <li><a href="{{ route('Welcome.All.Categories') }}">Menus</a></li>
                             <li><a href="{{ route('Welcome.About-Us') }}">About us</a></li>
                             <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
                         </ul>
@@ -71,10 +71,73 @@
     </div>
     <div class="footer-bottom">
         <div class="auto-container">
-            <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by {{env('APP_NAME')}}</div>
+            <div class="copyright">&copy; 2022 Restaurt. All Rights Reserved | Crafted by {{ env('APP_NAME') }}</div>
         </div>
     </div>
 </footer>
+
+{{-- model --}}
+
+<div class="modal fade" id="{{ $food->slug }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color:black;">{{ $food->title }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="img">
+                        <img src="{{ asset('images/' . $food->image) }}" alt="image">
+                    </div>
+                    <div class="p-3">
+                        <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
+                            @csrf
+                            <div class="form-group w-100">
+                                <select class="select form-control" multiple data-mdb-placeholder="Example placeholder" multiple>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                    <option value="4">Four</option>
+                                    <option value="5">Five</option>
+                                </select>
+                                {{-- <select name="extera[]" class="select" multiple style="width:100%;">
+                                    <option value="Cheese">Cheese</option>
+                                    <option value="Lettuce">Lettuce</option>
+                                    <option value="Tomato">Tomato</option>
+                                    <option value="Onion">Onion</option>
+                                    <option value="Cilantro">Cilantro</option>
+                                    <option value="Jalapeno">Jalapeno</option>
+                                    <option value="Pickles">Pickles</option>
+                                    <option value="Black Olives">Black Olives</option>
+                                    <option value="Green Olives">Green Olives</option>
+                                    <option value="Guancamole">Guancamole</option>
+                                    <option value="Sour Cream">Sour Cream</option>
+                                </select> --}}
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center mt-3">
+                                <div class="">
+                                    <input type="number" class="mt-3 mr-2" name="qty" min='1' value="1"
+                                        style="width:55px;height:35px;padding:6px;border:1px solid black;">
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-danger mt-3">AddToCart</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </div>
 <!--End pagewrapper-->
@@ -96,7 +159,7 @@
 {{-- mulite select option --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 <script>
-$(".livesearch").chosen();
+    $(".livesearch").chosen();
 </script>
 
 </body>

@@ -30,7 +30,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 @forelse ($foods as $food)
-                                    <a href="{{ route('Welcome.Show.Product', ['slug' => $food->slug]) }}">
+                                    <a data-toggle="modal" data-target="#{{ $food->slug }}">
                                         <div class="col-md-4 mx-3">
                                             <div class="card bg-transparent" style="width: 18rem;">
                                                 <img class="card-img-top" src="{{ asset('images/' . $food->image) }}"
@@ -40,31 +40,10 @@
                                         @csrf
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="card-title text-white" style="color:white">{{ $food->title }}</h5>
+                                                 <h5 class="card-title text-white" style="color:white">{{ $food->title }}</h5>
                                                 <p class="text-white" style="color:white">{{ $food->price }}$</p>
                                             </div>
                                             <p class="card-text text-white" style="color:white">{{ $food->des }}.</p>
-                                            <div class="">
-                                                <select name="extera[]" multiple="" placeholder="Extera Topin" id="countries">
-                                                    <option value="cheese">Cheese</option>
-                                                    <option value="Lettuce">Lettuce</option>
-                                                    <option value="Tomato">Tomato</option>
-                                                    <option value="Onion">Onion</option>
-                                                    <option value="Cilantro">Cilantro</option>
-                                                    <option value="Jalapeno">Jalapeno</option>
-                                                    <option value="Pickles">Pickles</option>
-                                                    <option value="Black Olives">Black Olives</option>
-                                                    <option value="Green Olives">Green Olives</option>
-                                                    <option value="Guancamole">Guancamole</option>
-                                                    <option value="Sour Cream">Sour Cream</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-around align-items-center">
-                                            <input type="number" name="qty" min="1" value="1"
-                                                style="width:55px;height:35px;padding:6px">
-                                            <button class="btn btn-danger">AddToCart</button>
-                                        </div>
                                     </form>
                             </div>
                         </div>
