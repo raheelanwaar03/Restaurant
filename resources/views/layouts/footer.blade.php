@@ -94,17 +94,12 @@
                         <img src="{{ asset('images/' . $food->image) }}" alt="image">
                     </div>
                     <div class="p-3">
-                        <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
+                        <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST"
+                            id="#multiselect_form">
                             @csrf
                             <div class="form-group w-100">
-                                <select class="select form-control" multiple data-mdb-placeholder="Example placeholder" multiple>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                    <option value="4">Four</option>
-                                    <option value="5">Five</option>
-                                </select>
-                                {{-- <select name="extera[]" class="select" multiple style="width:100%;">
+                                <select class="select form-control" name="extera[]" id="multiselect"
+                                    data-mdb-placeholder="Example placeholder" multiple>
                                     <option value="Cheese">Cheese</option>
                                     <option value="Lettuce">Lettuce</option>
                                     <option value="Tomato">Tomato</option>
@@ -116,11 +111,12 @@
                                     <option value="Green Olives">Green Olives</option>
                                     <option value="Guancamole">Guancamole</option>
                                     <option value="Sour Cream">Sour Cream</option>
-                                </select> --}}
+                                </select>
                             </div>
                             <div class="d-flex justify-content-center align-items-center mt-3">
                                 <div class="">
-                                    <input type="number" class="mt-3 mr-2" name="qty" min='1' value="1"
+                                    <input type="number" class="mt-3 mr-2" name="qty" min='1'
+                                        value="1"
                                         style="width:55px;height:35px;padding:6px;border:1px solid black;">
                                 </div>
                                 <div class="">
@@ -157,11 +153,39 @@
 <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
 <script src="{{ asset('assets/js/custom-script.js') }}"></script>
 {{-- mulite select option --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
 <script>
-    $(".livesearch").chosen();
-</script>
+    $(document).ready(function() {
+        $('#multiselect').multiselect({
+            nonSelectedText: 'Extera Toping',
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            buttonWidth: '100px'
+        });
 
+        $('#multiselect_form').on('submit', function(event) {
+            event.preventDefault();
+            var form_data = $(this).serialize();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: "{{ route('User.Add.To.Cart', ['id' => $food->id]) }}",
+                method: "POST",
+                data: form_data,
+                success: function(data) {
+                    $('#multiselect option:selected').each(function() {
+                        $(this).prop('selected', false);
+                    });
+                    $('#multiselect').multiselect('refresh');
+                    alert(data['success']);
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

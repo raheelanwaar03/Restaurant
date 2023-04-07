@@ -626,39 +626,17 @@
                     </div>
                     <div class="dish-gallery-slider owl-theme owl-carousel">
                         @foreach ($foods as $food)
-                            <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
-                                @csrf
-                                <div class="offer-block-two">
-                                    <div class="inner-box">
-                                        <div class="image"><a data-toggle="modal" data-target="#{{ $food->slug }}"><img src="{{ asset('images/' . $food->image) }}"
-                                                    style="transparent" alt=""></a></div>
-                                        <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
-                                        <div class="text desc">{{ $food->des }}</div>
-                                        <div class="price">${{ $food->price }}</div>
-                                    </div>
-                                    <div class="d-flex justify-content-around align-items-center">
-                                        <input type="number" name="qty" value="1" min="1"
-                                            style="width:55px;height:35px;padding:6px">
-                                        <button class="btn btn-danger">AddToCart</button>
-                                    </div>
-                                    {{-- <div>
-                                        <select name="extera[]" class="livesearch" multiple>
-                                            <option value="Cheese" class="bg-dark" style="color:black;">Cheese
-                                            </option>
-                                            <option value="Lettuce">Lettuce</option>
-                                            <option value="Tomato">Tomato</option>
-                                            <option value="Onion">Onion</option>
-                                            <option value="Cilantro">Cilantro</option>
-                                            <option value="Jalapeno">Jalapeno</option>
-                                            <option value="Pickles">Pickles</option>
-                                            <option value="Black Olives">Black Olives</option>
-                                            <option value="Green Olives">Green Olives</option>
-                                            <option value="Guancamole">Guancamole</option>
-                                            <option value="Sour Cream">Sour Cream</option>
-                                        </select>
-                                    </div> --}}
+                            <div class="offer-block-two">
+                                <div class="inner-box">
+                                    <div class="image"><a data-toggle="modal"
+                                            data-target="#{{ $food->slug }}"><img
+                                                src="{{ asset('images/' . $food->image) }}" style="transparent"
+                                                alt=""></a></div>
+                                    <h4><a href="menu-list-1.html">{{ $food->title }}</a></h4>
+                                    <div class="text desc">{{ $food->des }}</div>
+                                    <div class="price">${{ $food->price }}</div>
                                 </div>
-                            </form>
+                            </div>
                         @endforeach
                     </div>
                     <div class="lower-link-box text-center">
@@ -1278,22 +1256,57 @@
         </footer>
         {{-- model --}}
 
-        <div class="modal fade bg-dark" id="{{ $food->slug }}" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="{{ $food->slug }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">{{ $food->title }}</h5>
+                        <h5 class="modal-title" style="color:black;">{{ $food->title }}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img src="{{ asset('images/'.$food->image) }}" alt="image">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="img">
+                                <img src="{{ asset('images/' . $food->image) }}" alt="image">
+                            </div>
+                            <div class="p-3">
+                                <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST"
+                                    id="#multiselect_form">
+                                    @csrf
+                                    <div class="form-group w-100" style="1px solid black;">
+                                        <select class="select form-control" name="extera[]" style="border:1px solid black" id="multiselect"
+                                            data-mdb-placeholder="Extera Toping" multiple>
+                                            <option value="Cheese">Cheese</option>
+                                            <option value="Lettuce">Lettuce</option>
+                                            <option value="Tomato">Tomato</option>
+                                            <option value="Onion">Onion</option>
+                                            <option value="Cilantro">Cilantro</option>
+                                            <option value="Jalapeno">Jalapeno</option>
+                                            <option value="Pickles">Pickles</option>
+                                            <option value="Black Olives">Black Olives</option>
+                                            <option value="Green Olives">Green Olives</option>
+                                            <option value="Guancamole">Guancamole</option>
+                                            <option value="Sour Cream">Sour Cream</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+                                        <div class="">
+                                            <input type="number" class="mt-3 mr-2" name="qty" min='1'
+                                                value="1"
+                                                style="width:55px;height:35px;padding:6px;border:1px solid black;">
+                                        </div>
+                                        <div class="">
+                                            <button class="btn btn-danger mt-3">AddToCart</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -1319,10 +1332,42 @@
     <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
     <script src="{{ asset('assets/js/custom-script.js') }}"></script>
     {{-- muliti select option --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
     <script>
-        $(".livesearch").chosen();
+        $(document).ready(function() {
+            $('#multiselect').multiselect({
+                nonSelectedText: 'Extera Toping',
+                enableFiltering: true,
+                enableCaseInsensitiveFiltering: true,
+                buttonWidth: '150px'
+            });
+
+            $('#multiselect_form').on('submit', function(event) {
+                event.preventDefault();
+                var form_data = $(this).serialize();
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "{{ route('User.Add.To.Cart', ['id' => $food->id]) }}",
+                    method: "POST",
+                    data: form_data,
+                    success: function(data) {
+                        $('#multiselect option:selected').each(function() {
+                            $(this).prop('selected', false);
+                        });
+                        $('#multiselect').multiselect('refresh');
+                        alert(data['success']);
+                    }
+                });
+            });
+        });
     </script>
+
 </body>
 
 </html>
