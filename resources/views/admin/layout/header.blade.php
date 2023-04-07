@@ -144,146 +144,6 @@
                                 </div>
                             </div>
                             <div class="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
-                                {{-- <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        Hi, how are you samim?
-                                        <span class="msg_time">8:40 AM, Today</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end mb-4">
-                                    <div class="msg_cotainer_send">
-                                        Hi Khalid i am good tnx how about you?
-                                        <span class="msg_time_send">8:55 AM, Today</span>
-                                    </div>
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        I am good too, thank you for your chat template
-                                        <span class="msg_time">9:00 AM, Today</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end mb-4">
-                                    <div class="msg_cotainer_send">
-                                        You are welcome
-                                        <span class="msg_time_send">9:05 AM, Today</span>
-                                    </div>
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        I am looking for your next templates
-                                        <span class="msg_time">9:07 AM, Today</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end mb-4">
-                                    <div class="msg_cotainer_send">
-                                        Ok, thank you have a good day
-                                        <span class="msg_time_send">9:10 AM, Today</span>
-                                    </div>
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        Bye, see you
-                                        <span class="msg_time">9:12 AM, Today</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        Hi, how are you samim?
-                                        <span class="msg_time">8:40 AM, Today</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end mb-4">
-                                    <div class="msg_cotainer_send">
-                                        Hi Khalid i am good tnx how about you?
-                                        <span class="msg_time_send">8:55 AM, Today</span>
-                                    </div>
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        I am good too, thank you for your chat template
-                                        <span class="msg_time">9:00 AM, Today</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end mb-4">
-                                    <div class="msg_cotainer_send">
-                                        You are welcome
-                                        <span class="msg_time_send">9:05 AM, Today</span>
-                                    </div>
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        I am looking for your next templates
-                                        <span class="msg_time">9:07 AM, Today</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end mb-4">
-                                    <div class="msg_cotainer_send">
-                                        Ok, thank you have a good day
-                                        <span class="msg_time_send">9:10 AM, Today</span>
-                                    </div>
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/2.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-start mb-4">
-                                    <div class="img_cont_msg">
-                                        <img src="{{ asset('admin/public/images/avatar/1.jpg') }}"
-                                            class="rounded-circle user_img_msg" alt="" />
-                                    </div>
-                                    <div class="msg_cotainer">
-                                        Bye, see you
-                                        <span class="msg_time">9:12 AM, Today</span>
-                                    </div>
-                                </div> --}}
                             </div>
                             <div class="card-footer type_msg">
                                 <div class="input-group">
@@ -536,14 +396,6 @@
                             <li><a href="{{ route('Admin.All.Category') }}">All Categories</a></li>
                         </ul>
                     </li>
-                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-041-graph"></i>
-                            <span class="nav-text">Charts</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="chart-flot.html">Flot</a></li>
-                        </ul>
-                    </li> --}}
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-045-heart"></i>
                             <span class="nav-text">Food</span>
@@ -558,7 +410,7 @@
                             <span class="nav-text">Reservation</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('Admin.Book.Table') }}">Table Request</a></li>
+                            <li><a href="{{ route('Admin.Book.Table') }}">Table Requests</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

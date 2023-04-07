@@ -33,7 +33,7 @@
                                         <div class="card bg-transparent" style="width: 18rem;">
                                             <form action="{{ route('User.Add.To.Cart',['id'=>$product->id]) }}" method="POST">
                                                 @csrf
-                                                <a href="{{ route('Welcome.Show.Product', ['slug' => $product->slug]) }}">
+                                                <a data-toggle="modal" data-target="#{{ $food->slug }}">
                                                     <img class="card-img-top" src="{{ asset('images/' . $product->image) }}"
                                                         height="250px" width="250px" alt="Card image cap">
                                                     <div class="card-body">
@@ -44,25 +44,6 @@
                                                         <p class="card-text text-white">{{ $product->des }}.</p>
                                                     </div>
                                                 </a>
-                                                <div class="d-flex justify-content-around align-items-center mb-3 ">
-                                                    <input type="number" name="qty" min="1" value="1" style="width:55px;height:35px;padding:6px">
-                                                    <button class="btn btn-danger">AddToCart</button>
-                                                </div>
-                                                <div class="">
-                                                    <select name="extera[]" class="livesearch" multiple>
-                                                        <option value="Cheese" class="bg-dark" style="color:black;">Cheese</option>
-                                                        <option value="Lettuce">Lettuce</option>
-                                                        <option value="Tomato">Tomato</option>
-                                                        <option value="Onion">Onion</option>
-                                                        <option value="Cilantro">Cilantro</option>
-                                                        <option value="Jalapeno">Jalapeno</option>
-                                                        <option value="Pickles">Pickles</option>
-                                                        <option value="Black Olives">Black Olives</option>
-                                                        <option value="Green Olives">Green Olives</option>
-                                                        <option value="Guancamole">Guancamole</option>
-                                                        <option value="Sour Cream">Sour Cream</option>
-                                                    </select>
-                                                </div>
                                             </form>
                                         </div>
                                     </div>

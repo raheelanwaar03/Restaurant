@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('landingpage.layout.app')
 
 @section('content')
     <!-- Inner Banner Section -->
@@ -27,7 +27,8 @@
                 <div class="cinfo-box">
                     <div class="">
                         <h4 class="text-center my-4">{{ auth()->user()->name }} Please Add Your Address To Receive Your
-                            Order <span><a href="{{ route('Add.Address') }}" class="btn btn-success">Add Address</a></span>
+                            Order <span><a data-toggle="modal" data-target="#address" class="btn btn-success">Add
+                                    Address</a></span>
                             </h2>
                     </div>
                     <div class="card">
@@ -66,7 +67,7 @@
                                         <td>{{ $food->total_price }}</td>
                                         <td>
                                             <a href="{{ route('User.Delete.Cart.Item', ['id' => $food->id]) }}"
-                                                class="btn btn-danger">Remove</a>
+                                                class="btn btn-danger">Delete</a>
                                             <a href="{{ route('User.Store.Order', ['id' => $food->id]) }}"
                                                 class="btn btn-success text-white">Order Now</a>
                                             <a href="{{ route('User.Remove.Extera.Topin', ['id' => $food->id]) }}"
@@ -87,4 +88,5 @@
             </div>
         </div>
     </section>
+
 @endsection

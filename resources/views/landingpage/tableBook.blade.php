@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('landingpage.layout.app')
 
 @section('content')
     <section class="inner-banner">

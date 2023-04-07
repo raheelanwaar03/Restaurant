@@ -9,19 +9,20 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('asset/images/favicon.png') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('asset/images/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
-    {{-- multi select --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
 
 </head>
 
 <body>
     <div class="page-wrapper">
+        {{-- pre loader --}}
 
-        <!-- Preloader -->
         <div class="loader-wrap">
             <div class="preloader">
                 <div class="preloader-close">x</div>
@@ -67,7 +68,6 @@
                 </div>
             </div>
         </div>
-        <!-- Preloader End -->
 
         <!-- Main Header-->
         <header class="main-header header-down">
@@ -156,25 +156,35 @@
                                 <!-- Main Menu End-->
                             </div>
                             <!--Nav Outer End-->
-
-                            <div class="links-box clearfix">
-                                <div class="link link-btn">
-                                    <a href="{{ route('Welcome.Find.Table') }}"
-                                        class="theme-btn btn-style-one clearfix">
-                                        <span class="btn-wrap">
-                                            <span class="text-one">find a table</span>
-                                            <span class="text-two">find a table</span>
-                                        </span>
-                                    </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="links-box clearfix">
+                                    <div class="link link-btn mr-3">
+                                        <a href="{{ route('Welcome.Find.Table') }}"
+                                            class="theme-btn btn-style-one clearfix">
+                                            <span class="btn-wrap">
+                                                <span class="text-one">find a table</span>
+                                                <span class="text-two">find a table</span>
+                                            </span>
+                                        </a>
+                                        <div class="link link-btn ml-3">
+                                            <a href="{{ route('User.All.Cart.Items') }}"
+                                                class="theme-btn btn-style-one clearfix text-white">
+                                                <span class="btn-wrap">
+                                                    <span class="text-one">Cart Items( {{ cartItems() }} )</span>
+                                                    <span class="text-two">Cart Items( {{ cartItems() }} )</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="link link-btn ml-3">
-                                    <a href="{{ route('User.All.Cart.Items') }}"
-                                        class="theme-btn btn-style-one clearfix text-white">
-                                        <span class="btn-wrap">
-                                            <span class="text-one">Cart Items( {{ cartItems() }} )</span>
-                                            <span class="text-two">Cart Items</span>
+                                <div class="nav-toggler">
+                                    <button class="hidden-bar-opener">
+                                        <span class="hamburger">
+                                            <span class="top-bun"></span>
+                                            <span class="meat"></span>
+                                            <span class="bottom-bun"></span>
                                         </span>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +193,6 @@
             </div>
         </header>
 
-        <!--Menu Backdrop-->
         <div class="menu-backdrop"></div>
 
         <!-- Hidden Navigation Bar -->
@@ -191,37 +200,49 @@
             <!-- Hidden Bar Wrapper -->
             <div class="inner-box">
                 <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
-                <div class="logo-box"><a href="{{ route('Welcome') }}" title="{{ env('APP_NAME') }}"><img
+                <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img
                             src="{{ asset('assets/images/logo.png') }}" alt=""
-                            title="{{ env('APP_NAME') }}"></a>
-                </div>
+                            title="Delici - Restaurants HTML Template"></a></div>
 
                 <!-- .Side-menu -->
                 <div class="side-menu">
                     <ul class="navigation clearfix">
                         <li class="current"><a href="{{ route('Welcome') }}">Home</a>
                         </li>
+                        <li class="dropdown"><a href="#">Menus</a>
+                            <ul>
+                                @foreach ($categorys as $category)
+                                    <li><a
+                                            href="{{ route('Welcome.Category', ['slug' => $category->slug]) }}">{{ $category->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
                         <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
-                        <li><a href="our-chef.html">Our chefs</a></li>
-                        <li><a href="{{ route('Welcome.Contact-Us') }}">Contact</a></li>
+                        @if (auth()->user())
+                            <li><a href="{{ route('User.All.Orders') }}">All Orders</a></li>
+                        @else
+                            <li class="dropdown"><a href="#">Authentication</a>
+                                <ul>
+                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                </ul>
+                        @endif
+                        <li><a href="{{ route('Welcome.Contact-Us') }}">Contact </a></li>
                     </ul>
-                </div><!-- /.Side-menu -->
-
-                <h2>Visit Us</h2>
-                <ul class="info">
-                    <li>Restaurant St, {{ env('APP_NAME') }}, <br>London 9578, UK</li>
-                    <li>Open: 9.30 am - 2.30pm</li>
-                    <li><a href="mailto:booking@domainame.com">booking@domainame.com</a></li>
-                </ul>
-                <div class="separator"><span></span></div>
-                <div class="booking-info">
-                    <div class="bk-title">Booking request</div>
-                    <div class="bk-no"><a href="#">{{ env('APP_NUM') }}</a></div>
                 </div>
-
-            </div><!-- / Hidden Bar Wrapper -->
+                <div class="link link-btn ml-3">
+                    <a href="{{ route('User.All.Cart.Items') }}" class="theme-btn btn-style-one clearfix text-white">
+                        <span class="btn-wrap">
+                            <span class="text-one">Cart Items( {{ cartItems() }} )</span>
+                            <span class="text-two">Cart Items( {{ cartItems() }} )</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
         </section>
         <!-- / Hidden Bar -->
+
 
         <!--Info Back Drop-->
         <div class="info-back-drop"></div>
@@ -1256,8 +1277,8 @@
         </footer>
         {{-- model --}}
 
-        <div class="modal fade" id="{{ $food->slug }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true">
+        <div class="modal fade" id="{{ $food->slug }}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1276,7 +1297,8 @@
                                     id="#multiselect_form">
                                     @csrf
                                     <div class="form-group w-100" style="1px solid black;">
-                                        <select class="select form-control" name="extera[]" style="border:1px solid black" id="multiselect"
+                                        <select class="select form-control" name="extera[]"
+                                            style="border:1px solid black" id="multiselect"
                                             data-mdb-placeholder="Extera Toping" multiple>
                                             <option value="Cheese">Cheese</option>
                                             <option value="Lettuce">Lettuce</option>
@@ -1338,7 +1360,7 @@
     <script>
         $(document).ready(function() {
             $('#multiselect').multiselect({
-                nonSelectedText: 'Extera Toping',
+                nonSelectedText: 'Add Extera Toping',
                 enableFiltering: true,
                 enableCaseInsensitiveFiltering: true,
                 buttonWidth: '150px'
