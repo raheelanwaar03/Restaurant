@@ -78,12 +78,6 @@
                             <ul class="top-info clearfix">
                                 <li><i class="icon far fa-map-marker-alt"></i> {{ env('APP_ADDRESS') }}</li>
                                 <li><i class="icon far fa-clock"></i> Daily : {{ env('APP_TIMING') }}</li>
-                                <li>
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <button type='submit'>Logout</button>
-                                    </form>
-                                </li>
                             </ul>
                         </div>
                         <div class="top-right clearfix">
