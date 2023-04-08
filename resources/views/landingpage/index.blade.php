@@ -656,8 +656,10 @@
                                     <div class="text desc">{{ $food->des }}</div>
                                     <div class="price">${{ $food->price }}</div>
                                 </div>
-                                <a data-toggle="modal"
-                                data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
+                                <div class="text-center">
+                                    <a data-toggle="modal"
+                                    data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
+                                </div>
                             </div>
                         @endforeach
                     </div>
