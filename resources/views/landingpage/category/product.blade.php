@@ -43,6 +43,7 @@
                                                         </div>
                                                         <p class="card-text text-white">{{ $food->des }}.</p>
                                                     </div>
+                                                    <a data-toggle="modal" data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
                                                 </a>
                                             </form>
                                         </div>

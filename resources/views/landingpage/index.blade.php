@@ -656,6 +656,8 @@
                                     <div class="text desc">{{ $food->des }}</div>
                                     <div class="price">${{ $food->price }}</div>
                                 </div>
+                                <a data-toggle="modal"
+                                data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
                             </div>
                         @endforeach
                     </div>
@@ -1215,7 +1217,7 @@
                                             <li>{{ env('APP_ADDRESS') }}</li>
                                             <li><a href="mailto:{{ env('APP_EMAIL') }}">{{ env('APP_EMAIL') }}</a></li>
                                             <li><a href="tel:+88-123-123456">Booking Request : {{ env('APP_NUM') }}</a></li>
-                                            <li>Open : 09:00 am - 01:00 pm</li>
+                                            <li>Open : {{ env('APP_TIMING') }}</li>
                                         </ul>
                                     </div>
                                     <div class="separator"><span></span><span></span><span></span></div>

@@ -44,9 +44,9 @@
                             <div class="inner-box cp-seprator wow fadeInUp" data-wow-duration="1500ms"
                                 data-wow-delay="300ms">
                                 <h4>Contact Info</h4>
-                                <div class="text">Restaurant St, Delici City, London 9578, UK<br>Email :
-                                    booking@domainname.com</div>
-                                <div class="more-link"><a href="#">Booking : +88-123-123456</a></div>
+                                <div class="text">{{env('APP_ADDRESS')}}<br>Email :
+                                    {{ env('APP_EMAIL') }}</div>
+                                <div class="more-link"><a href="#">Booking : {{ env('APP_NUM') }}</a></div>
                             </div>
                         </div>
 
@@ -54,7 +54,7 @@
                         <div class="contactinfo-block col-lg-4 col-md-4 col-sm-12">
                             <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
                                 <h4>Dinner Time</h4>
-                                <div class="text">Monday to Sunday<br>5.30 pm - 11.30 pm</div>
+                                <div class="text">{{ env('APP_TIMING') }}</div>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="default-form reservation-form">
                             <form method="post"
-                                action="https://kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/index.html">
+                                action="#">
                                 <div class="clearfix">
                                     <div class="form-group">
                                         <div class="field-inner">
