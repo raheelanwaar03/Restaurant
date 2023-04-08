@@ -58,10 +58,9 @@
                                                 </form>
                                             </div>
                                         </div>
+                                    </div>
+                                </a>
                             </div>
-                            </a>
-                        </div>
-
                     @empty
                     </div>
                     <h3>Admin have not added any food yet!</h3>
