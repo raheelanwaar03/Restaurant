@@ -47,10 +47,11 @@
                                                 <p class="text-white" style="color:white">{{ $food->price }}$</p>
                                             </div>
                                             <p class="card-text text-white" style="color:white">{{ $food->des }}.</p>
-                                            <div class="text-center">
-                                                <a data-toggle="modal" data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
-                                            </div>
+                                        </div>
                                     </form>
+                                        <div class="text-center">
+                                            <a data-toggle="modal" data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
+                                        </div>
                             </div>
                         </div>
 
