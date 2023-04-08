@@ -35,24 +35,31 @@
                                             <div class="card bg-transparent" style="width: 18rem;">
                                                 <img class="card-img-top" src="{{ asset('images/' . $food->image) }}"
                                                     height="250px" width="250px" alt="Card image cap">
+
+
+                                                <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <h5 class="card-title text-white" style="color:white">
+                                                                {{ $food->title }}
+                                                            </h5>
+                                                            <p class="text-white" style="color:white">{{ $food->price }}$
+                                                            </p>
+                                                        </div>
+                                                        <p class="card-text text-white" style="color:white">
+                                                            {{ $food->des }}.</p>
+                                                        <div class="text-center">
+                                                            <a data-toggle="modal" data-target="#{{ $food->slug }}"
+                                                                class="btn btn-danger">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
-                                    </a>
-                                    <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
-                                        @csrf
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <h5 class="card-title text-white" style="color:white">{{ $food->title }}
-                                                </h5>
-                                                <p class="text-white" style="color:white">{{ $food->price }}$</p>
-                                            </div>
-                                            <p class="card-text text-white" style="color:white">{{ $food->des }}.</p>
-                                            <div class="text-center">
-                                                <a data-toggle="modal" data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </form>
                             </div>
+                            </a>
                         </div>
 
                     @empty
