@@ -114,7 +114,6 @@
                             </form>
                         </div>
                     </div>
-
                     <!--form image Section-->
                     <div class="loc-block col-lg-6 col-md-12 col-sm-12">
                         <img src="{{ asset('assets/images/resource/restaurant.png') }}" alt="">
