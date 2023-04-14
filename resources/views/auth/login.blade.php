@@ -1,53 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="{{ asset('asset/images/favicon.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-    <title>Authentication</title>
-</head>
-
-<body style="background-image: url({{ asset('assets/images/background/image-7.jpg') }});">
-    <x-alert/>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center text-light">Sign In</h1>
-            </div>
+@extends('auth.layout.app')
+@section('content')
+<body id="page-top">
+    <div class="row osahan-login m-0">
+        <div class="col-md-6 osahan-login-left px-0">
         </div>
-        <div style="margin-top: -150px" class="row min-vh-100">
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
-                <div class="card bg-transparent border-white w-100">
-                    <div class="card-body">
-                        <form action="{{ route('login') }}" method="POST">
-                            @csrf
-                            <div class="form-group">
-                                <label style="color:white">Email</label>
-                                <input type="text" style="background: transparent;color:white" name="email"
-                                    class="form-control" placeholder="Enter Your Email">
-                            </div>
-                            <div class="form-group">
-                                <label style="color:white">Password</label>
-                                <input type="password" style="background: transparent;color:white" name="password"
-                                    class="form-control" placeholder="Enter Your Password">
-                            </div>
-                            <button type="submit" class="btn btn-outline-light ">Submit</button>
-                            <a href="{{ route('password.request') }}" class="btn btn-dark text-white">Reset Password</a>
-                        </form>
+        <div class="col-md-6 d-flex justify-content-center flex-column px-0">
+            <div class="col-lg-6 mx-auto">
+                <h3 class="mb-1">Welcome</h3>
+                <p class="mb-5">Sign in to your account to continue</p>
+                <form href="{{ route('login') }}" method="POST">
+                    @csrf
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-email-outline"></i></div>
+                        <div class="w-100">
+                            <p class="mb-0 small font-weight-bold text-dark">Email Address</p>
+                            <input type="email"
+                                class="form-control form-control-sm p-0 border-input border-0 rounded-0"
+                                placeholder="Enter Your Email">
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: -150px">
-            <div class="col-md-12">
-                <h1 class="text-center text-light">haven't register yet?<span><a href="{{ route('register') }}"
-                            style="text-decoration: none"> Register</a></span></h1>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-form-textbox-password"></i>
+                        </div>
+                        <div class="w-100">
+                            <p class="mb-0 small font-weight-bold text-dark">Password</p>
+                            <input type="password"
+                                class="form-control form-control-sm p-0 border-input border-0 rounded-0"
+                                placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary btn-block mb-3">Sign in</button>
+                        <p class="text-center"><a href="{{ route('password.request') }}" class="text-dark">Forgot password?</a></p>
+                        <a href="{{ route('register') }}" class="btn btn-light btn-block mb-2">Create an account</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </body>
-
-</html>
+@endsection

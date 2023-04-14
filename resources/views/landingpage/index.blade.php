@@ -3,14 +3,14 @@
     <div class="container-fluid">
 
         <div class="d-flex align-items-center justify-content-between mb-3 mt-2">
-            <h5 class="mb-0">Explore categories</h5>
-            <a href="listing.html" class="small font-weight-bold text-dark">See all <i
+            <h5 class="mb-0">What we have</h5>
+            <a href="{{ route('Welcome.All.Products') }}" class="small font-weight-bold text-dark">See all <i
                     class="mdi mdi-chevron-right mr-2"></i></a>
         </div>
 
         <div class="row">
 
-            <a href="listing.html" class="text-decoration-none col-xl-2 col-md-4 mb-4">
+            <a href="#" class="text-decoration-none col-xl-2 col-md-4 mb-4">
                 <div class="rounded py-4 bg-white shadow-sm text-center">
                     <i class="mdi mdi-fire bg-danger text-white osahan-icon mx-auto rounded-pill"></i>
                     <h6 class="mb-1 mt-3">Popular</h6>
@@ -18,7 +18,7 @@
                 </div>
             </a>
 
-            <a href="listing.html" class="text-decoration-none col-xl-2 col-md-4 mb-4">
+            <a href="#" class="text-decoration-none col-xl-2 col-md-4 mb-4">
                 <div class="rounded py-4 bg-white shadow-sm text-center">
                     <i class="mdi mdi-motorbike bg-primary text-white osahan-icon mx-auto rounded-pill"></i>
                     <h6 class="mb-1 mt-3">Fast Delivery</h6>
@@ -26,7 +26,7 @@
                 </div>
             </a>
 
-            <a href="listing.html" class="text-decoration-none col-xl-2 col-md-4 mb-4">
+            <a href="#" class="text-decoration-none col-xl-2 col-md-4 mb-4">
                 <div class="rounded py-4 bg-white shadow-sm text-center">
                     <i class="mdi mdi-wallet-outline bg-warning text-white osahan-icon mx-auto rounded-pill"></i>
                     <h6 class="mb-1 mt-3">High class</h6>
@@ -34,7 +34,7 @@
                 </div>
             </a>
 
-            <a href="listing.html" class="text-decoration-none col-xl-2 col-md-4 mb-4">
+            <a href="#" class="text-decoration-none col-xl-2 col-md-4 mb-4">
                 <div class="rounded py-4 bg-white shadow-sm text-center">
                     <i class="mdi mdi-silverware-variant bg-danger text-white osahan-icon mx-auto rounded-pill"></i>
                     <h6 class="mb-1 mt-3">Dine in</h6>
@@ -42,7 +42,7 @@
                 </div>
             </a>
 
-            <a href="listing.html" class="text-decoration-none col-xl-2 col-md-4 mb-4">
+            <a href="#" class="text-decoration-none col-xl-2 col-md-4 mb-4">
                 <div class="rounded py-4 bg-white shadow-sm text-center">
                     <i class="mdi mdi-home-variant-outline bg-primary text-white osahan-icon mx-auto rounded-pill"></i>
                     <h6 class="mb-1 mt-3">Pick up</h6>
@@ -50,7 +50,7 @@
                 </div>
             </a>
 
-            <a href="listing.html" class="text-decoration-none col-xl-2 col-md-4 mb-4">
+            <a href="#" class="text-decoration-none col-xl-2 col-md-4 mb-4">
                 <div class="rounded py-4 bg-white shadow-sm text-center">
                     <i class="mdi mdi-map-outline bg-warning text-white osahan-icon mx-auto rounded-pill"></i>
                     <h6 class="mb-1 mt-3">Nearest</h6>
@@ -60,8 +60,8 @@
         </div>
 
         <div class="d-flex align-items-center justify-content-between mb-3 mt-2">
-            <h5 class="mb-0">Featured restaurants</h5>
-            <a href="listing.html" class="small font-weight-bold text-dark">See all <i
+            <h5 class="mb-0">Featured Categories</h5>
+            <a href="{{ route('Welcome.All.Categories') }}" class="small font-weight-bold text-dark">See all <i
                     class="mdi mdi-chevron-right mr-2"></i></a>
         </div>
 
@@ -91,76 +91,22 @@
 
         <div class="d-flex align-items-center justify-content-between mb-3 mt-2">
             <h5 class="mb-0">Asian food</h5>
-            <a href="listing.html" class="small font-weight-bold text-dark">See all <i
+            <a href="{{ route('Welcome.All.Products') }}" class="small font-weight-bold text-dark">See all <i
                     class="mdi mdi-chevron-right mr-2"></i></a>
         </div>
 
         <div class="row">
-
+            @forelse ($foods as $food)
             <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
-                data-target="#myitemsModal">
-                <img src="{{ asset('assets/img/food1.jpg') }}" class="img-fluid rounded">
+                data-target="#{{ $food->slug }}">
+                <img src="{{ asset('images/'.$food->image) }}" class="img-fluid rounded">
                 <div class="d-flex align-items-center mt-3">
-                    <p class="text-black h6 m-0">Spicy Na Thai Pizza</p>
-                    <span class="badge badge-light ml-auto"><i class="mdi mdi-truck-fast-outline"></i>
-                        Free
-                        delivery</span>
+                    <p class="text-black h6 m-0">{{ $food->title }}</p>
                 </div>
             </a>
-            <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
-                data-target="#myitemsModal">
-                <img src="{{ asset('assets/img/food2.jpg') }}" class="img-fluid rounded">
-                <div class="d-flex align-items-center mt-3">
-                    <p class="text-black h6 m-0">Special Burger</p>
-                    <span class="badge badge-light ml-auto"><i class="mdi mdi-truck-fast-outline"></i>
-                        Free
-                        delivery</span>
-                </div>
-            </a>
-            <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
-                data-target="#myitemsModal">
-                <img src="{{ asset('assets/img/food3.jpg') }}" class="img-fluid rounded">
-                <div class="d-flex align-items-center mt-3">
-                    <p class="text-black h6 m-0">Tandoori</p>
-                    <span class="badge badge-light ml-auto"><i class="mdi mdi-truck-fast-outline"></i>
-                        Free
-                        delivery</span>
-                </div>
-            </a>
-        </div>
-
-        <div class="row">
-
-            <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
-                data-target="#myitemsModal">
-                <img src="{{ asset('assets/img/food4.jpg') }}" class="img-fluid rounded">
-                <div class="d-flex align-items-center mt-3">
-                    <p class="text-black h6 m-0">Special Thali</p>
-                    <span class="badge badge-light ml-auto"><i class="mdi mdi-truck-fast-outline"></i>
-                        Free
-                        delivery</span>
-                </div>
-            </a>
-            <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
-                data-target="#myitemsModal">
-                <img src="{{ asset('assets/img/food5.jpg') }}" class="img-fluid rounded">
-                <div class="d-flex align-items-center mt-3">
-                    <p class="text-black h6 m-0">Diet Food</p>
-                    <span class="badge badge-light ml-auto"><i class="mdi mdi-truck-fast-outline"></i>
-                        Free
-                        delivery</span>
-                </div>
-            </a>
-            <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
-                data-target="#myitemsModal">
-                <img src="{{ asset('assets/img/food6.jpg') }}" class="img-fluid rounded">
-                <div class="d-flex align-items-center mt-3">
-                    <p class="text-black h6 m-0">Sandwich</p>
-                    <span class="badge badge-light ml-auto"><i class="mdi mdi-truck-fast-outline"></i>
-                        Free
-                        delivery</span>
-                </div>
-            </a>
+            @empty
+            <h4>Admin have not entered new food yet</h4>
+            @endforelse
         </div>
     </div>
 

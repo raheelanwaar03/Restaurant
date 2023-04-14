@@ -2,4 +2,6 @@
 
 @yield('content')
 
+<x-alert/>
+
 @include('landingpage.layout.footer')

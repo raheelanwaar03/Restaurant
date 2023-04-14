@@ -13,16 +13,12 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
     <title>{{ env('APP_NAME') }} - Online Food Ordering Website</title>
-
-    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <link href="assets/css/osahan.css" rel="stylesheet">
-
-    <link href="assets/font/stylesheet.css" rel="stylesheet">
-
-    <link href="assets/vendor/mdi-icons/css/materialdesignicons.min.css" rel="stylesheet">
-
-    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/osahan.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/font/stylesheet.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/mdi-icons/css/materialdesignicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css">
 </head>
 
 <body id="page-top">
@@ -31,71 +27,37 @@
 
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <a class="sidebar-brand d-flex align-items-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center" href="{{ route('Welcome') }}">
                 <div class="sidebar-brand-icon">
                     <img src="{{ asset('assets/img/logo.png') }}" class="img-fluid">
                 </div>
             </a>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('Welcome') }}">
                     <i class="mdi mdi-home-variant-outline"></i>
                     <span>Home</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="explore.html">
+                <a class="nav-link" href="{{ route('Welcome.All.Products') }}">
                     <i class="mdi mdi-grid-large"></i>
                     <span>Explore</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="favourities.html">
+                <a class="nav-link" href="{{ route('Welcome.All.Categories') }}">
                     <i class="mdi mdi-bookmark-outline"></i>
-                    <span>Favourities</span></a>
+                    <span>Categories</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="orders.html">
+                <a class="nav-link" href="@">
                     <i class="mdi mdi-book-open"></i>
                     <span>Orders</span></a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link d-flex" href="messages.html">
-                    <i class="mdi mdi-message-text-outline mr-2"></i>
-                    <span>Messages</span>
-                    <span class="rounded-circle bg-white text-primary ml-auto px-2 py-1">2</span></a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="settings.html">
-                    <i class="mdi mdi-cog"></i>
-                    <span>Settings</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Extra Pages</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pages:</h6>
-                        <a class="collapse-item" href="detail.html">Details</a>
-                        <a class="collapse-item" href="listing.html">Listing</a>
-                        <a class="collapse-item" href="messages.html">Messages</a>
-                        <a class="collapse-item" href="search.html">Search</a>
-                        <a class="collapse-item" href="buttons.html">Components</a>
-                        <a class="collapse-item" href="404.html">Page Not Found</a>
-                        <h6 class="collapse-header">Account:</h6>
-                        <a class="collapse-item" href="signin.html">Signin</a>
-                        <a class="collapse-item" href="signup.html">Signup</a>
-                        <a class="collapse-item" href="forgot.html">Forgot Password</a>
-                    </div>
-                </div>
-            </li>
             <div class="d-none d-md-block">
                 <div class="user d-flex align-items-center p-3">
                     <div class="pr-3"><i class="mdi mdi-account-circle-outline text-white h3 mb-0"></i></div>

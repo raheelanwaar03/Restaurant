@@ -1,63 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('auth.layout.app')
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-    <title>Authentication</title>
-</head>
-
-<body style="background-image: url({{ asset('assets/images/background/image-7.jpg') }});">
-    <x-alert/>
-    <img src="" alt="">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center text-light">Register New Account</h1>
+    <body id="page-top">
+        <div class="row osahan-login m-0">
+            <div class="col-md-6 osahan-login-left px-0">
             </div>
-        </div>
-        <div style="margin-top: -100px" class="row min-vh-100">
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
-                <div class="card bg-transparent border-white w-100">
-                    <div class="card-body">
-                        <form action="{{ route('register') }}" method="POST">
-                            @csrf
-                            <div class="form-group">
-                                <label style="color:white">Name</label>
-                                <input type="text" name="name" style="background: transparent;color:white"
-                                    class="form-control" placeholder="Enter Your Name">
+            <div class="col-md-6 d-flex justify-content-center flex-column px-0">
+                <div class="col-lg-6 mx-auto">
+                    <h3 class="mb-1">Welcome</h3>
+                    <p class="mb-5">Sign in to your account to continue</p>
+                    <form href="{{ route('login') }}" method="POST">
+                        @csrf
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-account-outline"></i></div>
+                            <div class="w-100">
+                                <p class="mb-0 small font-weight-bold text-dark">Full Name</p>
+                                <input type="text" name="name"
+                                    class="form-control form-control-sm p-0 border-input border-0 rounded-0"
+                                    placeholder="Enter Your Name">
                             </div>
-                            <div class="form-group">
-                                <label style="color:white">Email</label>
-                                <input type="text" style="background: transparent;color:white" name="email"
-                                    class="form-control" placeholder="Enter Your Email">
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-email-outline"></i></div>
+                            <div class="w-100">
+                                <p class="mb-0 small font-weight-bold text-dark">Email Address</p>
+                                <input type="email" name="email"
+                                    class="form-control form-control-sm p-0 border-input border-0 rounded-0"
+                                    placeholder="Enter Your Email">
                             </div>
-                            <div class="form-group">
-                                <label style="color:white">Password</label>
-                                <input type="password" style="background: transparent;color:white" name="password"
-                                    class="form-control" placeholder="Enter Your Password">
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-form-textbox-password"></i>
                             </div>
-                            <div class="form-group">
-                                <label style="color:white">Confirm Password</label>
-                                <input type="password" style="background: transparent;color:white"
-                                    name="password_confirmation" class="form-control"
-                                    placeholder="Enter Your Confirm Password">
+                            <div class="w-100">
+                                <p class="mb-0 small font-weight-bold text-dark">Password</p>
+                                <input type="password" name="password"
+                                    class="form-control form-control-sm p-0 border-input border-0 rounded-0"
+                                    placeholder="Enter Password">
                             </div>
-                            <button type="submit" class="btn btn-outline-light ">Submit</button>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-form-textbox-password"></i>
+                            </div>
+                            <div class="w-100">
+                                <p class="mb-0 small font-weight-bold text-dark">Confirm Password</p>
+                                <input type="password" name="password_confirmation"
+                                    class="form-control form-control-sm p-0 border-input border-0 rounded-0"
+                                    placeholder="Enter Password">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary btn-block mb-3">Register</button>
+                            <a href="{{ route('login') }}" class="btn btn-light btn-block mb-2">Already have account!</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-top: -100px">
-            <div class="col-md-12">
-                <h1 class="text-center text-light">Already have account?<span><a href="{{ route('login') }}" style="text-decoration: none" > Sign
-                            in </a></span></h1>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
+    </body>
+@endsection

@@ -14,12 +14,12 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
-<div class="modal fade" id="myitemsModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+<div class="modal fade" id="{{ $food->slug }}" data-backdrop="static" data-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog border-bottom">
         <div class="modal-content osahan-item-detail-pop">
             <div class="modal-header border-0">
-                <h5 class="modal-title" id="exampleModalLabel">Rice choice</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{ $food->title }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -29,37 +29,38 @@
                     <div class="position-absolute heart-fav">
                         <a href="#"><i class="mdi mdi-heart"></i></a>
                     </div>
-                    <img src="{{ asset('assets/img/food-banner.png') }}" class="img-fluid col-md-12 p-0 rounded">
+                    <img src="{{ asset('images/' . $food->image) }}" class="img-fluid col-md-12 p-0 rounded">
                 </div>
-                <h4 class="mb-2">Char-Broiled Chicken Shish</h4>
-                <p>Served with basmati rice or bulgur pilaf, skewered with grilled vegetables</p>
+                <h4 class="mb-2">{{ $food->name }}</h4>
+                <p>{{ $food->des }}</p>
                 <div class="d-flex align-items-center mb-3">
-                    <p class="text-danger mb-0">Rice choice</p>
-                    <p class="bg-primary text-white rounded px-2 py-1 mb-0 small ml-auto">Required</p>
+                    <p class="text-danger mb-0">{{ $food->title }}</p>
                 </div>
-                <form class="mb-2">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                        <label class="custom-control-label font-weight-bold text-dark" for="customCheck1">Basmati
-                            rice</label>
+                <form href="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST" class="mb-2">
+                    @csrf
+                    <div class="form-gorup">
+                        <label>Quantity:</label>
+                        <input type="number" name="qty" width="20px" height="12px"
+                            style="border:1px solid rgb(223, 221, 221)" value="1" min="1">
                     </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                        <label class="custom-control-label font-weight-bold text-dark" for="customCheck2">Brown
-                            rice</label>
+                    <div class="mt-4">
+                        <select name="extera[]" class="livesearch" multiple>
+                            <option value="Cheese" class="bg-dark" style="color:black;">Cheese</option>
+                            <option value="Lettuce">Lettuce</option>
+                            <option value="Tomato">Tomato</option>
+                            <option value="Onion">Onion</option>
+                            <option value="Cilantro">Cilantro</option>
+                            <option value="Jalapeno">Jalapeno</option>
+                            <option value="Pickles">Pickles</option>
+                            <option value="Black Olives">Black Olives</option>
+                            <option value="Green Olives">Green Olives</option>
+                            <option value="Guancamole">Guancamole</option>
+                            <option value="Sour Cream">Sour Cream</option>
+                        </select>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                        <label class="custom-control-label font-weight-bold text-dark" for="customCheck3">Bulgur
-                            pilaf</label>
-                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Add
+                        (${{ $food->price }})</button>
                 </form>
-                <p class="mb-0"><a href="#" class="text-decoration-none text-primary"><i
-                            class="fas fa-plus mr-2 bg-light rounded p-2"></i> Add special instructions</a></p>
-            </div>
-            <div class="modal-footer">
-                <button data-toggle="modal" data-target="#cartModal" class="btn btn-primary btn-block">Add
-                    ($15.00)</button>
             </div>
         </div>
     </div>
@@ -437,10 +438,17 @@
 
 <script src="assets/js/osahan.min.js" type="c80d47fa76d5aa4530a781ea-text/javascript"></script>
 <script src="assets/js/rocket-loader.min.js" data-cf-settings="c80d47fa76d5aa4530a781ea-|49" defer=""></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114"
-    integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw=="
-    data-cf-beacon='{"rayId":"7b24316e0f16c908","version":"2023.3.0","r":1,"b":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","si":100}'
-    crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114">
+</script>
+
+{{-- muliti select option --}}
+
+{{-- muliti select option --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+<script>
+    $(".livesearch").chosen();
+</script>
+
 </body>
 
 </html>

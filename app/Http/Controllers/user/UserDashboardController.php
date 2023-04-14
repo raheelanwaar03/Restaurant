@@ -46,7 +46,7 @@ class UserDashboardController extends Controller
         $price = $food->price * $request->qty;
         $cartFood->total_price = $price + $count;
         $cartFood->save();
-        return  redirect()->route('User.All.Cart.Items')->with('success','Food added to cart successfully');
+        return redirect()->back()->with('success','Food added to cart successfully');
 
     }
 
