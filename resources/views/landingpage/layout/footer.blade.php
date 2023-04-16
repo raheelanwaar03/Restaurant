@@ -441,14 +441,6 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114">
 </script>
 
-{{-- muliti select option --}}
-
-{{-- muliti select option --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-<script>
-    $(".livesearch").chosen();
-</script>
-
 </body>
 
 </html>

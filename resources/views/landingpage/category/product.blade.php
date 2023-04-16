@@ -1,67 +1,57 @@
-@extends('layouts.app')
+@extends('landingpage.layout.app')
 
 @section('content')
-    <!-- Inner Banner Section -->
-    <section class="inner-banner">
-        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/banner-image-4.jpg') }});">
-        </div>
-        <div class="auto-container">
-            <div class="inner">
-                <div class="subtitle"><span>our menu</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                <h1><span>All Products of {{ $category->title }}</span></h1>
+    <div class="container-fluid">
+        <div class="banner-image p-0 mt-n4 mx-n4 position-relative">
+            <div class="position-absolute heart-icon">
+                <a href="#" class="bg-white text-decoration-none rounded p-2 text-dark font-weight-bold"><i
+                        class="far fa-heart"></i></a>
             </div>
+            <img src="{{ asset('assets/img/banner.jpg') }}" class="img-fluid shadow">
         </div>
-    </section>
-    <!--End Banner Section -->
-
-    <!--Contact Info Section-->
-    <section class="contact-page">
-        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-25.png') }}" alt="" title="">
-        </div>
-        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-6.png') }}" alt="" title="">
-        </div>
-        <!--location Section-->
-        <div class="location-center">
-            <div class="container-fluid">
-                <div class="cinfo-box">
-                    <div class="row clearfix">
-                        <div class="col-md-12">
-                            <div class="row">
-                                @forelse ($products as $food)
-                                    <div class="col-md-4 mx-3">
-                                        <div class="card bg-transparent" style="width: 18rem;">
-                                            <form action="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" method="POST">
-                                                @csrf
-                                                <a data-toggle="modal" data-target="#{{ $food->slug }}">
-                                                    <img class="card-img-top" src="{{ asset('images/' . $food->image) }}"
-                                                        height="250px" width="250px" alt="Card image cap">
-                                                    <div class="card-body">
-                                                        <div class="d-flex justify-content-between align-items-center">
-                                                            <h5 class="card-title text-white">{{ $food->title }}</h5>
-                                                            <h3>${{ $food->price }}</h3>
-                                                        </div>
-                                                        <p class="card-text text-white">{{ $food->des }}.</p>
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <a data-toggle="modal" data-target="#{{ $food->slug }}" class="btn btn-danger">Add to Cart</a>
-                                                    </div>
-                                                </a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                @empty
-                            </div>
-                            <h3>Admin have not added any food yet!</h3>
-                            @endforelse
-                            <div class="col-md-12 text-center">
-                                {{ $products->withQueryString()->links('pagination::bootstrap-5') }}
-                            </div>
-                        </div>
-                    </div>
+        <div class="mt-n5 bg-white p-3 mb-4 rounded shadow position-relative">
+            <div class="osahan-single-top-info d-flex">
+                <img src="{{ asset('images/' . $category->image) }}"
+                    class="img-fluid border p-2 mb-auto rounded brand-logo shadow-sm">
+                <div class="ml-3">
+                    <p class="text-muted p-0 mt-2 mb-2">{{ $category->des }}</p>
+                    <p class="mb-0 small">
+                        <i class="mdi mdi-star text-warning"></i> <span class="font-weight-bold text-dark">4.8</span> - 500+
+                        Ratings
+                    </p>
                 </div>
             </div>
         </div>
+
+        <ul class="nav nav-tabs border-0 mb-4" id="myTab" role="tablist">
+            <li class="nav-item mr-2" role="presentation">
+                <a class="nav-link active border-0 btn btn-light" id="popular-tab" data-toggle="tab" href="#popular"
+                    role="tab" aria-controls="popular" aria-selected="true">All Food of {{ $category->title }}</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="popular" role="tabpanel" aria-labelledby="popular-tab">
+
+                <div class="row">
+
+                    @forelse ($foods as $food)
+                        <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
+                            data-target="#{{ $food->slug }}">
+                            <img src="{{ asset('images/' . $food->image) }}" class="img-fluid rounded">
+                            <div class="d-flex align-items-center mt-3 mb-2">
+                                <p class="text-black h6 m-0">{{ $food->title }}</p>
+                            </div>
+                            <p class="small mb-2">
+                                {{ $food->des }}
+                            </p>
+                        </a>
+
+                    @empty
+                        <h4>No Food</h4>
+                    @endforelse
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    </div>
 @endsection

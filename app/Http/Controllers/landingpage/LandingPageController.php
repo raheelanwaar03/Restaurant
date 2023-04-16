@@ -52,8 +52,9 @@ class LandingPageController extends Controller
 
     public function welcomeCategories()
     {
+        $foods = Food::get();
         $categorys = Category::paginate(9);
-        return view('landingpage.category.index',compact('categorys'));
+        return view('landingpage.category.index',compact('categorys','foods'));
     }
     // showing category wise product
 
@@ -62,9 +63,9 @@ class LandingPageController extends Controller
         if(Category::where('slug',$slug)->exists())
         {
             $category = Category::where('slug',$slug)->first();
-            $products = Food::where('category_id',$category->id)->paginate(9);
+            $foods = Food::where('category_id',$category->id)->paginate(9);
             $categorys = Category::get();
-            return view('landingpage.category.product',compact('products','category','categorys'));
+            return view('landingpage.category.product',compact('foods','category','categorys'));
         }
         else{
             return redirect('/')->with('error','slug is not avaliable');

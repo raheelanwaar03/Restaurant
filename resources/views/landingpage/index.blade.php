@@ -66,23 +66,24 @@
         </div>
 
         <div class="row">
-
-            @forelse ($categorys as $item)
-            <a href="#" class="text-dark text-decoration-none col-xl-4 col-lg-12 col-md-12">
-                <div class="bg-white shadow-sm rounded d-flex align-items-center p-1 mb-4 osahan-list">
-                    <div class="bg-light p-3 rounded">
-                        <img src="{{ asset('images/'.$item->image) }}" class="img-fluid">
+            @forelse ($categorys as $category)
+            <div class="col-md-4">
+                <a href="{{ route('Welcome.Category',['slug'=>$category->slug]) }}" class="text-dark text-decoration-none col-xl-4 col-lg-12 col-md-12">
+                    <div class="bg-white shadow-sm rounded d-flex align-items-center p-1 mb-4 osahan-list">
+                        <div class="bg-light p-3 rounded">
+                            <img src="{{ asset('images/'.$category->image) }}" class="img-fluid">
+                        </div>
+                        <div class="mx-3 py-2 w-100">
+                            <p class="mb-2 text-black">{{ $category->title }}</p>
+                            <p class="small mb-2">
+                                <i class="mdi mdi-star text-warning mr-1"></i> <span
+                                    class="font-weight-bold text-dark">0.8</span> (873)
+                                <i class="mdi mdi-currency-dollar ml-3"></i>starting from: 50/-
+                            </p>
+                        </div>
                     </div>
-                    <div class="mx-3 py-2 w-100">
-                        <p class="mb-2 text-black">{{ $item->title }}</p>
-                        <p class="small mb-2">
-                            <i class="mdi mdi-star text-warning mr-1"></i> <span
-                                class="font-weight-bold text-dark">0.8</span> (873)
-                            <i class="mdi mdi-currency-dollar ml-3"></i>starting from: 50/-
-                        </p>
-                    </div>
-                </div>
-            </a>
+                </a>
+            </div>
             @empty
 
             @endforelse
@@ -97,13 +98,15 @@
 
         <div class="row">
             @forelse ($foods as $food)
-            <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
-                data-target="#{{ $food->slug }}">
-                <img src="{{ asset('images/'.$food->image) }}" class="img-fluid rounded">
-                <div class="d-flex align-items-center mt-3">
-                    <p class="text-black h6 m-0">{{ $food->title }}</p>
-                </div>
-            </a>
+            <div class="col-md-4">
+                <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
+                    data-target="#{{ $food->slug }}">
+                    <img src="{{ asset('images/'.$food->image) }}" class="img-fluid rounded">
+                    <div class="d-flex align-items-center mt-3">
+                        <p class="text-black h6 m-0">{{ $food->title }}</p>
+                    </div>
+                </a>
+            </div>
             @empty
             <h4>Admin have not entered new food yet</h4>
             @endforelse
