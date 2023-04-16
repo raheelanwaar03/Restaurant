@@ -56,6 +56,20 @@
                     <i class="mdi mdi-book-open"></i>
                     <span>Orders</span></a>
             </li>
+            @if (auth()->user())
+
+            @else
+            <li class="nav-item">
+                <a href="{{ route('login') }}" class="nav-link" href="@">
+                    <i class="mdi mdi-book-open"></i>
+                    <span>Login</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('register') }}" class="nav-link" href="@">
+                    <i class="mdi mdi-book-open"></i>
+                    <span>Register</span></a>
+            </li>
+            @endif
 
 
             <div class="d-none d-md-block">
@@ -64,6 +78,10 @@
                     <div>
                         @if (auth()->user())
                             <p class="mb-0 text-white">{{ auth()->user()->name }}</p>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="btn btn-primary">Logout</button>
+                            </form>
                         @else
                             <p class="mb-0 text-white">User name</p>
                         @endif

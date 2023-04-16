@@ -8,13 +8,13 @@
             <div class="col-lg-6 mx-auto">
                 <h3 class="mb-1">Welcome</h3>
                 <p class="mb-5">Sign in to your account to continue</p>
-                <form href="{{ route('login') }}" method="POST">
+                <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="d-flex align-items-center mb-4">
                         <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-email-outline"></i></div>
                         <div class="w-100">
                             <p class="mb-0 small font-weight-bold text-dark">Email Address</p>
-                            <input type="email"
+                            <input type="email" name="email"
                                 class="form-control form-control-sm p-0 border-input border-0 rounded-0"
                                 placeholder="Enter Your Email">
                         </div>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="w-100">
                             <p class="mb-0 small font-weight-bold text-dark">Password</p>
-                            <input type="password"
+                            <input type="password" name="password"
                                 class="form-control form-control-sm p-0 border-input border-0 rounded-0"
                                 placeholder="Enter Password">
                         </div>

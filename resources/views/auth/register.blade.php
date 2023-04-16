@@ -9,7 +9,7 @@
                 <div class="col-lg-6 mx-auto">
                     <h3 class="mb-1">Welcome</h3>
                     <p class="mb-5">Sign in to your account to continue</p>
-                    <form href="{{ route('login') }}" method="POST">
+                    <form action="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="d-flex align-items-center mb-4">
                             <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-account-outline"></i></div>
