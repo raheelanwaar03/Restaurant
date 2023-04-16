@@ -36,7 +36,7 @@
                 <div class="d-flex align-items-center mb-3">
                     <p class="text-danger mb-0">{{ $food->title }}</p>
                 </div>
-                <form href="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST" class="mb-2">
+                <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST" class="mb-2">
                     @csrf
                     <div class="form-gorup">
                         <label>Quantity:</label>
