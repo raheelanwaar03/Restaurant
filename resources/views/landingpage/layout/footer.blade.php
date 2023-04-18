@@ -1,446 +1,229 @@
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; {{ env('APP_NAME') }} 2020</span>
+<div class="footer-area black-bg-2 pt-70">
+    <div class="footer-top-area pb-18">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer-about mb-40">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="{{ 'assets/img/logo/footer-logo.png' }}" alt="footer logo" height="100px" width="100px">
+                            </a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <div class="payment-img">
+                            <a href="#">
+                                <img src="{{ 'assets/img/icon-img/payment.png' }}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-40">
+                        <div class="footer-title mb-22">
+                            <h4>Information</h4>
+                        </div>
+                        <div class="footer-content">
+                            <ul>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Customer Service</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-40">
+                        <div class="footer-title mb-22">
+                            <h4>My Account</h4>
+                        </div>
+                        <div class="footer-content">
+                            <ul>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="#">Order History</a></li>
+                                <li><a href="wishlist.html">Wish List</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">Order History</a></li>
+                                <li><a href="#">International Orders</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-40">
+                        <div class="footer-title mb-22">
+                            <h4>Get in touch</h4>
+                        </div>
+                        <div class="footer-contact">
+                            <ul>
+                                <li>Address: 123 Main Your address goes here.</li>
+                                <li>Telephone Enquiry: (012) 800 456 789-987 </li>
+                                <li>Email: <a href="#">Info@example.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-35 footer-title mb-22">
+                            <h4>Get in touch</h4>
+                        </div>
+                        <div class="footer-time">
+                            <ul>
+                                <li>Open: <span>8:00 AM</span> - Close: <span>18:00 PM</span></li>
+                                <li>Saturday - Sunday: <span>Close</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
-
-</div>
-
-</div>
-
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<div class="modal fade" id="{{ $food->slug }}" data-backdrop="static" data-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog border-bottom">
-        <div class="modal-content osahan-item-detail-pop">
-            <div class="modal-header border-0">
-                <h5 class="modal-title" id="exampleModalLabel">{{ $food->title }}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body px-3 py-0">
-                <div class="pb-3 position-relative">
-                    <div class="position-absolute heart-fav">
-                        <a href="#"><i class="mdi mdi-heart"></i></a>
+    <div class="footer-bottom-area border-top-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-7">
+                    <div class="copyright">
+                        <p>&copy; 2022 <strong> {{ env('APP_NAME') }} </strong> Made with <i class="fa fa-heart text-danger"></i>                        </p>
                     </div>
-                    <img src="{{ asset('images/' . $food->image) }}" class="img-fluid col-md-12 p-0 rounded">
                 </div>
-                <h4 class="mb-2">{{ $food->name }}</h4>
-                <p>{{ $food->des }}</p>
-                <div class="d-flex align-items-center mb-3">
-                    <p class="text-danger mb-0">{{ $food->title }}</p>
+                <div class="col-lg-6 col-md-6 col-sm-5">
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus-outline"></i></a></li>
+                            <li><a href="#"><i class="ion-social-rss"></i></a></li>
+                            <li><a href="#"><i class="ion-social-dribbble-outline"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST" class="mb-2">
-                    @csrf
-                    <div class="form-gorup">
-                        <label>Quantity:</label>
-                        <input type="number" name="qty" width="20px" height="12px"
-                            style="border:1px solid rgb(223, 221, 221)" value="1" min="1">
-                    </div>
-                    <div class="mt-4">
-                        <select name="extera[]" class="livesearch" multiple>
-                            <option value="Cheese" class="bg-dark" style="color:black;">Cheese</option>
-                            <option value="Lettuce">Lettuce</option>
-                            <option value="Tomato">Tomato</option>
-                            <option value="Onion">Onion</option>
-                            <option value="Cilantro">Cilantro</option>
-                            <option value="Jalapeno">Jalapeno</option>
-                            <option value="Pickles">Pickles</option>
-                            <option value="Black Olives">Black Olives</option>
-                            <option value="Green Olives">Green Olives</option>
-                            <option value="Guancamole">Guancamole</option>
-                            <option value="Sour Cream">Sour Cream</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Add
-                        (${{ $food->price }})</button>
-                </form>
             </div>
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">My cart <span class="small">(2 items)</span></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body osahan-my-cart">
-                <a href="#" class="text-dark d-flex align-items-center mb-3" data-toggle="modal"
-                    data-target="#myaddressModal">
-                    <div>
-                        <p class="mb-0 text-danger">Delivered to</p>
-                        <p class="mb-0 small">{{ env('APP_ADDRESS') }}</p>
-                    </div>
-                    <div class="ml-auto">
-                        <p class="mb-0 text-info">Edit<i class="mdi h6 m-0 mdi-chevron-right"></i></p>
-                    </div>
-                </a>
-                <div class="details-page border-top pt-3 osahan-my-cart-item">
-                    <h6 class="mb-3">Pizza Hut</h6>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="mr-2"><img src="{{ asset('assets/img/pizza.png') }}" class="img-fluid rounded">
-                        </div>
-                        <div class="small text-black-50">1 x</div>
-                        <div class="ml-2">
-                            <p class="mb-0 text-black">Cheese pie</p>
-                            <p class="mb-0 small">$15</p>
-                        </div>
-                        <a href="#" class="ml-auto"><i
-                                class="btn btn-light text-danger mdi mdi-trash-can-outline rounded"></i></a>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="mr-2"><img src="{{ asset('assets/img/burger.png') }}"
-                                class="img-fluid rounded"></div>
-                        <div class="small text-black-50">2 x</div>
-                        <div class="text-dark ml-2">
-                            <p class="mb-0 text-black">Peperoni pie</p>
-                            <p class="mb-0 small">$23</p>
-                        </div>
-                        <a href="#" class="ml-auto"><i
-                                class="btn btn-light text-danger mdi mdi-trash-can-outline rounded"></i></a>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="mr-2"><img src="{{ asset('assets/img/burger2.png') }}"
-                                class="img-fluid rounded"></div>
-                        <div class="small text-black-50">3 x</div>
-                        <div class="text-dark ml-2">
-                            <p class="mb-0 text-black">Osahan Burger</p>
-                            <p class="mb-0 small">$50</p>
-                        </div>
-                        <a href="#" class="ml-auto"><i
-                                class="btn btn-light text-danger mdi mdi-trash-can-outline rounded"></i></a>
-                    </div>
-                    <div class="my-3"><a href="#" data-toggle="modal" data-target="#myitemsModal"
-                            class="text-primary"><i class="mdi mdi-plus mr-2"></i> Add more items</a></div>
-                    <a href="#" class="d-flex align-items-center mb-3" data-toggle="modal"
-                        data-target="#mycoupansModal">
-                        <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-motorbike"></i></div>
-                        <div>
-                            <p class="mb-0 text-dark">Delivery</p>
-                            <p class="mb-0 small text-black-50">$0</p>
-                        </div>
-                    </a>
-                    <a href="#" class="d-flex align-items-center mb-3" data-toggle="modal"
-                        data-target="#mycoupansModal">
-                        <div class="mr-3 bg-light rounded p-2 osahan-icon"><i class="mdi mdi-percent"></i></div>
-                        <div>
-                            <p class="mb-0 text-dark">Promo code</p>
-                            <p class="mb-0 small text-black-50">HFXWO</p>
-                        </div>
-                        <div class="ml-auto"><button class="btn btn-primary"><i class="mdi mdi-plus"></i></button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer justify-content-start osahan-my-cart-footer">
-                <div class="row w-100">
-                    <div class="col-2 px-0"><button class="btn btn-warning btn-block" data-toggle="modal"
-                            data-target="#mysplitModal"><i class="mdi mdi-account-plus-outline"></i></button>
-                    </div>
-                    <div class="col-10 pr-0"><button class="btn btn-primary btn-block" data-toggle="modal"
-                            data-target="#checkoutModal">Checkout ($53.00)</button></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p class="text-dark mb-2 small">Payment methods</p>
-                <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
-                    <label class="btn osahan-radio btn-light btn-sm rounded active">
-                        <input type="radio" name="options" id="option1" checked> <i
-                            class="mdi mdi-credit-card-outline"></i> Card
-                    </label>
-                    <label class="btn osahan-radio btn-light btn-sm rounded">
-                        <input type="radio" name="options" id="option2"> <i class="mdi mdi-currency-usd"></i>
-                        COD
-                    </label>
-                    <label class="btn osahan-radio btn-light btn-sm rounded">
-                        <input type="radio" name="options" id="option3"> <i class="fab fa-paypal"></i>
-                        Paypal
-                    </label>
-                </div>
-                <h6 class="mb-3">My cards <span class="small">(2)</span></h6>
-                <div class="btn-group btn-group-toggle osahan-card" data-toggle="buttons">
-                    <label class="btn osahan-radio osahan-card-pay btn-light btn-sm rounded mb-2 active w-100">
-                        <input type="radio" name="options" id="option1" checked>
-                        <div class="d-flex align-items-center card-detials small mb-3">
-                            <p class="small"><i class="mdi mdi-chip"></i></p>
-                            <p class="ml-auto d-flex align-items-center">
-                                <span class="card-no mr-2"><i class="mdi mdi-circle"></i> <i
-                                        class="mdi mdi-circle"></i> <i class="mdi mdi-circle"></i> <i
-                                        class="mdi mdi-circle"></i></span>
-                                <span class="small">1211</span>
-                            </p>
-                        </div>
-                        <h1 class="mb-0">Mastercard</h1>
-                        <p class="small mb-1">Platinum</p>
-                        <p class="text-right mb-0"><i class="fab fa-cc-mastercard text-warning"></i></p>
-                    </label>
-                    <label class="btn osahan-radio osahan-card-pay btn-light btn-sm rounded mb-2 w-100">
-                        <input type="radio" name="options" id="option2">
-                        <div class="d-flex align-items-center card-detials small mb-3">
-                            <p class="small"><i class="mdi mdi-chip"></i></p>
-                            <p class="ml-auto d-flex align-items-center">
-                                <span class="card-no mr-2"><i class="mdi mdi-circle"></i> <i
-                                        class="mdi mdi-circle"></i> <i class="mdi mdi-circle"></i> <i
-                                        class="mdi mdi-circle"></i></span>
-                                <span class="small">2277</span>
-                            </p>
-                        </div>
-                        <h1 class="mb-0">Visa Debit</h1>
-                        <p class="small mb-1">Plantinum</p>
-                        <p class="text-right mb-0"><i class="fab fa-cc-visa"></i></p>
-                    </label>
-                </div>
-                <a href="#" data-toggle="modal" data-target="#paymentsModal"
-                    class="btn btn-light btn-block"><i class="mdi mdi-plus"></i> Add</a>
-            </div>
-            <div class="modal-footer justify-content-start">
-                <a href="orders.html" class="btn btn-primary btn-block">Confirm payment ($53.00)</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="myaddressModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Delivered address</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="inputAddress" class="small font-weight-bold text-dark mb-0">Street
-                            Name</label>
-                        <input type="text" class="form-control form-control-sm border-0 p-0 border-input rounded-0"
-                            id="inputAddress" placeholder="" value="300 Post Street">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress" class="small font-weight-bold text-dark mb-0">City</label>
-                        <input type="text" class="form-control form-control-sm border-0 p-0 border-input rounded-0"
-                            id="inputAddress" placeholder="" value="San Francisco">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress" class="small font-weight-bold text-dark mb-0">State</label>
-                        <input type="text" class="form-control form-control-sm border-0 p-0 border-input rounded-0"
-                            id="inputAddress" placeholder="" value="California">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress" class="small font-weight-bold text-dark mb-0">Zip Code</label>
-                        <input type="text" class="form-control form-control-sm border-0 p-0 border-input rounded-0"
-                            id="inputAddress" placeholder="" value="123456">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer border-0">
-                <button data-dismiss="modal" aria-label="Close" class="btn btn-primary btn-block">Confirm</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="mycoupansModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Enter promo code</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div data-dismiss="modal" aria-label="Close" class="card offer-card bg-light border rounded mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title"><img src="{{ asset('assets/img/bank/1.png') }}"> OSAHANEAT50</h5>
-                        <h6 class="card-subtitle mb-2 text-primary">Get 50% OFF on your first
-                            {{ env('APP_NAME') }} order</h6>
-                        <p class="card-text">Use code OSAHANEAT50 &amp; get 50% off on your first osahan order on
-                            Website and Mobile site. Maximum discount: $200</p>
-                        <a href="#" class="card-link">APPLY CODE</a>
-                        <a href="#" class="card-link">KNOW MORE</a>
-                    </div>
-                </div>
-                <div data-dismiss="modal" aria-label="Close" class="card offer-card bg-light border rounded mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title"><img src="{{ asset('assets/img/bank/2.png') }}"> OSAHANLINE</h5>
-                        <h6 class="card-subtitle mb-2 text-primary">Get 20% OFF on your first
-                            {{ env('APP_NAME') }} order</h6>
-                        <p class="card-text">Use code OSAHANEAT50 &amp; get 50% off on your first osahan order on
-                            Website and Mobile site. Maximum discount: $200</p>
-                        <a href="#" class="card-link">APPLY CODE</a>
-                        <a href="#" class="card-link">KNOW MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer border-0">
-                <button data-dismiss="modal" aria-label="Close" class="btn btn-primary btn-block">Confirm</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="mysplitModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Split order</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body split-list">
-                <a href="#" data-dismiss="modal" aria-label="Close"
-                    class="text-decoration-none d-flex border rounded p-2 bg-light align-items-center mb-2">
-                    <div class="mr-2"><img src="{{ asset('assets/img/user1.png') }}"
-                            class="img-fluid rounded-circle"></div>
-                    <div class="ml-2">
-                        <p class="mb-0 text-dark">Kate Simpson</p>
-                        <span class="mb-0 small text-black-50"><span class="__cf_email__"
-                                data-cfemail="b8d3d9ccddcbd1d5c8cbd7d6f8d7cdccd4d7d7d396dbd7d5">[email&#160;protected]</span></span>
-                    </div>
-                </a>
-                <a href="#" data-dismiss="modal" aria-label="Close"
-                    class="text-decoration-none d-flex border rounded p-2 bg-light align-items-center mb-2">
-                    <div class="mr-2"><img src="{{ asset('assets/img/user2.png') }}"
-                            class="img-fluid rounded-circle"></div>
-                    <div class="ml-2">
-                        <p class="mb-0 text-dark">Andrew smith</p>
-                        <span class="mb-0 small text-black-50"><span class="__cf_email__"
-                                data-cfemail="b9d8d7ddcbdccef9d6cccd97dad6d4">[email&#160;protected]</span></span>
-                    </div>
-                </a>
-                <a href="#" data-dismiss="modal" aria-label="Close"
-                    class="text-decoration-none d-flex border rounded p-2 bg-light align-items-center mb-2">
-                    <div class="mr-2"><img src="{{ asset('assets/img/user3.png') }}"
-                            class="img-fluid rounded-circle"></div>
-                    <div class="ml-2">
-                        <p class="mb-0 text-dark">Gurdeep Osahan</p>
-                        <span class="mb-0 small text-black-50"><span class="__cf_email__"
-                                data-cfemail="ff969e92908c9e979e91bf908a8bd19c9092">[email&#160;protected]</span></span>
-                    </div>
-                </a>
-            </div>
-            <div class="modal-footer border-0">
-                <button data-dismiss="modal" aria-label="Close" class="btn btn-primary btn-block">Save</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Saved addresses</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul class="nav nav-tabs border-0 mb-3" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active border-0 bg-primary text-white rounded small" id="home-tab"
-                            data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                            aria-selected="true">Home
-                            (2)</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link border-0 bg-light text-dark rounded ml-3 small" id="profile-tab"
-                            data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                            aria-selected="false">Work (2)</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel"
-                        aria-labelledby="home-tab">
-                        <div type="button" data-dismiss="modal"
-                            class="d-flex align-items-center mb-2 border rounded p-2">
-                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i
-                                    class="mdi mdi-home-variant-outline"></i></div>
-                            <div class="w-100">
-                                <p class="mb-0 font-weight-bold text-dark">Home 1</p>
-                                <P class="mb-0 small">775 Cletus Estates Suite 423</P>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <!-- Thumbnail Large Image start -->
+                        <div class="tab-content">
+                            <div id="pro-1" class="tab-pane fade show active">
+                                <img src="{{ 'assets/img/product-details/product-detalis-l1.jpg' }}"
+                                    alt="">
+                            </div>
+                            <div id="pro-2" class="tab-pane fade">
+                                <img src="{{ 'assets/img/product-details/product-detalis-l2.jpg' }}"
+                                    alt="">
+                            </div>
+                            <div id="pro-3" class="tab-pane fade">
+                                <img src="{{ 'assets/img/product-details/product-detalis-l3.jpg' }}"
+                                    alt="">
+                            </div>
+                            <div id="pro-4" class="tab-pane fade">
+                                <img src="{{ 'assets/img/product-details/product-detalis-l4.jpg' }}"
+                                    alt="">
                             </div>
                         </div>
-                        <div type="button" data-dismiss="modal"
-                            class="d-flex align-items-center mb-b border rounded p-2">
-                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i
-                                    class="mdi mdi-home-variant-outline"></i></div>
-                            <div class="w-100">
-                                <p class="mb-0 font-weight-bold text-dark">Home 2</p>
-                                <P class="mb-0 small">182 Cletus Estates Suite 423</P>
+                        <!-- Thumbnail Large Image End -->
+                        <!-- Thumbnail Image End -->
+                        <div class="product-thumbnail">
+                            <div class="thumb-menu owl-carousel nav nav-style" role="tablist">
+                                <button class="active" id="pro-1-tab" data-bs-toggle="tab"
+                                    data-bs-target="#pro-1" type="button" role="tab"
+                                    aria-controls="pro-1" aria-selected="true">
+                                    <img src="{{ 'assets/img/product-details/product-detalis-s1.jpg' }}"
+                                        alt="product-thumbnail">
+                                </button>
+                                <button id="pro-2-tab" data-bs-toggle="tab" data-bs-target="#pro-2"
+                                    type="button" role="tab" aria-controls="pro-2"
+                                    aria-selected="true">
+                                    <img src="{{ 'assets/img/product-details/product-detalis-s2.jpg' }}"
+                                        alt="product-thumbnail">
+                                </button>
+                                <button id="pro-3-tab" data-bs-toggle="tab" data-bs-target="#pro-3"
+                                    type="button" role="tab" aria-controls="pro-3"
+                                    aria-selected="true">
+                                    <img src="{{ 'assets/img/product-details/product-detalis-s3.jpg' }}"
+                                        alt="product-thumbnail">
+                                </button>
+                                <button id="pro-4-tab" data-bs-toggle="tab" data-bs-target="#pro-4"
+                                    type="button" role="tab" aria-controls="pro-4"
+                                    aria-selected="true">
+                                    <img src="{{ 'assets/img/product-details/product-detalis-s4.jpg' }}"
+                                        alt="product-thumbnail">
+                                </button>
                             </div>
                         </div>
+                        <!-- Thumbnail image end -->
                     </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div type="button" data-dismiss="modal"
-                            class="d-flex align-items-center mb-2 border rounded p-2">
-                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i
-                                    class="mdi mdi-office-building-marker-outline"></i></div>
-                            <div class="w-100">
-                                <p class="mb-0 font-weight-bold text-dark">Work 1</p>
-                                <P class="mb-0 small">775 Cletus Estates Suite 423</P>
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                        <div class="modal-pro-content">
+                            <h3>PRODUCTS NAME HERE </h3>
+                            <div class="product-price-wrapper">
+                                <span>$120.00</span>
+                                <span class="product-price-old">$162.00 </span>
                             </div>
-                        </div>
-                        <div type="button" data-dismiss="modal"
-                            class="d-flex align-items-center mb-b border rounded p-2">
-                            <div class="mr-3 bg-light rounded p-2 osahan-icon"><i
-                                    class="mdi mdi-office-building-marker-outline"></i></div>
-                            <div class="w-100">
-                                <p class="mb-0 font-weight-bold text-dark">Work 2</p>
-                                <P class="mb-0 small">182 Cletus Estates Suite 423</P>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
+                            <div class="quick-view-select">
+                                <div class="select-option-part">
+                                    <label>Size*</label>
+                                    <select class="select">
+                                        <option value="">S</option>
+                                        <option value="">M</option>
+                                        <option value="">L</option>
+                                    </select>
+                                </div>
+                                <div class="quickview-color-wrap">
+                                    <label>Color*</label>
+                                    <div class="quickview-color">
+                                        <ul>
+                                            <li class="blue">b</li>
+                                            <li class="red">r</li>
+                                            <li class="pink">p</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="product-quantity">
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton"
+                                        value="02">
+                                </div>
+                                <button>Add to cart</button>
+                            </div>
+                            <span><i class="fa fa-check"></i> In stock</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-primary btn-block">Save Changes</button>
-            </div>
         </div>
     </div>
 </div>
+<!-- Modal end -->
 
-<script data-cfasync="false" src="asset/email-decode.min.js"></script>
-<script src="assets/vendor/jquery/jquery.min.js" type="c80d47fa76d5aa4530a781ea-text/javascript"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" type="c80d47fa76d5aa4530a781ea-text/javascript"></script>
 
-<script src="assets/vendor/jquery-easing/jquery.easing.min.js" type="c80d47fa76d5aa4530a781ea-text/javascript"></script>
 
-<script src="assets/js/osahan.min.js" type="c80d47fa76d5aa4530a781ea-text/javascript"></script>
-<script src="assets/js/rocket-loader.min.js" data-cf-settings="c80d47fa76d5aa4530a781ea-|49" defer=""></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114">
-</script>
 
+
+<!-- all js here -->
+<script src="{{ 'assets/js/vendor/jquery-1.12.4.min.js' }}"></script>
+<script src="{{ 'assets/js/popper.js' }}"></script>
+<script src="{{ 'assets/js/bootstrap.min.js' }}"></script>
+<script src="{{ 'assets/js/imagesloaded.pkgd.min.js' }}"></script>
+<script src="{{ 'assets/js/isotope.pkgd.min.js' }}"></script>
+<script src="{{ 'assets/js/ajax-mail.js' }}"></script>
+<script src="{{ 'assets/js/owl.carousel.min.js' }}"></script>
+<script src="{{ 'assets/js/plugins.js' }}"></script>
+<script src="{{ 'assets/js/main.js' }}"></script>
 </body>
 
 </html>

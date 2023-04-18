@@ -1,161 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-{{-- This website is design and developed by Raheel Anwaar
-    Whats'up:   03149720318
-    For Email : raheelanwaar05@gmail.com
---}}
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ env('APP_NAME') }} - Food & Drink eCommerce Bootstrap5 Template</title>
     <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
-    <title>{{ env('APP_NAME') }} - Online Food Ordering Website</title>
-    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('assets/css/osahan.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/font/stylesheet.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/mdi-icons/css/materialdesignicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css">
+    <meta name="robots" content="noindex, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ 'assets/img/favicon.png' }}">
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/animate.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/owl.carousel.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/slick.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/chosen.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/font-awesome.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/simple-line-icons.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/ionicons.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/meanmenu.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/style.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/responsive.css' }}">
+    <script src="{{ 'assets/js/vendor/modernizr-2.8.3.min.js' }}"></script>
 </head>
 
-<body id="page-top">
-
-    <div id="wrapper">
-
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <a class="sidebar-brand d-flex align-items-center" href="{{ route('Welcome') }}">
-                <div class="sidebar-brand-icon">
-                    <img src="{{ asset('assets/img/logo.png') }}" class="img-fluid">
-                </div>
-            </a>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ route('Welcome') }}">
-                    <i class="mdi mdi-home-variant-outline"></i>
-                    <span>Home</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('Welcome.All.Products') }}">
-                    <i class="mdi mdi-grid-large"></i>
-                    <span>Explore</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('Welcome.All.Categories') }}">
-                    <i class="mdi mdi-bookmark-outline"></i>
-                    <span>Categories</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="@">
-                    <i class="mdi mdi-book-open"></i>
-                    <span>Orders</span></a>
-            </li>
-            @if (auth()->user())
-
-            @else
-            <li class="nav-item">
-                <a href="{{ route('login') }}" class="nav-link" href="@">
-                    <i class="mdi mdi-book-open"></i>
-                    <span>Login</span></a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('register') }}" class="nav-link" href="@">
-                    <i class="mdi mdi-book-open"></i>
-                    <span>Register</span></a>
-            </li>
-            @endif
-
-
-            <div class="d-none d-md-block">
-                <div class="user d-flex align-items-center p-3">
-                    <div class="pr-3"><i class="mdi mdi-account-circle-outline text-white h3 mb-0"></i></div>
-                    <div>
-                        @if (auth()->user())
-                            <p class="mb-0 text-white">{{ auth()->user()->name }}</p>
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="btn btn-primary">Logout</button>
-                            </form>
-                        @else
-                            <p class="mb-0 text-white">User name</p>
-                        @endif
+<body>
+    <!-- header start -->
+    <header class="header-area">
+        <div class="header-top black-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12 col-sm-4">
+                        <div class="welcome-area">
+                            <p>Welcome to {{ env('APP_NAME') }}!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-12 col-sm-8">
+                        <div class="account-curr-lang-wrap f-right">
+                            <ul class="p-2">
+                                <li class="text-white">Timing: {{ env('APP_TIMING') }}</li>
+                                <li class="text-white">Email: {{ env('APP_EMAIL') }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-        </ul>
-
-
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <div id="content">
-
-                <nav
-                    class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm osahan-nav-top">
-
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <ul class="navbar-nav">
-
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-12 col-sm-4">
+                        <div class="logo">
+                            <a href="{{ route('Welcome') }}">
+                                <img alt="" src="{{ 'assets/img/logo/logo.png' }}" height="100px"
+                                    width="100px">
                             </a>
-
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="mdi mdi-magnify"></i>
-                                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-12 col-sm-8">
+                        <div class="header-middle-right f-right">
+                            <div class="header-login">
+                                @if (auth()->user())
+                                    <a href="#">
+                                        <div class="header-icon-style">
+                                            <i class="icon-user icons"></i>
                                         </div>
-                                    </div>
-                                </form>
+                                        <div class="login-text-content">
+                                            <p><span>{{ auth()->user()->name }}</span></p>
+                                        </div>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}">
+                                        <div class="header-icon-style">
+                                            <i class="icon-user icons"></i>
+                                        </div>
+                                        <div class="login-text-content">
+                                            <p>Register <br> or <span>Sign in</span></p>
+                                        </div>
+                                @endif
                             </div>
-                        </li>
-
-                        <li class="nav-item dropdown no-arrow mx-2 osahan-t-loc">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" data-toggle="modal"
-                                data-target="#companyAddress">
-                                <span class="mdi mdi-crosshairs-gps"></span><span class="ml-2">Company Address: {{env('APP_ADDRESS')}}</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="ml-auto">
-                        <a href="search.html">
-                            <form class="d-none d-sm-inline-block form-inline mx-2 my-2 my-md-0 mw-100 navbar-search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control bg-light" placeholder="Search for..."
-                                        aria-label="Search" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="mdi mdi-magnify"></i>
-                                        </button>
+                            <div class="header-wishlist">
+                                @if (auth()->user())
+                                    <a href="#">
+                                        <div class="header-icon-style">
+                                        </div>
+                                        <div class="wishlist-text">
+                                            <form action="{{ route('logout') }}" method="POST">
+                                                @csrf
+                                                <button class="btn btn-primary">Logout</button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                @endif
+                            </div>
+                            <div class="header-cart">
+                                <a href="#">
+                                    <div class="header-icon-style">
+                                        <i class="icon-handbag icons"></i>
+                                        <span class="count-style">02</span>
+                                    </div>
+                                    <div class="cart-text">
+                                        <span class="digit">My Cart</span>
+                                        <span class="cart-digit-bold">$209.00</span>
+                                    </div>
+                                </a>
+                                <div class="shopping-cart-content">
+                                    <ul>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt=""
+                                                        src="{{ 'assets/img/cart/cart-1.jpg' }}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="#">Phantom Remote </a></h4>
+                                                <h6>Qty: 02</h6>
+                                                <span>$260.00</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="ion ion-close"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt=""
+                                                        src="{{ 'assets/img/cart/cart-2.jpg' }}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="#">Phantom Remote</a></h4>
+                                                <h6>Qty: 02</h6>
+                                                <span>$260.00</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="ion ion-close"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shopping-cart-total">
+                                        <h4>Shipping : <span>$20.00</span></h4>
+                                        <h4>Total : <span class="shop-total">$260.00</span></h4>
+                                    </div>
+                                    <div class="shopping-cart-btn">
+                                        <a href="cart-page.html">view cart</a>
+                                        <a href="checkout.html">checkout</a>
                                     </div>
                                 </div>
-                            </form>
-                        </a>
-                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#cartModal"><i
-                                class="mdi mdi-shopping-outline"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom transparent-bar black-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="route('Welcome')">home</a>
+                                    </li>
+                                    {{-- <li><a href="{{ route('My.Account') }}">My Account</a></li> --}}
+                                    <li class="mega-menu-position top-hover"><a href="{{ route('Welcome.All.Products') }}">Food</a>
+                                    </li>
+                                    <li class="top-hover"><a href="#">categories
+                                         <i class="ion-chevron-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="{{ route('Welcome.All.Categories') }}">All Categories</a></li>
+                                            @forelse ($categorys as $category)
+                                            <li><a href="{{ route('Welcome.Category',['slug'=>$category->slug]) }}">{{ $category->title }} </a></li>
+                                            @empty
+
+                                            @endforelse
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ route('Welcome.About-Us') }}">about</a></li>
+                                    <li><a href="{{ route('Welcome.Contact-Us') }}">contact us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-menu-area-start -->
+        <div class="mobile-menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mobile-menu">
+                            <nav id="mobile-menu-active">
+                                <ul class="menu-overflow" id="nav">
+                                    <li><a href="{{ route('Welcome') }}">Home</a>
+                                    </li>
+                                    {{-- <li><a href="{{ route('My.Account') }}">My Account</a></li> --}}
+                                    <li><a href="{{ route('Welcome.All.Products') }}">Food</a>
+                                    </li>
+                                    <li><a href="{{ route('Welcome.All.Categories') }}">Categories</a>
+                                        <ul>
+                                            @forelse ($categorys as $category)
+                                            <li><a href="{{ route('Welcome.Category',['slug'=>$category->slug]) }}">{{ $category->title }}</a></li>
+                                            @empty
+                                            <h3>No category avaliable</h3>
+                                            @endforelse
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ route('Welcome.Contact-Us') }}">Contact us</a></li>
+                                    <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-menu-area-end -->
+    </header>

@@ -107,10 +107,9 @@ class LandingPageController extends Controller
         return view('landingpage.products.show',compact('food','categorys'));
     }
 
-    public function address()
+    public function myAccount()
     {
-        $categorys = Category::paginate(9);
-        return view('landingpage.address',compact('categorys'));
+        return view('landingpage.myAccount');
     }
 
     public function storeAddress(Request $request)
