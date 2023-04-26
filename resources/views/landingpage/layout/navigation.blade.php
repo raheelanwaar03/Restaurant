@@ -9,21 +9,21 @@
     <meta name="robots" content="noindex, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ 'assets/img/favicon.png' }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}">
 
     <!-- all css here -->
-    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/animate.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/owl.carousel.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/slick.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/chosen.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/font-awesome.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/simple-line-icons.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/ionicons.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/meanmenu.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/style.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/responsive.css' }}">
-    <script src="{{ 'assets/js/vendor/modernizr-2.8.3.min.js' }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/chosen.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+    <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
                     <div class="col-lg-3 col-md-4 col-12 col-sm-4">
                         <div class="logo">
                             <a href="{{ route('Welcome') }}">
-                                <img alt="" src="{{ 'assets/img/logo/logo.png' }}" height="100px"
+                                <img alt="" src="{{ asset('assets/img/logo/logo.png') }}" height="100px"
                                     width="100px">
                             </a>
                         </div>
@@ -111,7 +111,7 @@
                                         <li class="single-shopping-cart">
                                             <div class="shopping-cart-img">
                                                 <a href="#"><img alt=""
-                                                        src="{{ 'assets/img/cart/cart-1.jpg' }}"></a>
+                                                        src="{{ asset('assets/img/cart/cart-1.jpg') }}"></a>
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="#">Phantom Remote </a></h4>
@@ -125,7 +125,7 @@
                                         <li class="single-shopping-cart">
                                             <div class="shopping-cart-img">
                                                 <a href="#"><img alt=""
-                                                        src="{{ 'assets/img/cart/cart-2.jpg' }}"></a>
+                                                        src="{{ asset('assets/img/cart/cart-2.jpg') }}"></a>
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="#">Phantom Remote</a></h4>
@@ -162,16 +162,19 @@
                                     <li><a href="route('Welcome')">home</a>
                                     </li>
                                     {{-- <li><a href="{{ route('My.Account') }}">My Account</a></li> --}}
-                                    <li class="mega-menu-position top-hover"><a href="{{ route('Welcome.All.Products') }}">Food</a>
+                                    <li class="mega-menu-position top-hover"><a
+                                            href="{{ route('Welcome.All.Products') }}">Food</a>
                                     </li>
                                     <li class="top-hover"><a href="#">categories
-                                         <i class="ion-chevron-down"></i></a>
+                                            <i class="ion-chevron-down"></i></a>
                                         <ul class="submenu">
-                                            <li><a href="{{ route('Welcome.All.Categories') }}">All Categories</a></li>
+                                            <li><a href="{{ route('Welcome.All.Categories') }}">All Categories</a>
+                                            </li>
                                             @forelse ($categorys as $category)
-                                            <li><a href="{{ route('Welcome.Category',['slug'=>$category->slug]) }}">{{ $category->title }} </a></li>
+                                                <li><a
+                                                        href="{{ route('Welcome.Category', ['slug' => $category->slug]) }}">{{ $category->title }}
+                                                    </a></li>
                                             @empty
-
                                             @endforelse
                                         </ul>
                                     </li>
@@ -200,9 +203,11 @@
                                     <li><a href="{{ route('Welcome.All.Categories') }}">Categories</a>
                                         <ul>
                                             @forelse ($categorys as $category)
-                                            <li><a href="{{ route('Welcome.Category',['slug'=>$category->slug]) }}">{{ $category->title }}</a></li>
+                                                <li><a
+                                                        href="{{ route('Welcome.Category', ['slug' => $category->slug]) }}">{{ $category->title }}</a>
+                                                </li>
                                             @empty
-                                            <h3>No category avaliable</h3>
+                                                <h3>No category avaliable</h3>
                                             @endforelse
                                         </ul>
                                     </li>

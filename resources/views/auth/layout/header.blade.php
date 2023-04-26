@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-12 col-sm-4">
                         <div class="welcome-area">
-                            <p>Welcome to {{ env('APP_NAME') }}!</p>
+                            <p>Welcome to spicymexicanfood!</p>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-12 col-sm-8">

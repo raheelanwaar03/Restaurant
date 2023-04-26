@@ -6,14 +6,15 @@
                     <div class="footer-about mb-40">
                         <div class="footer-logo">
                             <a href="index.html">
-                                <img src="{{ 'assets/img/logo/footer-logo.png' }}" alt="footer logo" height="100px" width="100px">
+                                <img src="{{ asset('assets/img/logo/footer-logo.png') }}" alt="footer logo" height="100px"
+                                    width="100px">
                             </a>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                         <div class="payment-img">
                             <a href="#">
-                                <img src="{{ 'assets/img/icon-img/payment.png' }}" alt="">
+                                <img src="{{ asset('assets/img/icon-img/payment.png') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -83,7 +84,8 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-7">
                     <div class="copyright">
-                        <p>&copy; 2022 <strong> {{ env('APP_NAME') }} </strong> Made with <i class="fa fa-heart text-danger"></i>                        </p>
+                        <p>&copy; 2022 <strong> {{ env('APP_NAME') }} </strong> Made with <i
+                                class="fa fa-heart text-danger"></i> </p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-5">
@@ -103,12 +105,11 @@
     </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+<div class="modal fade" id="{{ $food->slug }}" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -116,91 +117,29 @@
                         <!-- Thumbnail Large Image start -->
                         <div class="tab-content">
                             <div id="pro-1" class="tab-pane fade show active">
-                                <img src="{{ 'assets/img/product-details/product-detalis-l1.jpg' }}"
-                                    alt="">
-                            </div>
-                            <div id="pro-2" class="tab-pane fade">
-                                <img src="{{ 'assets/img/product-details/product-detalis-l2.jpg' }}"
-                                    alt="">
-                            </div>
-                            <div id="pro-3" class="tab-pane fade">
-                                <img src="{{ 'assets/img/product-details/product-detalis-l3.jpg' }}"
-                                    alt="">
-                            </div>
-                            <div id="pro-4" class="tab-pane fade">
-                                <img src="{{ 'assets/img/product-details/product-detalis-l4.jpg' }}"
-                                    alt="">
-                            </div>
-                        </div>
-                        <!-- Thumbnail Large Image End -->
-                        <!-- Thumbnail Image End -->
-                        <div class="product-thumbnail">
-                            <div class="thumb-menu owl-carousel nav nav-style" role="tablist">
-                                <button class="active" id="pro-1-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pro-1" type="button" role="tab"
-                                    aria-controls="pro-1" aria-selected="true">
-                                    <img src="{{ 'assets/img/product-details/product-detalis-s1.jpg' }}"
-                                        alt="product-thumbnail">
-                                </button>
-                                <button id="pro-2-tab" data-bs-toggle="tab" data-bs-target="#pro-2"
-                                    type="button" role="tab" aria-controls="pro-2"
-                                    aria-selected="true">
-                                    <img src="{{ 'assets/img/product-details/product-detalis-s2.jpg' }}"
-                                        alt="product-thumbnail">
-                                </button>
-                                <button id="pro-3-tab" data-bs-toggle="tab" data-bs-target="#pro-3"
-                                    type="button" role="tab" aria-controls="pro-3"
-                                    aria-selected="true">
-                                    <img src="{{ 'assets/img/product-details/product-detalis-s3.jpg' }}"
-                                        alt="product-thumbnail">
-                                </button>
-                                <button id="pro-4-tab" data-bs-toggle="tab" data-bs-target="#pro-4"
-                                    type="button" role="tab" aria-controls="pro-4"
-                                    aria-selected="true">
-                                    <img src="{{ 'assets/img/product-details/product-detalis-s4.jpg' }}"
-                                        alt="product-thumbnail">
-                                </button>
+                                <img src="{{ asset('images/' . $food->image) }}" alt="">
                             </div>
                         </div>
                         <!-- Thumbnail image end -->
                     </div>
                     <div class="col-md-7 col-sm-7 col-xs-12">
                         <div class="modal-pro-content">
-                            <h3>PRODUCTS NAME HERE </h3>
+                            <h3>{{ $food->title }}</h3>
                             <div class="product-price-wrapper">
-                                <span>$120.00</span>
-                                <span class="product-price-old">$162.00 </span>
+                                <span>${{ $food->price }}</span>
+                                {{-- <span class="product-price-old">$162.00 </span> --}}
                             </div>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
-                            <div class="quick-view-select">
-                                <div class="select-option-part">
-                                    <label>Size*</label>
-                                    <select class="select">
-                                        <option value="">S</option>
-                                        <option value="">M</option>
-                                        <option value="">L</option>
-                                    </select>
-                                </div>
-                                <div class="quickview-color-wrap">
-                                    <label>Color*</label>
-                                    <div class="quickview-color">
-                                        <ul>
-                                            <li class="blue">b</li>
-                                            <li class="red">r</li>
-                                            <li class="pink">p</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <p>{{ $food->des }}</p>
                             <div class="product-quantity">
                                 <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton"
-                                        value="02">
+                                    <input class="cart-plus-minus-box" type="text" name="qty" min="1"
+                                        value="1">
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                            <span><i class="fa fa-check"></i> In stock</span>
+                            <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">Add to cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -210,20 +149,16 @@
 </div>
 <!-- Modal end -->
 
-
-
-
-
 <!-- all js here -->
-<script src="{{ 'assets/js/vendor/jquery-1.12.4.min.js' }}"></script>
-<script src="{{ 'assets/js/popper.js' }}"></script>
-<script src="{{ 'assets/js/bootstrap.min.js' }}"></script>
-<script src="{{ 'assets/js/imagesloaded.pkgd.min.js' }}"></script>
-<script src="{{ 'assets/js/isotope.pkgd.min.js' }}"></script>
-<script src="{{ 'assets/js/ajax-mail.js' }}"></script>
-<script src="{{ 'assets/js/owl.carousel.min.js' }}"></script>
-<script src="{{ 'assets/js/plugins.js' }}"></script>
-<script src="{{ 'assets/js/main.js' }}"></script>
+<script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+<script src="{{ asset('assets/js/popper.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('assets/js/ajax-mail.js' )}}"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

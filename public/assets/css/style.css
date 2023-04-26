@@ -1,12 +1,12 @@
 /*-----------------------------------------------------------------------------------
-    
+
     Template Name: Billy - Food & Drink eCommerce Bootstrap5 Template
     Version: 1.0
-    
+
 -----------------------------------------------------------------------------------
-    
-    [Table of contents] 
-	
+
+    [Table of contents]
+
     1. Template default css
     2. Index page style
     3. Home page 2
@@ -22,7 +22,7 @@
     13. Blog details
     14. About us
     15. Testimonial page
-    
+
 -----------------------------------------------------------------------------------*/
 
 
@@ -201,12 +201,12 @@ span.tooltip-content {
 /*************************
  Bootstrap Custom Container
 ************************/
-.container, 
-.container-fluid, 
-.container-lg, 
-.container-md, 
-.container-sm, 
-.container-xl, 
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
 .container-xxl {
   width: 100%;
   padding-right: 15px;
@@ -217,45 +217,45 @@ span.tooltip-content {
 
 
 @media (min-width: 576px){
-  .container, 
+  .container,
   .container-sm {
     max-width: 540px;
 }
 }
 
 @media (min-width: 768px){
-  .container, 
-  .container-md, 
+  .container,
+  .container-md,
   .container-sm {
     max-width: 720px;
 }
 }
 
 @media (min-width: 992px){
-  .container, 
-  .container-lg, 
-  .container-md, 
+  .container,
+  .container-lg,
+  .container-md,
   .container-sm {
     max-width: 960px;
 }
 }
 
 @media (min-width: 1200px){
-  .container, 
-  .container-lg, 
-  .container-md, 
-  .container-sm, 
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
   .container-xl {
     max-width: 1200px;
   }
 }
 
 @media (min-width: 1400px){
-  .container, 
-  .container-lg, 
-  .container-md, 
-  .container-sm, 
-  .container-xl, 
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
   .container-xxl {
     max-width: 1200px;
   }
@@ -1218,7 +1218,7 @@ textarea:focus {
 }
 
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 
 .ptb-0 {
@@ -1329,7 +1329,7 @@ textarea:focus {
 
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 
 .mtb-0 {
@@ -1388,7 +1388,7 @@ textarea:focus {
 }
 
 /*************************************
-    Background variation set 
+    Background variation set
  **************************************/
 
 /*colored background*/
@@ -5387,4 +5387,9 @@ h5.panel-title span {
 .pagination-style .owl-dot.active {
     height: 10px;
     width: 30px;
+}
+
+.cartBtn{
+    border: none;
+    padding: 7px;
 }
