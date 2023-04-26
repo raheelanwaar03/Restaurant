@@ -6,7 +6,7 @@
             <div class="breadcrumb-content">
                 <ul>
                     <li><a href="{{ route('Welcome') }}">Home</a></li>
-                    <li class="active">All Products of {{ $category->title }} </li>
+                    <li class="active">All Products in {{ $category->title }} </li>
                 </ul>
             </div>
         </div>
