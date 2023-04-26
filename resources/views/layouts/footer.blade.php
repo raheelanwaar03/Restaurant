@@ -111,10 +111,14 @@
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
 <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
-<script src="{{ asset('assets/js/ajax-mail.js' )}}"></script>
+<script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
 <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugins.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+<script>
+    $(".livesearch").chosen();
+</script>
 </body>
 
 </html>

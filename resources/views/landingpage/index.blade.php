@@ -10,7 +10,7 @@
                         <h1 class="animated">Order Your Favourite Food</h1>
                         <h3 class="animated">Fresh Heathy and Organic.</h3>
                         <div class="slider-btn mt-90">
-                            <a class="animated" href="product-details.html">Order Now</a>
+                            <a class="animated" href="{{ route('Welcome.All.Products') }}">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                         <h1 class="animated">Order Your Favourite Food</h1>
                         <h3 class="animated">Fresh Heathy and Organic.</h3>
                         <div class="slider-btn mt-90">
-                            <a class="animated" href="product-details.html">Order Now</a>
+                            <a class="animated" href="{{ route('Welcome.All.Products') }}">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -37,8 +37,9 @@
                         <h4>All Food Items</h4>
                     </a>
                 </div>
-                <p>Typi non habent claritatem insitam est usus legentis in qui facit eorum claritatem, investigationes
-                    demonstraverunt lectores legere me lius quod legunt saepius.</p>
+                <p>Our food is simply the best. We use only the finest ingredients, prepared with skill and passion by our
+                    expert chefs. Every dish is a work of art, bursting with flavor and aroma, and served with care and
+                    attention. Come and experience the very best in food and hospitality.</p>
             </div>
             <div class="tab-content jump yellow-color">
                 <div id="tab1" class="tab-pane active">
@@ -47,7 +48,7 @@
                             <div class="custom-col-5">
                                 <div class="product-wrapper mb-25">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="{{ route('Welcome.Show.Product',['slug'=>$food->slug]) }}">
                                             <img src="{{ asset('images/' . $food->image) }}" alt="">
                                         </a>
                                         <div class="product-action">
@@ -69,7 +70,7 @@
                                     </div>
                                     <div class="product-content">
                                         <h4>
-                                            <a href="product-details.html">{{ $food->title }}</a>
+                                            <a href="{{ route('Welcome.Show.Product',['slug'=>$food->slug]) }}">{{ $food->title }}</a>
                                         </h4>
                                         <div class="product-price-wrapper">
                                             <span>${{ $food->price }}</span>
@@ -190,7 +191,7 @@
                     <h3>It’s Time To Start <br>Your Own Revolution By Laurent</h3>
                     <p>Exclusive Offer -10% Off This Week</p>
                     <div class="banner-btn">
-                        <a href="#">Order Now</a>
+                        <a href="{{ route('Welcome.All.Products') }}">Order Now</a>
                     </div>
                 </div>
             </div>

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css' )}}">
     <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css">
 </head>
 
 <body>
@@ -159,7 +160,7 @@
                         <div class="main-menu">
                             <nav>
                                 <ul>
-                                    <li><a href="route('Welcome')">home</a>
+                                    <li><a href="{{ route('Welcome') }}">home</a>
                                     </li>
                                     {{-- <li><a href="{{ route('My.Account') }}">My Account</a></li> --}}
                                     <li class="mega-menu-position top-hover"><a href="{{ route('Welcome.All.Products') }}">Food</a>

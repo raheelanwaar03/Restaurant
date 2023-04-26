@@ -1,78 +1,92 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Inner Banner Section -->
-    <section class="inner-banner">
-        <div class="image-layer" style="background-image: url({{ asset('images/' . $food->image) }});">
-        </div>
-        <div class="auto-container">
-            <div class="inner">
-                <div class="subtitle"><span>our menu</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                <h1><span>Product Details</span></h1>
+    <div class="breadcrumb-area gray-bg">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <ul>
+                    <li><a href="{{ route('Welcome') }}">Home</a></li>
+                    <li class="active">Product Details </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!--End Banner Section -->
-
-    <!--Contact Info Section-->
-    <section class="contact-page">
-        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-25.png') }}" alt="" title="">
-        </div>
-        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-6.png') }}" alt="" title="">
-        </div>
-    </section>
-
-    {{-- product detalis --}}
-
-    <section class="menu-one">
-        <div class="right-bg"><img src="images/background/bg-16.png" alt="" title=""></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <div class="subtitle"><span>single</span></div>
-                <div class="pattern-image"><img src="{{ asset('assets/images/icons/separator.svg') }}" alt=""
-                        title=""></div>
-                <h2>{{ $food->title }}</h2>
-            </div>
-            <div class="row clearfix">
-                <div class="col-md-12">
-                    <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
-                        @csrf
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="card w-25 bg-transparent" style="border:none">
-                                <div class="card-body">
-                                    <img src="{{ asset('images/' . $food->image) }}" alt="{{ $food->image }}" style="border-radius:10px" height="250px" width="250px">
-                                </div>
+    </div>
+    <div class="product-details pt-100 pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="product-details-img">
+                        <img class="zoompro" src="{{ asset('images/' . $food->image) }}"
+                            data-zoom-image="{{ asset('images/' . $food->image) }}" alt="zoom" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="product-details-content">
+                        <h4>{{ $food->name }}</h4>
+                        <div class="rating-review">
+                            <div class="pro-dec-rating">
+                                <i class="ion-android-star-outline theme-star"></i>
+                                <i class="ion-android-star-outline theme-star"></i>
+                                <i class="ion-android-star-outline theme-star"></i>
+                                <i class="ion-android-star-outline theme-star"></i>
+                                <i class="ion-android-star-outline"></i>
                             </div>
-                            <div class="ml-5">
-                                <h5><a href="#">Title: {{ $food->title }}</a></h5>
-                                <div class="price"><span>Price: ${{ $food->price }}</span></div>
-                                <div class="text desc"><a href="#">Description: {{ $food->des }}</a></div>
-                                <div class="">
-                                    <select name="extera[]" class="livesearch" multiple style="width: 250px;">
-                                        <option value="Cheese" >Cheese</option>
-                                        <option value="Lettuce">Lettuce</option>
-                                        <option value="Tomato">Tomato</option>
-                                        <option value="Onion">Onion</option>
-                                        <option value="Cilantro">Cilantro</option>
-                                        <option value="Jalapeno">Jalapeno</option>
-                                        <option value="Pickles">Pickles</option>
-                                        <option value="Black Olives">Black Olives</option>
-                                        <option value="Green Olives">Green Olives</option>
-                                        <option value="Guancamole">Guancamole</option>
-                                        <option value="Sour Cream">Sour Cream</option>
-                                    </select>
-                                </div>
-                                <div class="mt-3">
-                                    <input type="number" name="qty" min='1' value="1"
-                                        style="width:55px;height:35px;padding:6px">
-                                    <button class="btn btn-danger">AddToCart</button>
-                                </div>
+                            <div class="pro-dec-review">
+                                <ul>
+                                    <li>32 Reviews </li>
+                                    <li> Add Your Reviews</li>
+                                </ul>
                             </div>
                         </div>
-                    </form>
+                        <span>${{ $food->price }}</span>
+                        <div class="in-stock">
+                            <p>Available: <span>In stock</span></p>
+                        </div>
+                        <p>{{ $food->des }}</p>
+                        <div class="pro-dec-feature">
+                            <label for="">Extera Topin:</label>
+                            <select name="extera[]" class="livesearch" multiple style="width: 250px;">
+                                <option value="Cheese">Cheese</option>
+                                <option value="Lettuce">Lettuce</option>
+                                <option value="Tomato">Tomato</option>
+                                <option value="Onion">Onion</option>
+                                <option value="Cilantro">Cilantro</option>
+                                <option value="Jalapeno">Jalapeno</option>
+                                <option value="Pickles">Pickles</option>
+                                <option value="Black Olives">Black Olives</option>
+                                <option value="Green Olives">Green Olives</option>
+                                <option value="Guancamole">Guancamole</option>
+                                <option value="Sour Cream">Sour Cream</option>
+                            </select>
+                        </div>
+                        <div class="pro-details-cart-wrap d-flex align-items-center">
+                            <div class="product-quantity m-2">
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" min="1">
+                                </div>
+                            </div>
+                            <div class="shop-list-cart-wishlist">
+                                <form action="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="ion-android-cart"></i> Add To Cart
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="pro-dec-categories">
+                            <ul>
+                                <li class="categories-title">Categories:</li>
+                                <li><a href="#">Fast Foods,</a></li>
+                                <li><a href="#"> Rich Foods, </a></li>
+                                <li><a href="#">Custom Orders,</a></li>
+                                <li><a href="#">Home Decor,</a></li>
+                                <li><a href="#">Weddings, </a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection
