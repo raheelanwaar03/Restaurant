@@ -104,50 +104,6 @@
         </div>
     </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="{{ $food->slug }}" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-5 col-sm-5 col-xs-12">
-                        <!-- Thumbnail Large Image start -->
-                        <div class="tab-content">
-                            <div id="pro-1" class="tab-pane fade show active">
-                                <img src="{{ asset('images/' . $food->image) }}" alt="">
-                            </div>
-                        </div>
-                        <!-- Thumbnail image end -->
-                    </div>
-                    <div class="col-md-7 col-sm-7 col-xs-12">
-                        <div class="modal-pro-content">
-                            <h3>{{ $food->title }}</h3>
-                            <div class="product-price-wrapper">
-                                <span>${{ $food->price }}</span>
-                                {{-- <span class="product-price-old">$162.00 </span> --}}
-                            </div>
-                            <p>{{ $food->des }}</p>
-                            <div class="product-quantity">
-                                <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qty" min="1"
-                                        value="1">
-                                </div>
-                            </div>
-                            <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
-                                @csrf
-                                <button type="submit" class="btn btn-danger">Add to cart</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal end -->
 
 <!-- all js here -->
 <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>

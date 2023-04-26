@@ -14,7 +14,7 @@ class LandingPageController extends Controller
     public function index()
     {
         $categorys = Category::get();
-        $foods = Food::paginate(5);
+        $foods = Food::paginate(10);
         return view('landingpage.index',compact('categorys','foods'));
     }
 
@@ -53,7 +53,7 @@ class LandingPageController extends Controller
     public function welcomeCategories()
     {
         $foods = Food::get();
-        $categorys = Category::paginate(9);
+        $categorys = Category::paginate(10);
         return view('landingpage.category.index',compact('categorys','foods'));
     }
     // showing category wise product
@@ -63,7 +63,7 @@ class LandingPageController extends Controller
         if(Category::where('slug',$slug)->exists())
         {
             $category = Category::where('slug',$slug)->first();
-            $foods = Food::where('category_id',$category->id)->paginate(9);
+            $foods = Food::where('category_id',$category->id)->paginate(10);
             $categorys = Category::get();
             return view('landingpage.category.product',compact('foods','category','categorys'));
         }
@@ -95,7 +95,7 @@ class LandingPageController extends Controller
 
     public function allProducts()
     {
-        $categorys = Category::paginate(9);
+        $categorys = Category::paginate(5);
         $foods = Food::paginate(20);
         return view('landingpage.products.index',compact('foods','categorys'));
     }
