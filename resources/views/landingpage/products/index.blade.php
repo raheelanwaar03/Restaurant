@@ -29,7 +29,7 @@
                             <div class="custom-col-5">
                                 <div class="product-wrapper mb-25">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="{{ route('Welcome.Show.Product', ['slug' => $food->slug]) }}">
                                             <img src="{{ asset('images/' . $food->image) }}" alt="">
                                         </a>
                                         <div class="product-action">
@@ -40,18 +40,22 @@
                                                     <button class="cartBtn bg-transparent" type="submit"
                                                         title="Add To Cart"><i class="ion-android-cart"></i> Add to
                                                         Cart</button>
-                                                </form>
+
                                             </div>
                                             <div class="pro-action-right">
+                                                <input type="number" name="qty" value="1" min="1"
+                                                    class="bg-transparent" style="width:50px;height:30px">
                                                 <a title="Quick View" data-bs-toggle="modal"
                                                     data-bs-target="#{{ $food->slug }}"><i
                                                         class="ion-android-open"></i></a>
                                             </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="product-content">
                                         <h4>
-                                            <a href="product-details.html">{{ $food->title }}</a>
+                                            <a
+                                                href="{{ route('Welcome.Show.Product', ['slug' => $food->slug]) }}">{{ $food->title }}</a>
                                         </h4>
                                         <div class="product-price-wrapper">
                                             <span>${{ $food->price }}</span>

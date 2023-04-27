@@ -22,9 +22,12 @@ class UserDashboardController extends Controller
     public function addToCart(Request $request, $id)
     {
         $extera = $request->extera;
-        $count =  count($extera);
+        $count = 0;
+        if($extera != null)
+        {
+            $count =  count($extera);
+        }
         $food = Food::find($id);
-
         // check if food already added to cart
 
         $foodCheck = cartFood::where('id',auth()->id())->where('product_id',$food->id)->first();
@@ -60,7 +63,6 @@ class UserDashboardController extends Controller
     public function updateCart(Request $request,$id)
     {
         $cartFood = cartFood::find($id);
-
         $cartFood->qty = $request->qty;
         $price = $cartFood->price * $request->qty;
 

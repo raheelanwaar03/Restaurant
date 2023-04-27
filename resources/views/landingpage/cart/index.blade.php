@@ -1,92 +1,197 @@
-@extends('landingpage.layout.app')
+@extends('layouts.app')
 
 @section('content')
-    <!-- Inner Banner Section -->
-    <section class="inner-banner">
-        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/banner-image-4.jpg') }});">
-        </div>
-        <div class="auto-container">
-            <div class="inner">
-                <div class="subtitle"><span>our menu</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                <h1><span>All Cart Items</span></h1>
+    <div class="breadcrumb-area gray-bg">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Cart </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!--End Banner Section -->
-
-    <!--Contact Info Section-->
-    <section class="contact-page">
-        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-25.png') }}" alt="" title="">
-        </div>
-        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-6.png') }}" alt="" title="">
-        </div>
-        <!--location Section-->
-        <div class="location-center">
-            <div class="container-fluid">
-                <div class="cinfo-box">
-                    <div class="">
-                        <h4 class="text-center my-4">{{ auth()->user()->name }} Please Add Your Address To Receive Your
-                            Order <span><a data-toggle="modal" data-target="#address" class="btn btn-success">Add
-                                    Address</a></span>
-                            </h2>
-                    </div>
-                    <div class="card">
-                        <table class="table table-striped table-dark">
-                            <thead>
-                                <tr>
-                                    <th>Item Name</th>
-                                    <th>Item Price</th>
-                                    <th>Item Quantity</th>
-                                    <th>Item Image</th>
-                                    <th>Total Price</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($foods as $food)
-                                    @csrf
+    </div>
+    <!-- shopping-cart-area start -->
+    <div class="cart-main-area pt-95 pb-100">
+        <div class="container">
+            <h3 class="page-title">Your cart items</h3>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <form action="#">
+                        <div class="table-content table-responsive">
+                            <table>
+                                <thead>
                                     <tr>
-                                        <td>{{ $food->title }}</td>
-                                        <td>{{ $food->price }}</td>
-                                        <td>
-                                            <form action="{{ route('User.Update.Cart.Item', ['id' => $food->id]) }}"
-                                                method='POST'>
-                                                @csrf
-                                                <input type="number" name="qty" value="{{ $food->qty }}"
-                                                    min="1" style="width:55px;height:35px;padding:6px">
-                                                <button type="submit" style="background: transparent;color:white;">
-                                                    <i class="fa fa-refresh" aria-hidden="true"></i>
-                                                </button>
-                                        </td>
-                                        </form>
-                                        <td>
-                                            <img src="{{ asset('images/' . $food->image) }}" class="img-fluid img-thumbnail"
-                                                width="90px" height="90px" alt="{{ $food->image }}">
-                                        </td>
-                                        <td>{{ $food->total_price }}</td>
-                                        <td>
-                                            <a href="{{ route('User.Delete.Cart.Item', ['id' => $food->id]) }}"
-                                                class="btn btn-danger">Delete</a>
-                                            <a href="{{ route('User.Store.Order', ['id' => $food->id]) }}"
-                                                class="btn btn-success text-white">Order Now</a>
-                                            <a href="{{ route('User.Remove.Extera.Topin', ['id' => $food->id]) }}"
-                                                class="btn btn-warning text-white">Remove Extera Topin</a>
-                                        </td>
+                                        <th>Image</th>
+                                        <th>Product Name</th>
+                                        <th>Unit Price</th>
+                                        <th>Qty</th>
+                                        <th>Subtotal</th>
+                                        <th>action</th>
                                     </tr>
-                                @empty
-                                    <h4 class="text-dark text-center">You have not added any Food into cart <a
-                                            href="{{ route('Welcome.All.Products') }}">vist our food menu</a> </h4>
-                                @endforelse
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @forelse ($foods as $food)
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/' . $food->image) }}"
+                                                        class="img-thumbnail img-fluid" height="150px" width="150px"
+                                                        alt="img"></a>
+                                            </td>
+                                            <td class="product-name"><a href="#">{{ $food->title }}</a></td>
+                                            <td class="product-price-cart"><span class="amount">${{ $food->price }}</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <form action="{{ route('User.Update.Cart.Item', ['id' => $food->id]) }}"
+                                                    method='POST'>
+                                                    @csrf
+                                                    <div class="d-flex">
+                                                        <input type="number" name="qty" value="{{ $food->qty }}"
+                                                            style="width:100px;" class="bg-transparent" min="1">
+                                                        <button type="submit">
+                                                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                                {{-- <div class="cart-plus-minus">
+                                                <input class="cart-plus-minus-box" type="text" name="qtybutton"
+                                                    value="2">
+                                            </div> --}}
+                                            </td>
+                                            <td class="product-subtotal">${{ $food->total_price }}</td>
+                                            <td class="product-remove">
+                                                <a href="{{ route('User.Delete.Cart.Item', ['id' => $food->id]) }}"
+                                                    class="btn btn-danger text-white"><i class="fa fa-times"></i>Del</a>
+                                                <a href="{{ route('User.Remove.Extera.Topin', ['id' => $food->id]) }}"
+                                                    class="btn btn-sm btn-warning text-white">RemoveTopin</a>
+                                                {{-- <a href="#"><i class="fa fa-pencil"></i></a>
+                                            <a href="#"><i class="fa fa-times"></i></a> --}}
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <h4>No Item in cart</h4>
+                                    @endforelse
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="cart-shiping-update-wrapper">
+                                <div class="cart-shiping-update">
+                                    <a href="{{ route('Welcome.All.Products') }}">Continue Shopping</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    {{ $foods->withQueryString()->links('pagination::bootstrap-5') }}
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="cart-tax">
+                                <div class="title-wrap">
+                                    <h4 class="cart-bottom-title section-bg-gray">Enter Your address to take delivery</h4>
+                                </div>
+                                <div class="tax-wrapper">
+                                    <div class="tax-select-wrapper">
+                                        <form action="{{ route('Store.Address') }}" method="POST">
+                                            @csrf
+                                            <div class="tax-select">
+                                                <label>
+                                                    Type Address Down here
+                                                </label>
+                                                <input type="text" name="address">
+                                            </div>
+                                            <button class="cart-btn-2" type="submit">Add</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="grand-totall">
+                                <div class="title-wrap">
+                                    <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
+                                </div>
+                                <h5>Total products Quantity <span>{{ totalCartQty() }}</span></h5>
+                                <h4 class="grand-totall-title">Grand Total <span>${{ orderTotalPrice() }}</span></h4>
+                                <a href="#">Proceed to Checkout</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
 @endsection
+
+{{-- <section class="contact-page">
+    <div class="left-bg"><img src="{{ asset('assets/images/background/bg-25.png') }}" alt="" title="">
+    </div>
+    <div class="right-bg"><img src="{{ asset('assets/images/background/bg-6.png') }}" alt="" title="">
+    </div>
+    <!--location Section-->
+    <div class="location-center">
+        <div class="container-fluid">
+            <div class="cinfo-box">
+                <div class="">
+                    <h4 class="text-center my-4">{{ auth()->user()->name }} Please Add Your Address To Receive Your
+                        Order <span><a data-toggle="modal" data-target="#address" class="btn btn-success">Add
+                                Address</a></span>
+                        </h2>
+                </div>
+                <div class="card">
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Item Price</th>
+                                <th>Item Quantity</th>
+                                <th>Item Image</th>
+                                <th>Total Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($foods as $food)
+                                @csrf
+                                <tr>
+                                    <td>{{ $food->title }}</td>
+                                    <td>{{ $food->price }}</td>
+                                    <td>
+                                        <form action="{{ route('User.Update.Cart.Item', ['id' => $food->id]) }}"
+                                            method='POST'>
+                                            @csrf
+                                            <input type="number" name="qty" value="{{ $food->qty }}"
+                                                min="1" style="width:55px;height:35px;padding:6px">
+                                            <button type="submit" style="background: transparent;color:white;">
+                                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <img src="{{ asset('images/' . $food->image) }}" class="img-fluid img-thumbnail"
+                                            width="90px" height="90px" alt="{{ $food->image }}">
+                                    </td>
+                                    <td>{{ $food->total_price }}</td>
+                                    <td>
+                                        <a href="{{ route('User.Delete.Cart.Item', ['id' => $food->id]) }}"
+                                            class="btn btn-danger">Delete</a>
+                                        <a href="{{ route('User.Store.Order', ['id' => $food->id]) }}"
+                                            class="btn btn-success text-white">Order Now</a>
+                                        <a href="{{ route('User.Remove.Extera.Topin', ['id' => $food->id]) }}"
+                                            class="btn btn-warning text-white">Remove Extera Topin</a>
+                                    </td>
+                                </tr>
+                            @empty
+                                <h4 class="text-dark text-center">You have not added any Food into cart <a
+                                        href="{{ route('Welcome.All.Products') }}">vist our food menu</a> </h4>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                {{ $foods->withQueryString()->links('pagination::bootstrap-5') }}
+            </div>
+        </div>
+    </div>
+</section> --}}

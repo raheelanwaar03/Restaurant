@@ -136,21 +136,19 @@
                                         value="1">
                                 </div>
                             </div>
-                            <div class="w-100">
-                                <select name="extera[]" class="livesearch" multiple style="width: 250px;">
-                                    <option value="Cheese">Cheese</option>
-                                    <option value="Lettuce">Lettuce</option>
-                                    <option value="Tomato">Tomato</option>
-                                    <option value="Onion">Onion</option>
-                                    <option value="Cilantro">Cilantro</option>
-                                    <option value="Jalapeno">Jalapeno</option>
-                                    <option value="Pickles">Pickles</option>
-                                    <option value="Black Olives">Black Olives</option>
-                                    <option value="Green Olives">Green Olives</option>
-                                    <option value="Guancamole">Guancamole</option>
-                                    <option value="Sour Cream">Sour Cream</option>
-                                </select>
-                            </div>
+                            <select name="extera[]" class="livesearch" multiple style="width: 250px;">
+                                <option value="Cheese">Cheese</option>
+                                <option value="Lettuce">Lettuce</option>
+                                <option value="Tomato">Tomato</option>
+                                <option value="Onion">Onion</option>
+                                <option value="Cilantro">Cilantro</option>
+                                <option value="Jalapeno">Jalapeno</option>
+                                <option value="Pickles">Pickles</option>
+                                <option value="Black Olives">Black Olives</option>
+                                <option value="Green Olives">Green Olives</option>
+                                <option value="Guancamole">Guancamole</option>
+                                <option value="Sour Cream">Sour Cream</option>
+                            </select>
                             <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-danger">Add to cart</button>

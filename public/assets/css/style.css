@@ -1758,7 +1758,7 @@ textarea:focus {
 .cart-text > span.digit {
     margin-bottom: 6px;
 }
-.header-cart > a .header-icon-style span {
+.header-carts > a .header-icon-style span {
     background-color: #e02c2b;
     border-radius: 100%;
     color: #fff;
@@ -1775,7 +1775,7 @@ textarea:focus {
     top: -3px;
     width: 22px;
 }
-.header-cart {
+.header-carts {
     display: inline-block;
     position: relative;
 }
@@ -2043,7 +2043,7 @@ textarea:focus {
     margin: 27px 0 0;
     transition: all .3s ease 0s;
 }
-.stick .header-cart {
+.stick .header-carts {
     padding: 22px 0 0 63px;
     transition: all .3s ease 0s;
 }
@@ -2606,7 +2606,7 @@ textarea:focus {
 .yellow-color .product-nav .owl-nav div:hover {
     color: #f3b804;
 }
-.yellow-color.header-cart > a .header-icon-style span {
+.yellow-color.header-carts > a .header-icon-style span {
     background-color: #f3b804;
 }
 .yellow-color.main-menu ul li.top-hover ul li > a::before,

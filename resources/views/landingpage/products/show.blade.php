@@ -61,16 +61,17 @@
                         </div>
                         <div class="pro-details-cart-wrap d-flex align-items-center">
                             <div class="product-quantity m-2">
-                                <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" min="1">
-                                </div>
+                                <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" type="text" name="qty" value="1"
+                                            min="1">
+                                    </div>
                             </div>
                             <div class="shop-list-cart-wishlist">
-                                <form action="{{ route('User.Add.To.Cart',['id'=>$food->id]) }}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-danger">
-                                        <i class="ion-android-cart"></i> Add To Cart
-                                    </button>
+                                @csrf
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="ion-android-cart"></i> Add To Cart
+                                </button>
                                 </form>
                             </div>
                         </div>
