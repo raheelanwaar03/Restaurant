@@ -122,7 +122,7 @@
                                 <ul>
                                     <li><a href="route('Welcome')">home</a>
                                     </li>
-                                    {{-- <li><a href="{{ route('My.Account') }}">My Account</a></li> --}}
+                                    <li><a href="{{ route('Welcome.Find.Table') }}">Book a Table</a></li>
                                     <li class="mega-menu-position top-hover"><a
                                             href="{{ route('Welcome.All.Products') }}">Food</a>
                                     </li>
@@ -141,6 +141,7 @@
                                     </li>
                                     <li><a href="{{ route('Welcome.About-Us') }}">about</a></li>
                                     <li><a href="{{ route('Welcome.Contact-Us') }}">contact us</a></li>
+                                    <li><a href="{{ route('User.All.Orders') }}">My Order</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -158,7 +159,7 @@
                                 <ul class="menu-overflow" id="nav">
                                     <li><a href="{{ route('Welcome') }}">Home</a>
                                     </li>
-                                    {{-- <li><a href="{{ route('My.Account') }}">My Account</a></li> --}}
+                                    <li><a href="{{ route('Welcome.Find.Table') }}">Book a Table</a></li>
                                     <li><a href="{{ route('Welcome.All.Products') }}">Food</a>
                                     </li>
                                     <li><a href="{{ route('Welcome.All.Categories') }}">Categories</a>
@@ -174,6 +175,7 @@
                                     </li>
                                     <li><a href="{{ route('Welcome.Contact-Us') }}">Contact us</a></li>
                                     <li><a href="{{ route('Welcome.About-Us') }}">About Us</a></li>
+                                    <li><a href="{{ route('User.All.Orders') }}">My Orders</a></li>
                                 </ul>
                             </nav>
                         </div>
