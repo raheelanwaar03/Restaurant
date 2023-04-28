@@ -17,7 +17,7 @@ Route::prefix('/User')->name('User.')->middleware('auth','user')->group(function
 
     // Order system
 
-    Route::get('/Order/{id}',[UserDashboardController::class,'storeOrder'])->name('Store.Order');
+    Route::post('/Order',[UserDashboardController::class,'storeOrder'])->name('Store.Order');
     Route::get('/All/Orders',[UserDashboardController::class,'allOrder'])->name('All.Orders');
     Route::get('/Cancel/Order/{id}',[UserDashboardController::class,'destroyOrder'])->name('Cancel.Order');
 

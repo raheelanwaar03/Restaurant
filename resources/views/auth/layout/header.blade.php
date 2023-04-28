@@ -71,67 +71,18 @@
                                 </a>or
                                 <a href="{{ route('register') }}">Register</a>
                             </div>
-                            <div class="header-wishlist">
-                                <a href="wishlist.html">
-                                    <div class="header-icon-style">
-                                        <i class="icon-heart icons"></i>
-                                    </div>
-                                    <div class="wishlist-text">
-                                        <p>Your <br> <span>Wishlist</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="header-cart">
-                                <a href="#">
+                            <div class="p-4"></div>
+                            <div class="header-carts ml-3">
+                                <a href="{{ route('User.All.Cart.Items') }}">
                                     <div class="header-icon-style">
                                         <i class="icon-handbag icons"></i>
-                                        <span class="count-style">02</span>
+                                        <span class="count-style">{{ cartItems() }}</span>
                                     </div>
-                                    <div class="cart-text">
+                                    {{-- <div class="cart-text">
                                         <span class="digit">My Cart</span>
                                         <span class="cart-digit-bold">$209.00</span>
-                                    </div>
+                                    </div> --}}
                                 </a>
-                                <div class="shopping-cart-content">
-                                    <ul>
-                                        <li class="single-shopping-cart">
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt=""
-                                                        src="{{ asset('assets/img/cart/cart-1.jpg') }}"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">Phantom Remote </a></h4>
-                                                <h6>Qty: 02</h6>
-                                                <span>$260.00</span>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="ion ion-close"></i></a>
-                                            </div>
-                                        </li>
-                                        <li class="single-shopping-cart">
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt=""
-                                                        src="{{ asset('assets/img/cart/cart-2.jpg') }}"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">Phantom Remote</a></h4>
-                                                <h6>Qty: 02</h6>
-                                                <span>$260.00</span>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="ion ion-close"></i></a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="shopping-cart-total">
-                                        <h4>Shipping : <span>$20.00</span></h4>
-                                        <h4>Total : <span class="shop-total">$260.00</span></h4>
-                                    </div>
-                                    <div class="shopping-cart-btn">
-                                        <a href="cart-page.html">view cart</a>
-                                        <a href="checkout.html">checkout</a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

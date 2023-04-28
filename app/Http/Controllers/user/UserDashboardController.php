@@ -91,31 +91,36 @@ class UserDashboardController extends Controller
 
     // order system
 
-    public function storeOrder($id)
+    public function storeOrder()
     {
         // check user address
 
         $userAddress = UserAddress::where('user_id',auth()->user()->id)->first();
         if($userAddres = '')
         {
-            return redirect()->route('Add.Address')->with('error','Please Add Your Address For Receiving Delivery');
+            return redirect()->back()->with('error','Please Add Your Address For Receiving Delivery');
         }
 
-        $cartFood = cartFood::find($id);
+        $cartFoods = cartFood::where('user_id',auth()->user()->id)->get();
+        // storing cartItems into order
 
-        // storing cartItem into order
+        foreach($cartFoods as $cartFood)
+        {
+            $orderFood = new Order();
+            $orderFood->user_id = auth()->id();
+            $orderFood->product_id = $cartFood->product_id;
+            $orderFood->title = $cartFood->title;
+            $orderFood->item_price = $cartFood->price;
+            $orderFood->total_price = $cartFood->total_price;
+            $orderFood->image = $cartFood->image;
+            $orderFood->item_qty = $cartFood->qty;
+            $orderFood->save();
 
-        $orderFood = new Order();
-        $orderFood->user_id = auth()->id();
-        $orderFood->product_id = $cartFood->product_id;
-        $orderFood->title = $cartFood->title;
-        $orderFood->item_price = $cartFood->price;
-        $orderFood->total_price = $cartFood->total_price;
-        $orderFood->image = $cartFood->image;
-        $orderFood->item_qty = $cartFood->qty;
-        $orderFood->save();
-        // removing from cart
-        $cartFood->delete();
+            $cart_Food = $cartFood->id;
+            $cart = cartFood::find($cart_Food);
+            $cart->delete();
+
+        }
 
         return redirect()->back()->with('success','Thanks for Your Order!');
 
