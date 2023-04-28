@@ -1,39 +1,31 @@
 @extends('landingpage.layout.app')
 
 @section('content')
-    <!-- Inner Banner Section -->
-    <section class="inner-banner">
-        <div class="image-layer" style="background-image: url({{ asset('assets/images/background/banner-image-4.jpg') }});">
-        </div>
-        <div class="auto-container">
-            <div class="inner">
-                <div class="subtitle"><span>our menu</span></div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                <h1><span>Order Items & Status</span></h1>
+    <div class="breadcrumb-area gray-bg">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">My Orders </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!--End Banner Section -->
-
-    <!--Contact Info Section-->
-    <section class="contact-page">
-        <div class="left-bg"><img src="{{ asset('assets/images/background/bg-25.png') }}" alt="" title="">
-        </div>
-        <div class="right-bg"><img src="{{ asset('assets/images/background/bg-6.png') }}" alt="" title="">
-        </div>
-        <!--location Section-->
-        <div class="location-center">
-            <div class="container-fluid">
-                <div class="cinfo-box">
-                    <div class="card">
-                        <table class="table table-striped table-dark">
+    </div>
+    <!-- shopping-cart-area start -->
+    <div class="cart-main-area pt-95 pb-100">
+        <div class="container">
+            <h3 class="page-title">My Orders</h3>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="table-content table-responsive">
+                        <table>
                             <thead>
                                 <tr>
-                                    <th>Item Name</th>
+                                    <th>Name</th>
                                     <th>Item Price</th>
-                                    <th>Item Quantity</th>
-                                    <th>Item Image</th>
-                                    <th>Total Price</th>
+                                    <th>Qty</th>
+                                    <th>Image</th>
+                                    <th>Order Price</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -54,14 +46,23 @@
                                     <h4 class="text-dark text-center">You have not added any Food into cart <a
                                             href="{{ route('Welcome.All.Products') }}">vist our food menu</a> </h4>
                                 @endforelse
+                                <div class="col-md-12 text-center">
+                                    {{ $orderFoods->withQueryString()->links('pagination::bootstrap-5') }}
+                                </div>
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    {{ $orderFoods->withQueryString()->links('pagination::bootstrap-5') }}
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="cart-shiping-update-wrapper">
+                                <div class="cart-shiping-update">
+                                    <a href="{{ route('Welcome.All.Products') }}">Continue Shopping</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection

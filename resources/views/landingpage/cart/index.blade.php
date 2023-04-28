@@ -17,7 +17,6 @@
             <h3 class="page-title">Your cart items</h3>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <form action="#">
                         <div class="table-content table-responsive">
                             <table>
                                 <thead>
@@ -74,7 +73,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </form>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="cart-shiping-update-wrapper">

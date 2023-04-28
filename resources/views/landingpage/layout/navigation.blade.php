@@ -88,10 +88,10 @@
                                         <div class="header-icon-style">
                                         </div>
                                         <div class="wishlist-text">
-                                            <form action="{{ route('logout') }}" method="POST">
+                                            {{-- <form action="{{ route('logout') }}" method="POST">
                                                 @csrf
                                                 <button class="btn btn-primary">Logout</button>
-                                            </form>
+                                            </form> --}}
                                         </div>
                                     </a>
                                 @endif

@@ -74,7 +74,7 @@
                                 <div class="col-lg-12">
                                     <div class="contact-form-style">
                                         <textarea name="message" placeholder="Message"></textarea>
-                                        <button class="submit btn-style" type="submit">SEND MESSAGE</button>
+                                        <button class="submit btn-style">SEND MESSAGE</button>
                                     </div>
                                 </div>
                             </div>
