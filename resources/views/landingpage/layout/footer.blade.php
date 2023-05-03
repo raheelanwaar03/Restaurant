@@ -123,8 +123,9 @@
                             </div>
                             <p>{{ $food->des }}</p>
                             <div class="col-md-12">
+                                <div class="form-group">
                                     <label for="">Extera Topin:</label>
-                                    <select name="extera[]" id="choices-multiple-remove-button" placeholder="Optional" multiple>
+                                    <select name="extera[]" id="choices-multiple-remove-button" class="form-control" placeholder="Optional" multiple>
                                     <option value="Cheese">Cheese</option>
                                     <option value="Lettuce">Lettuce</option>
                                     <option value="Tomato">Tomato</option>
@@ -147,7 +148,7 @@
                             </div>
                             <form action="{{ route('User.Add.To.Cart', ['id' => $food->id]) }}" method="POST">
                                 @csrf
-                                <button type="submit" class="btn btn-danger p-2">Add to cart</button>
+                                <button type="submit" class="btn btn-danger pb-2">Add to cart</button>
                             </form>
                         </div>
                     </div>
