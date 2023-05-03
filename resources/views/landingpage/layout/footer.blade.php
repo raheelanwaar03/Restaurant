@@ -122,6 +122,24 @@
                                 {{-- <span class="product-price-old">$162.00 </span> --}}
                             </div>
                             <p>{{ $food->des }}</p>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Extera Topin</label>
+                                    <select name="extera[]" id="choices-multiple-remove-button" class="form-control" placeholder="Optional" multiple>
+                                    <option value="Cheese">Cheese</option>
+                                    <option value="Lettuce">Lettuce</option>
+                                    <option value="Tomato">Tomato</option>
+                                    <option value="Onion">Onion</option>
+                                    <option value="Cilantro">Cilantro</option>
+                                    <option value="Jalapeno">Jalapeno</option>
+                                    <option value="Pickles">Pickles</option>
+                                    <option value="Black Olives">Black Olives</option>
+                                    <option value="Green Olives">Green Olives</option>
+                                    <option value="Guancamole">Guancamole</option>
+                                    <option value="Sour Cream">Sour Cream</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="product-quantity">
                                 <div class="cart-plus-minus">
                                     <input class="cart-plus-minus-box" type="text" name="qty" min="1"
@@ -152,9 +170,19 @@
 <script src="{{ asset('assets/js/plugins.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 {{-- extera --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    $(".livesearch").chosen();
+    $(document).ready(function() {
+
+        var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+            removeItemButton: true,
+            maxItemCount: 10,
+            searchResultLimit: 10,
+            renderChoiceLimit: 10,
+        });
+
+    });
 </script>
 </body>
 
