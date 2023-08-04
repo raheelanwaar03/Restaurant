@@ -1,4 +1,31 @@
-@extends('landingpage.layout.app')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <title>{{ env('APP_NAME') }}</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="text-center">
+                        Web is in UnderConsturction
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+{{-- @extends('landingpage.layout.app')
 
 @section('content')
     <div class="slider-area-2">
@@ -78,7 +105,6 @@
                                     </h4>
                                     <div class="product-price-wrapper">
                                         <span>${{ $food->price }}</span>
-                                        {{-- <span class="product-price-old">$120.00 </span> --}}
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +192,6 @@
                                             </h4>
                                             <div class="product-price-wrapper">
                                                 <span>${{ $food->price }}</span>
-                                                {{-- <span class="product-price-old">$120.00 </span> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -225,4 +250,4 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection --}}
