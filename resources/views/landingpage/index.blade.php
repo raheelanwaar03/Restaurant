@@ -11,8 +11,8 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row min-vh-100">
+            <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="card">
                     <div class="text-center">
                         Web is in UnderConsturction
