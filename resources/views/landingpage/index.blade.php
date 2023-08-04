@@ -11,11 +11,13 @@
 
 <body>
     <div class="container">
-        <div class="row min-vh-100">
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
+        <div class="row min-vh-100 d-flex justify-content-center align-items-center">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="text-center">
-                        Web is in UnderConsturction
+                        <h1>
+                            Web is in UnderConsturction
+                        </h1>
                     </div>
                 </div>
             </div>
