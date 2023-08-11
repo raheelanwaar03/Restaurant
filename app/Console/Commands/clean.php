@@ -35,14 +35,14 @@ class clean extends Command
         Artisan::call('route:clear');
 
         $user = new User();
-        $user->name = 'RaheelAnwaar';
+        $user->name = 'Farhan';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('asdfasdf');
         $user->role = 'admin';
         $user->save();
 
         $user = new User();
-        $user->name = 'Hamza';
+        $user->name = 'Zohaib';
         $user->email = 'user@gmail.com';
         $user->password = Hash::make('asdfasdf');
         $user->role = 'user';
