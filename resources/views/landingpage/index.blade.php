@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,9 +25,9 @@
     </div>
 </body>
 
-</html>
+</html> --}}
 
-{{-- @extends('landingpage.layout.app')
+ @extends('landingpage.layout.app')
 
 @section('content')
     <div class="slider-area-2">
@@ -252,4 +252,4 @@
             </div>
         </div>
     </div>
-@endsection --}}
+@endsection
